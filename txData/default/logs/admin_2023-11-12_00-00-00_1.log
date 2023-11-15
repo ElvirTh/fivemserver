@@ -1,0 +1,30 @@
+
+================================================================
+======== txAdmin v6.0.2 atop fxserver 6683 Starting - 11/12/2023, 6:37:14 PM
+================================================================
+[18:37:27][Elvir_Thaqi1] created admins file
+[18:38:18][Elvir_Thaqi1] Changing global/fxserver settings via setup stepper.
+[18:38:24][Elvir_Thaqi1] executed "STOP SERVER"
+
+================================================================
+======== txAdmin v6.0.2 atop fxserver 6683 Starting - 11/12/2023, 7:30:39 PM
+================================================================
+[19:31:33][Elvir_Thaqi1] logged in from 127.0.0.1 via citizenfx
+[19:33:57][MONITOR] Restarting server (resource "cfx-mercy-peds" failed to start within the 120s time limit).
+[19:34:43][Elvir_Thaqi1] Changing fxRunner settings.
+[19:37:47][Elvir_Thaqi1] executed "RESTART SERVER"
+[19:40:42][Elvir_Thaqi1] executed "RESTART SERVER"
+[19:44:10][Elvir_Thaqi1] logged in via in-game ui
+[19:47:27][Elvir_Thaqi1] logged in via in-game ui
+[19:50:15][Elvir_Thaqi1] executed "STOP SERVER"
+[19:50:43][Elvir_Thaqi1] executed "START SERVER"
+[19:53:06][Elvir_Thaqi1] logged in via in-game ui
+[20:01:09][Elvir_Thaqi1] logged in via in-game ui
+
+================================================================
+======== txAdmin v6.0.2 atop fxserver 6683 Starting - 11/12/2023, 8:21:50 PM
+================================================================
+[20:21:54][Elvir_Thaqi1] logged in from 127.0.0.1 via citizenfx
+[20:24:56][Elvir_Thaqi1] logged in via in-game ui
+[20:31:11][Elvir_Thaqi1] executed "RESTART SERVER"
+[20:34:17][Elvir_Thaqi1] logged in via in-game ui

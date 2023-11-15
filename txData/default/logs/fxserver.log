@@ -1,0 +1,43 @@
+
+================================================================
+======== Log Rotated - 11/16/2023, 12:00:00 AM                  
+================================================================
+[ script:mercy-bennys] Ready	false
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[   script:mercy-chat] EliSkzzz	fix
+[   script:mercy-chat] EliSkzzz	hud
+[   script:mercy-base] [DEBUG:weight-check]: Checking new weight before adding item: 37.45
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[   script:mercy-base] [DEBUG:weight-check]: Checking new weight before adding item: 37.45
+[script:mercy-invento] [DEBUG:Degen:GetQuality]: Getting quality of idcard with CreateDate: Sun Nov 12 19:45:08 2023
+[script:mercy-invento] [DEBUG:Degen:GetQuality]: Getting quality of weapon_scar with CreateDate: Wed Nov 15 03:47:16 2023
+[script:mercy-invento] [DEBUG:Degen:GetQuality]: Getting quality of lockpick with CreateDate: Sun Nov 12 19:45:21 2023
+[script:mercy-invento] [DEBUG:Degen:GetQuality]: Getting quality of phone with CreateDate: Sun Nov 12 19:45:21 2023
+[script:mercy-invento] [0m[DEBUG:Degen:GetQuality]: Getting quality of idcard with CreateDate: Sun Nov 12 19:45:08 2023
+[script:mercy-invento] [DEBUG:Degen:GetQuality]: Getting quality of weapon_scar with CreateDate: Wed Nov 15 03:47:16 2023
+[script:mercy-invento] [DEBUG:Degen:GetQuality]: Getting quality of lockpick with CreateDate: Sun Nov 12 19:45:21 2023
+[script:mercy-invento] [DEBUG:Degen:GetQuality]: Getting quality of phone with CreateDate: Sun Nov 12 19:45:21 2023
+[   script:mercy-base] [DEBUG:Save]: SAVING PLAYER
+[   script:mercy-base] [mercy-base:LOG] [Player] EliSkzzz's (0831) data updated in database.
+[ citizen-server-impl] [97mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] server thread hitch warning: timer interval of 742 milliseconds
+[   script:mercy-base] [DEBUG:Save]: SAVING PLAYER
+[   script:mercy-base] [mercy-base:LOG] [Player] EliSkzzz's (0831) data updated in database.
+[ citizen-server-impl] server thread hitch warning: timer interval of 363 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 384 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 404 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 201 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 405 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 175 milliseconds
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[   script:mercy-base] [DEBUG:Save]: SAVING PLAYER
+[   script:mercy-base] [mercy-base:LOG] [Player] EliSkzzz's (0831) data updated in database.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[   script:mercy-base] [DEBUG:Save]: SAVING PLAYER
+[   script:mercy-base] [mercy-base:LOG] [Player] EliSkzzz's (0831) data updated in database.
+[ citizen-server-impl] server thread hitch warning: timer interval of 158 milliseconds
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-main] -> Quitting: SIGINT received
+[   script:mercy-base] [DEBUG:Save]: SAVING PLAYER
+[   script:mercy-base] [mercy-base:LOG] [Player] EliSkzzz's (0831) data updated in database.

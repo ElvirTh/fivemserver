@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Elvir_Thaqi1",
+    "master": true,
+    "password_hash": "$2a$11$WenBs.t4wV4YBpzn1x56feNZcmaZDwbisfuPlTKuNYp9GBcb9JF5C",
+    "providers": {
+      "citizenfx": {
+        "id": "Elvir_Thaqi1",
+        "identifier": "fivem:10893259",
+        "data": {
+          "sub": "74b49ce623b90fc8f73306f0b90583d9",
+          "nameid": "https://forum.cfx.re/internal/user/10893259",
+          "name": "Elvir_Thaqi1",
+          "picture": "https://forum.cfx.re/user_avatar/forum.cfx.re/elvir_thaqi1/256/3608802_2.png",
+          "profile": "https://forum.cfx.re/u/Elvir_Thaqi1"
+        }
+      }
+    },
+    "permissions": []
+  }
+]

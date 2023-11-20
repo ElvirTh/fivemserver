@@ -11,16 +11,16 @@ local error_codes_defined = {
 };
 
 CreateThread(function()
-	if (GetCurrentResourceName() ~= "mercy-api") then 
+	if (GetCurrentResourceName() ~= "Ethnic-api") then 
 		--StopResource(GetCurrentResourceName());
-		print("[" .. GetCurrentResourceName() .. "] " .. "IMPORTANT: This resource must be named mercy-api for it to work properly with other scripts...");
+		print("[" .. GetCurrentResourceName() .. "] " .. "IMPORTANT: This resource must be named Ethnic-api for it to work properly with other scripts...");
 	end
 end)
 
 tracked = {}
 
-RegisterNetEvent('mercy-api/server/player-loaded', function()
-	if (GetCurrentResourceName() ~= "mercy-api") then 
+RegisterNetEvent('Ethnic-api/server/player-loaded', function()
+	if (GetCurrentResourceName() ~= "Ethnic-api") then 
 		TriggerClientEvent('chatMessage', -1, '^1[^5SCRIPT ERROR^1] ^3The script ^1' .. GetCurrentResourceName() .. ' ^3will not work properly... You must '
 	.. 'rename the resource to ^1un-api');
 	end
@@ -30,7 +30,7 @@ RegisterNetEvent('mercy-api/server/player-loaded', function()
 	end
 end)
 
-card = '{"type":"AdaptiveCard","$schema":"http://adaptivecards.io/schemas/adaptive-card.json","version":"1.3","body":[{"type":"Image","url":"' .. Config.Splash.Header_IMG .. '","horizontalAlignment":"Center"},{"type":"Container","items":[{"type":"TextBlock","text":"mercy-api","wrap":true,"fontType":"Default","size":"ExtraLarge","weight":"Bolder","color":"Light","horizontalAlignment":"Center"},{"type":"TextBlock","text":"' .. Config.Splash.Heading1 .. '","wrap":true,"size":"Large","weight":"Bolder","color":"Light","horizontalAlignment":"Center"},{"type":"TextBlock","text":"' .. Config.Splash.Heading2 .. '","wrap":true,"color":"Light","size":"Medium","horizontalAlignment":"Center"},{"type":"ColumnSet","height":"stretch","minHeight":"100px","bleed":true,"horizontalAlignment":"Center","columns":[{"type":"Column","width":"stretch","items":[{"type":"ActionSet","actions":[{"type":"Action.OpenUrl","title":"Discord","url":"' .. Config.Splash.Discord_Link .. '","style":"positive"}]}],"height":"stretch"},{"type":"Column","width":"stretch","items":[{"type":"ActionSet","actions":[{"type":"Action.OpenUrl","title":"Website","style":"positive","url":"' .. Config.Splash.Website_Link .. '"}]}]}]},{"type":"ActionSet","actions":[{"type":"Action.OpenUrl","title":"Click to join Unity\'s Discord","style":"destructive","iconUrl":"https://i.gyazo.com/0904b936e8e30d0104dec44924bd2294.gif","url":"https://discord.com/invite/WjB5VFz"}]}],"style":"default","bleed":true,"height":"stretch"},{"type":"Image","url":"https://i.gyazo.com/7e896862b14be754ae8bad90b664a350.png","selectAction":{"type":"Action.OpenUrl","url":""},"horizontalAlignment":"Center"}]}'
+card = '{"type":"AdaptiveCard","$schema":"http://adaptivecards.io/schemas/adaptive-card.json","version":"1.3","body":[{"type":"Image","url":"' .. Config.Splash.Header_IMG .. '","horizontalAlignment":"Center"},{"type":"Container","items":[{"type":"TextBlock","text":"Ethnic-api","wrap":true,"fontType":"Default","size":"ExtraLarge","weight":"Bolder","color":"Light","horizontalAlignment":"Center"},{"type":"TextBlock","text":"' .. Config.Splash.Heading1 .. '","wrap":true,"size":"Large","weight":"Bolder","color":"Light","horizontalAlignment":"Center"},{"type":"TextBlock","text":"' .. Config.Splash.Heading2 .. '","wrap":true,"color":"Light","size":"Medium","horizontalAlignment":"Center"},{"type":"ColumnSet","height":"stretch","minHeight":"100px","bleed":true,"horizontalAlignment":"Center","columns":[{"type":"Column","width":"stretch","items":[{"type":"ActionSet","actions":[{"type":"Action.OpenUrl","title":"Discord","url":"' .. Config.Splash.Discord_Link .. '","style":"positive"}]}],"height":"stretch"},{"type":"Column","width":"stretch","items":[{"type":"ActionSet","actions":[{"type":"Action.OpenUrl","title":"Website","style":"positive","url":"' .. Config.Splash.Website_Link .. '"}]}]}]},{"type":"ActionSet","actions":[{"type":"Action.OpenUrl","title":"Click to join Unity\'s Discord","style":"destructive","iconUrl":"https://i.gyazo.com/0904b936e8e30d0104dec44924bd2294.gif","url":"https://discord.com/invite/WjB5VFz"}]}],"style":"default","bleed":true,"height":"stretch"},{"type":"Image","url":"https://i.gyazo.com/7e896862b14be754ae8bad90b664a350.png","selectAction":{"type":"Action.OpenUrl","url":""},"horizontalAlignment":"Center"}]}'
 if Config.Splash.Enabled then 
 	AddEventHandler('playerConnecting', function(name, setKickReason, deferrals) 
 		-- Player is connecting
@@ -164,7 +164,7 @@ function IsDiscordEmailVerified(user)
                 --print("---")
             end
         else 
-        	print("[mercy-discord] ERROR: Code 200 was not reached. DETAILS: " .. error_codes_defined[member.code]);
+        	print("[Ethnic-discord] ERROR: Code 200 was not reached. DETAILS: " .. error_codes_defined[member.code]);
         end
     end
     return isVerified;
@@ -192,7 +192,7 @@ function GetDiscordEmail(user)
                 --print("---")
             end
         else 
-        	print("[mercy-discord] ERROR: Code 200 was not reached. DETAILS: " .. error_codes_defined[member.code])
+        	print("[Ethnic-discord] ERROR: Code 200 was not reached. DETAILS: " .. error_codes_defined[member.code])
         end
     end
     return emailData;
@@ -220,7 +220,7 @@ function GetDiscordName(user)
                 --print("---")
             end
         else 
-        	print("[mercy-discord] ERROR: Code 200 was not reached. DETAILS: " .. error_codes_defined[member.code])
+        	print("[Ethnic-discord] ERROR: Code 200 was not reached. DETAILS: " .. error_codes_defined[member.code])
         end
     end
     return nameData;
@@ -239,7 +239,7 @@ function GetGuildIcon(guild --[[optional]])
 			return 'https://cdn.discordapp.com/icons/' .. Config.Guild_ID .. "/" .. data.icon .. ".png";
 		end 
 	else
-		print("[mercy-discord] An error occured, please check your config and ensure everything is correct. Error: "..(guild.data or guild.code)) 
+		print("[Ethnic-discord] An error occured, please check your config and ensure everything is correct. Error: "..(guild.data or guild.code)) 
 	end
 	return nil;
 end
@@ -252,7 +252,7 @@ function GetGuildSplash(guild --[[optional]])
 		-- Image 
 		return 'https://cdn.discordapp.com/splashes/' .. Config.Guild_ID .. "/" .. data.icon .. ".png";
 	else
-		print("[mercy-discord] An error occured, please check your config and ensure everything is correct. Error: "..(guild.data or guild.code)) 
+		print("[Ethnic-discord] An error occured, please check your config and ensure everything is correct. Error: "..(guild.data or guild.code)) 
 	end
 	return nil;
 end 
@@ -265,7 +265,7 @@ function GetGuildName(guild --[[optional]])
 		-- Image 
 		return data.name;
 	else
-		print("[mercy-discord] An error occured, please check your config and ensure everything is correct. Error: "..(guild.data or guild.code)) 
+		print("[Ethnic-discord] An error occured, please check your config and ensure everything is correct. Error: "..(guild.data or guild.code)) 
 	end
 	return nil;
 end
@@ -278,7 +278,7 @@ function GetGuildDescription(guild --[[optional]])
 		-- Image 
 		return data.description;
 	else
-		print("[mercy-discord] An error occured, please check your config and ensure everything is correct. Error: "..(guild.data or guild.code)) 
+		print("[Ethnic-discord] An error occured, please check your config and ensure everything is correct. Error: "..(guild.data or guild.code)) 
 	end
 	return nil;
 end
@@ -291,7 +291,7 @@ function GetGuildMemberCount(guild --[[optional]])
 		-- Image 
 		return data.approximate_member_count;
 	else
-		print("[mercy-discord] An error occured, please check your config and ensure everything is correct. Error: "..(guild.data or guild.code)) 
+		print("[Ethnic-discord] An error occured, please check your config and ensure everything is correct. Error: "..(guild.data or guild.code)) 
 	end
 	return nil;
 end
@@ -303,7 +303,7 @@ function GetGuildOnlineMemberCount(guild --[[optional]])
 		local data = json.decode(guild.data)
 		return data.approximate_presence_count;
 	else
-		print("[mercy-discord] An error occured, please check your config and ensure everything is correct. Error: "..(guild.data or guild.code)) 
+		print("[Ethnic-discord] An error occured, please check your config and ensure everything is correct. Error: "..(guild.data or guild.code)) 
 	end
 	return nil;
 end
@@ -337,14 +337,14 @@ function GetDiscordAvatar(user)
 					--print("---")
 				end
 			else 
-				print("[mercy-discord] ERROR: Code 200 was not reached. DETAILS: " .. error_codes_defined[member.code])
+				print("[Ethnic-discord] ERROR: Code 200 was not reached. DETAILS: " .. error_codes_defined[member.code])
 			end
 			Caches.Avatars[discordId] = imgURL;
 		else 
 			imgURL = Caches.Avatars[discordId];
 		end 
 	else 
-		print("[mercy-discord] ERROR: Discord ID was not found...")
+		print("[Ethnic-discord] ERROR: Discord ID was not found...")
 	end
     return imgURL;
 end
@@ -374,7 +374,7 @@ function GetGuildRoleList(guild --[[optional]])
 			end
 			Caches.RoleList[guildId] = roleList;
 		else
-			print("[mercy-discord] An error occured, please check your config and ensure everything is correct. Error: "..(guild.data or guild.code)) 
+			print("[Ethnic-discord] An error occured, please check your config and ensure everything is correct. Error: "..(guild.data or guild.code)) 
 			Caches.RoleList = nil;
 		end
 	end
@@ -409,11 +409,11 @@ function GetDiscordRoles(user, guild --[[optional]])
 			end
 			return roles
 		else
-			print("[mercy-discord] ERROR: Code 200 was not reached... Returning false. [Member Data NOT FOUND] DETAILS: " .. error_codes_defined[member.code])
+			print("[Ethnic-discord] ERROR: Code 200 was not reached... Returning false. [Member Data NOT FOUND] DETAILS: " .. error_codes_defined[member.code])
 			return false
 		end
 	else
-		print("[mercy-discord] ERROR: Discord was not connected to user's Fivem account...")
+		print("[Ethnic-discord] ERROR: Discord was not connected to user's Fivem account...")
 		return false
 	end
 	return false
@@ -436,11 +436,11 @@ function GetDiscordNickname(user)
 			local nickname = data.nick
 			return nickname;
 		else
-			print("[mercy-discord] ERROR: Code 200 was not reached. Error Code: " .. error_codes_defined[member.code])
+			print("[Ethnic-discord] ERROR: Code 200 was not reached. Error Code: " .. error_codes_defined[member.code])
 			return nil;
 		end
 	else
-		print("[mercy-discord] ERROR: Discord was not connected to user's Fivem account...")
+		print("[Ethnic-discord] ERROR: Discord was not connected to user's Fivem account...")
 		return nil;
 	end
 	return nil;
@@ -450,18 +450,18 @@ CreateThread(function()
   local mguild = DiscordRequest("GET", "guilds/"..Config.Guild_ID, {})
   if mguild.code == 200 then
     local data = json.decode(mguild.data)
-    print("[mercy-discord] Successful connection to Guild : "..data.name.." ("..data.id..")")
+    print("[Ethnic-discord] Successful connection to Guild : "..data.name.." ("..data.id..")")
   else
-    print("[mercy-discord] An error occured, please check your config and ensure everything is correct. Error: "..(mguild.data and json.decode(mguild.data) or mguild.code)) 
+    print("[Ethnic-discord] An error occured, please check your config and ensure everything is correct. Error: "..(mguild.data and json.decode(mguild.data) or mguild.code)) 
   end
   if (Config.Multiguild) then 
     for _,guildID in pairs(Config.Guilds) do
       local guild = DiscordRequest("GET", "guilds/"..guildID, {})
       if guild.code == 200 then
         local data = json.decode(guild.data)
-        print("[mercy-discord] Successful connection to Guild : "..data.name.." ("..data.id..")")
+        print("[Ethnic-discord] Successful connection to Guild : "..data.name.." ("..data.id..")")
       else
-        print("[mercy-discord] An error occured, please check your config and ensure everything is correct. Error: "..(guild.data and json.decode(guild.data) or guild.code)) 
+        print("[Ethnic-discord] An error occured, please check your config and ensure everything is correct. Error: "..(guild.data and json.decode(guild.data) or guild.code)) 
       end
     end
   end

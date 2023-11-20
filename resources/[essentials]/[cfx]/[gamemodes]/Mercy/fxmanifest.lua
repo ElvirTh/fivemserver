@@ -13,4 +13,4 @@ map 'map.lua'
 fx_version 'adamant'
 game 'gta5'
 
-author 'MercyDevelopment'
+author 'EthnicDevelopment'

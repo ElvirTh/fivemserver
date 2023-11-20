@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Mercy'
+author 'Ethnic'
 description 'Queue'
 
 shared_scripts {

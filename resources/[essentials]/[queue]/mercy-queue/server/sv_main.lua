@@ -31,7 +31,7 @@ function CheckForGhostUsers()
             -- They no longer exist
             Queue:PopLicense(license)
             if Config.Debug then 
-                print("[mercy-queue] (Thread : NO LONGER EXISTS) Popped player " .. name .. " from queue...");
+                print("[Ethnic-queue] (Thread : NO LONGER EXISTS) Popped player " .. name .. " from queue...");
             end
             if connecting[license] ~= nil then 
                 connecting[license] = nil;
@@ -40,7 +40,7 @@ function CheckForGhostUsers()
                 end
             end
             if Config.Debug then 
-                print("[mercy-queue] (Thread : NO LONGER EXISTS) currentConnectors is == " .. tostring(currentConnectors) )
+                print("[Ethnic-queue] (Thread : NO LONGER EXISTS) currentConnectors is == " .. tostring(currentConnectors) )
             end
         playerConnecting[license] = nil;
         end
@@ -236,7 +236,7 @@ AddEventHandler('playerConnecting', function(name, setKickReason, deferrals)
                         playerConnecting[license].Connection = true;
                     end
                     if Config.Debug then 
-                        print("[mercy-queue] currentConnectors is == " .. tostring(currentConnectors) )
+                        print("[Ethnic-queue] currentConnectors is == " .. tostring(currentConnectors) )
                     end
                 end -- connecting[license] == nil 
                 deferrals.done();
@@ -284,7 +284,7 @@ AddEventHandler('playerConnecting', function(name, setKickReason, deferrals)
                     playerConnecting[license].Connection = true;
                 end
                 if Config.Debug then 
-                    print("[mercy-queue] Total Connected Players: " .. tostring(currentConnectors) )
+                    print("[Ethnic-queue] Total Connected Players: " .. tostring(currentConnectors) )
                 end
             end -- connecting[license] == nil
             deferrals.done();
@@ -309,7 +309,7 @@ AddEventHandler('playerDropped', function (reason)
     end
 end)
 
-RegisterNetEvent('mercy-queue/server/activated', function()
+RegisterNetEvent('Ethnic-queue/server/activated', function()
     -- They were activated, pop them from Queue 
     Queue:Pop(source);
     local user = source;
@@ -322,7 +322,7 @@ RegisterNetEvent('mercy-queue/server/activated', function()
     end
     if Config.Debug then 
         print(prefix .. " " .. GetPlayerName(user) .. " has been dropped from the queue.");
-        print("[mercy-queue] Total Connected Players: " .. tostring(currentConnectors) )
+        print("[Ethnic-queue] Total Connected Players: " .. tostring(currentConnectors) )
     end
 end)
 

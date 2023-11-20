@@ -117,7 +117,7 @@ end
 
 function parsePoly(zone)
   local printout = printoutHeader(zone.name)
-  printout = printout .. "exports['mercy-polyzone']:CreatePolyZone("..zone.name..", {"
+  printout = printout .. "exports['Ethnic-polyzone']:CreatePolyZone("..zone.name..", {"
   for i=1, #zone.points do
       if i ~= #zone.points then
       printout = printout .. "  vector2(" .. tostring(zone.points[i].x) .. ", " .. tostring(zone.points[i].y) .."),\n"
@@ -139,7 +139,7 @@ end
 
 function parseCircle(zone)
   local printout = printoutHeader(zone.name)
-  printout = printout .. "exports['mercy-polyzone']:CreateCircleZone("
+  printout = printout .. "exports['Ethnic-polyzone']:CreateCircleZone("
   printout = printout .. "\"" .. zone.name .. "\", vector3(" .. tostring(round(zone.center.x, 2)) .. ", " .. tostring(round(zone.center.y, 2))  .. ", " .. tostring(round(zone.center.z, 2)) .."), "
   printout = printout .. tostring(zone.radius) .. ", "
   printout = printout .. "{\n  useZ = " .. tostring(zone.useZ) .. ",\n})\n\n"
@@ -149,7 +149,7 @@ end
 
 function parseBox(zone)
   local printout = printoutHeader(zone.name)
-  printout = printout .. "exports['mercy-polyzone']:CreateBoxZone("
+  printout = printout .. "exports['Ethnic-polyzone']:CreateBoxZone("
   printout = printout .. "\"" .. zone.name .. "\", vector3(" .. tostring(round(zone.center.x, 2)) .. ", " .. tostring(round(zone.center.y, 2))  .. ", " .. tostring(round(zone.center.z, 2)) .."), "
   printout = printout .. tostring(zone.length) .. ", "
   printout = printout .. tostring(zone.width) .. ", "

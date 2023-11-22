@@ -355,10 +355,10 @@ Hud.addNuiListener('ToggleComponentActive', (Data) => {
     if (Data.Type == 'Voice') {
         if (Data.Bool) {
             if (Data.OnRadio) {
-                Voice.path.setAttribute("stroke", "rgb(237, 21, 61")
+                Voice.path.setAttribute("stroke", "rgb(237, 21, 61)")
                 Voice.trail.setAttribute("stroke", "rgba(39, 55, 70,1.0)")
             } else {
-                Voice.path.setAttribute("stroke", "rgb(235, 211, 52)")
+                Voice.path.setAttribute("stroke", "rgb(128,128,0)")
                 Voice.trail.setAttribute("stroke", "rgba(39, 55, 70,1.0)")
             }
         } else {

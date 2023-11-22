@@ -1,4 +1,4 @@
-local HudInitialized, IsInVehicle, IsVehicleAircraft, HasCompass = false, false, false, false
+local HudInitialized, IsInVehicle, HasCompass = false, false, false, false
 
 -- [ Threads ] --
 
@@ -214,7 +214,7 @@ RegisterNetEvent("Ethnic-threads/entered-vehicle", function()
                     end
                     ShowingVehicleHud = true
                     DisplayRadar(ShowingVehicleHud)
-                    exports['Ethnic-ui']:SendUIMessage('Hud', 'SetVehicleHud', {Bool = ShowingVehicleHud, Aircraft = IsPedInAnyHeli(PlayerPedId()) or IsPedInAnyPlane(PlayerPedId()), Waypoint = WaypointDistance ~= nil and WaypointDistance or 0})
+                    exports['Ethnic-ui']:SendUIMessage('Hud', 'SetVehicleHud', {Bool = ShowingVehicleHud, Waypoint = WaypointDistance ~= nil and WaypointDistance or 0})
                 end
                 
                 local Plate, VehicleClass, HasBelt = GetVehicleNumberPlateText(Vehicle), GetVehicleClass(Vehicle), exports['Ethnic-vehicles']:GetBeltStatus()
@@ -227,11 +227,9 @@ RegisterNetEvent("Ethnic-threads/entered-vehicle", function()
                 exports['Ethnic-ui']:SendUIMessage('Hud', 'UpdateVehicleHud', {
                     Speed = GetVehicleCurrentRpm(Vehicle),
                     -- RPM = RPM, -- Todo
-                    Mph = math.ceil(SpeedValue * 2.236936),
+                    Mph = math.ceil(SpeedValue * 3.6),
                     Fuel = exports['Ethnic-vehicles']:GetVehicleMeta(Vehicle, 'Fuel'),
                     Belt = HasBelt,
-                    IsAircraft = IsPedInAnyHeli(PlayerPedId()) or IsPedInAnyPlane(PlayerPedId()),
-                    Altitude = math.floor(GetEntityHeightAboveGround(Vehicle) * 2.28084),
                     -- BrokenEngine = GetVehicleEngineHealth(Vehicle) < 400.0, -- Todo: Add
                     Waypoint = WaypointDistance ~= nil and WaypointDistance or 0,
                 })

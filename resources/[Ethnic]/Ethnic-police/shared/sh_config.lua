@@ -104,7 +104,7 @@ Config.ExemptWeapons = {
     "WEAPON_FIREEXTINGUISHER",
 }
 
-Config.PurchaseVehicles = {'polvic','polchal','polstang','polvette','polexp','polchar','polbike','ucbanshee','ucrancher','ucbuffalo','m3g80umnon','M5RB_VV'}
+Config.PurchaseVehicles = {'ucbanshee','ucrancher','ucbuffalo','m3g80umnon','M5RB_VV'}
 
 Config.CameraHelicopters = {
     [GetHashKey('airone')] = true,
@@ -123,40 +123,20 @@ Config.HeliPad = {
 
 Config.PolicePad = {
     {
-        Model = 'polvic',
+        Model = 'M5RB_VV',
         Coords = vector4(445.81, -988.8, 25.7, 90.31),
     },
     {
-        Model = 'polchal',
-        Coords = vector4(446.12, -994.22, 25.7, 90.11),
+        Model = 'mrkoctavia',
+        Coords = vector4(446.12, -991.57, 25.7, 88.64),
     },
     {
         Model = 'polstang',
-        Coords = vector4(446.01, -991.49, 25.6998, 90.55),
+        Coords = vector4(446.12, -994.22, 25.7, 90.11),
     },
     {
         Model = 'polvette',
-        Coords = vector4(437.01, -994.32, 25.7, 270.53),
-    },
-    {
-        Model = 'polexp',
-        Coords = vector4(437.01, -991.52, 25.7, 264.33),
-    },
-    {
-        Model = 'polchar',
-        Coords = vector4(436.84, -988.83, 25.7, 267.13),
-    },
-    {
-        Model = 'M5RB_VV',
-        Coords = vector4(436.84, -988.83, 25.7, 267.13),
-    },
-    {
-        Model = 'm3g80umnon',
-        Coords = vector4(437.01, -991.52, 25.7, 264.33),
-    },
-    {
-        Model = 'mrkoctavia',
-        Coords = vector4(437.01, -991.52, 25.7, 264.33),
+        Coords = vector4(445.36, -996.95, 25.7, 90.4),
     },
 }
 

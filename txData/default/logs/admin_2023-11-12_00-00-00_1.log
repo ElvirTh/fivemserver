@@ -10,7 +10,7 @@
 ======== txAdmin v6.0.2 atop fxserver 6683 Starting - 11/12/2023, 7:30:39 PM
 ================================================================
 [19:31:33][Elvir_Thaqi1] logged in from 127.0.0.1 via citizenfx
-[19:33:57][MONITOR] Restarting server (resource "cfx-mercy-peds" failed to start within the 120s time limit).
+[19:33:57][MONITOR] Restarting server (resource "cfx-Ethnic-peds" failed to start within the 120s time limit).
 [19:34:43][Elvir_Thaqi1] Changing fxRunner settings.
 [19:37:47][Elvir_Thaqi1] executed "RESTART SERVER"
 [19:40:42][Elvir_Thaqi1] executed "RESTART SERVER"

@@ -1,0 +1,1 @@
+"C:\Users\Administrator\Desktop\Ethnic-Framework\Voiceserver\artifacts\FXServer.exe" +exec cfg\server.cfg

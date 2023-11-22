@@ -8,11 +8,11 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Databasestructuur van mercy-framework wordt geschreven
-CREATE DATABASE IF NOT EXISTS `mercy-framework` /*!40100 DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci */;
-USE `mercy-framework`;
+-- Databasestructuur van Ethnic-framework wordt geschreven
+CREATE DATABASE IF NOT EXISTS `Ethnic-framework` /*!40100 DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci */;
+USE `Ethnic-framework`;
 
--- Structuur van  tabel mercy-framework.bans wordt geschreven
+-- Structuur van  tabel Ethnic-framework.bans wordt geschreven
 CREATE TABLE IF NOT EXISTS `bans` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `banid` varchar(50) DEFAULT NULL,
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `bans` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.hotel_rooms wordt geschreven
+-- Structuur van  tabel Ethnic-framework.hotel_rooms wordt geschreven
 CREATE TABLE IF NOT EXISTS `hotel_rooms` (
   `RoomId` int(11) DEFAULT NULL,
   `RoomInfo` text DEFAULT NULL,
@@ -65,7 +65,7 @@ INSERT INTO `hotel_rooms` (`RoomId`, `RoomInfo`, `Available`) VALUES
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.logs wordt geschreven
+-- Structuur van  tabel Ethnic-framework.logs wordt geschreven
 CREATE TABLE IF NOT EXISTS `logs` (
   `Type` text DEFAULT NULL,
   `Steam` varchar(255) DEFAULT NULL,
@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `logs` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.mdw_announcements wordt geschreven
+-- Structuur van  tabel Ethnic-framework.mdw_announcements wordt geschreven
 CREATE TABLE IF NOT EXISTS `mdw_announcements` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` text DEFAULT NULL,
@@ -88,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `mdw_announcements` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.mdw_evidences wordt geschreven
+-- Structuur van  tabel Ethnic-framework.mdw_evidences wordt geschreven
 CREATE TABLE IF NOT EXISTS `mdw_evidences` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(50) DEFAULT NULL,
@@ -102,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `mdw_evidences` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.mdw_legislation wordt geschreven
+-- Structuur van  tabel Ethnic-framework.mdw_legislation wordt geschreven
 CREATE TABLE IF NOT EXISTS `mdw_legislation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` text DEFAULT NULL,
@@ -113,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `mdw_legislation` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.mdw_profiles wordt geschreven
+-- Structuur van  tabel Ethnic-framework.mdw_profiles wordt geschreven
 CREATE TABLE IF NOT EXISTS `mdw_profiles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(50) DEFAULT NULL,
@@ -130,7 +130,7 @@ CREATE TABLE IF NOT EXISTS `mdw_profiles` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.mdw_reports wordt geschreven
+-- Structuur van  tabel Ethnic-framework.mdw_reports wordt geschreven
 CREATE TABLE IF NOT EXISTS `mdw_reports` (
   `report` int(11) NOT NULL AUTO_INCREMENT,
   `id` varchar(50) DEFAULT NULL,
@@ -148,7 +148,7 @@ CREATE TABLE IF NOT EXISTS `mdw_reports` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.mdw_staff wordt geschreven
+-- Structuur van  tabel Ethnic-framework.mdw_staff wordt geschreven
 CREATE TABLE IF NOT EXISTS `mdw_staff` (
   `id` int(11) DEFAULT NULL,
   `citizenid` varchar(50) DEFAULT NULL,
@@ -164,7 +164,7 @@ CREATE TABLE IF NOT EXISTS `mdw_staff` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.mdw_warrants wordt geschreven
+-- Structuur van  tabel Ethnic-framework.mdw_warrants wordt geschreven
 CREATE TABLE IF NOT EXISTS `mdw_warrants` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
@@ -176,7 +176,7 @@ CREATE TABLE IF NOT EXISTS `mdw_warrants` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.players wordt geschreven
+-- Structuur van  tabel Ethnic-framework.players wordt geschreven
 CREATE TABLE IF NOT EXISTS `players` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Cid` int(11) DEFAULT NULL,
@@ -198,7 +198,7 @@ CREATE TABLE IF NOT EXISTS `players` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.player_accounts wordt geschreven
+-- Structuur van  tabel Ethnic-framework.player_accounts wordt geschreven
 CREATE TABLE IF NOT EXISTS `player_accounts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `CitizenId` varchar(50) DEFAULT NULL,
@@ -215,7 +215,7 @@ CREATE TABLE IF NOT EXISTS `player_accounts` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.player_business wordt geschreven
+-- Structuur van  tabel Ethnic-framework.player_business wordt geschreven
 CREATE TABLE IF NOT EXISTS `player_business` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
@@ -228,7 +228,7 @@ CREATE TABLE IF NOT EXISTS `player_business` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.player_houses wordt geschreven
+-- Structuur van  tabel Ethnic-framework.player_houses wordt geschreven
 CREATE TABLE IF NOT EXISTS `player_houses` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(50) DEFAULT '[]',
@@ -250,7 +250,7 @@ CREATE TABLE IF NOT EXISTS `player_houses` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.player_house_plants wordt geschreven
+-- Structuur van  tabel Ethnic-framework.player_house_plants wordt geschreven
 CREATE TABLE IF NOT EXISTS `player_house_plants` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `houseid` varchar(50) DEFAULT '11111',
@@ -260,7 +260,7 @@ CREATE TABLE IF NOT EXISTS `player_house_plants` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.player_inventory-stash wordt geschreven
+-- Structuur van  tabel Ethnic-framework.player_inventory-stash wordt geschreven
 CREATE TABLE IF NOT EXISTS `player_inventory-stash` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `stash` varchar(50) NOT NULL,
@@ -270,7 +270,7 @@ CREATE TABLE IF NOT EXISTS `player_inventory-stash` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.player_inventory-vehicle wordt geschreven
+-- Structuur van  tabel Ethnic-framework.player_inventory-vehicle wordt geschreven
 CREATE TABLE IF NOT EXISTS `player_inventory-vehicle` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `plate` varchar(50) NOT NULL,
@@ -281,7 +281,7 @@ CREATE TABLE IF NOT EXISTS `player_inventory-vehicle` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.player_outfits wordt geschreven
+-- Structuur van  tabel Ethnic-framework.player_outfits wordt geschreven
 CREATE TABLE IF NOT EXISTS `player_outfits` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(50) DEFAULT NULL,
@@ -294,7 +294,7 @@ CREATE TABLE IF NOT EXISTS `player_outfits` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.player_phone_contacts wordt geschreven
+-- Structuur van  tabel Ethnic-framework.player_phone_contacts wordt geschreven
 CREATE TABLE IF NOT EXISTS `player_phone_contacts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(50) DEFAULT NULL,
@@ -303,7 +303,7 @@ CREATE TABLE IF NOT EXISTS `player_phone_contacts` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=147 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
--- Structuur van  tabel mercy-framework.player_phone_tweets wordt geschreven
+-- Structuur van  tabel Ethnic-framework.player_phone_tweets wordt geschreven
 CREATE TABLE IF NOT EXISTS `player_phone_tweets` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `CitizenId` varchar(50) DEFAULT NULL,
@@ -316,7 +316,7 @@ CREATE TABLE IF NOT EXISTS `player_phone_tweets` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.player_phone_debts wordt geschreven
+-- Structuur van  tabel Ethnic-framework.player_phone_debts wordt geschreven
 CREATE TABLE IF NOT EXISTS `player_phone_debts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(50) DEFAULT NULL,
@@ -330,7 +330,7 @@ CREATE TABLE IF NOT EXISTS `player_phone_debts` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.player_phone_documents wordt geschreven
+-- Structuur van  tabel Ethnic-framework.player_phone_documents wordt geschreven
 CREATE TABLE IF NOT EXISTS `player_phone_documents` (
   `citizenid` varchar(50) DEFAULT NULL,
   `id` int(11) DEFAULT NULL,
@@ -341,7 +341,7 @@ CREATE TABLE IF NOT EXISTS `player_phone_documents` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.player_phone_messages wordt geschreven
+-- Structuur van  tabel Ethnic-framework.player_phone_messages wordt geschreven
 CREATE TABLE IF NOT EXISTS `player_phone_messages` (
   `citizenid` varchar(50) DEFAULT NULL,
   `name` varchar(50) DEFAULT NULL,
@@ -351,7 +351,7 @@ CREATE TABLE IF NOT EXISTS `player_phone_messages` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.player_skins wordt geschreven
+-- Structuur van  tabel Ethnic-framework.player_skins wordt geschreven
 CREATE TABLE IF NOT EXISTS `player_skins` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(50) NOT NULL DEFAULT '',
@@ -363,7 +363,7 @@ CREATE TABLE IF NOT EXISTS `player_skins` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.player_vehicles wordt geschreven
+-- Structuur van  tabel Ethnic-framework.player_vehicles wordt geschreven
 CREATE TABLE IF NOT EXISTS `player_vehicles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(50) DEFAULT NULL,
@@ -385,7 +385,7 @@ CREATE TABLE IF NOT EXISTS `player_vehicles` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.player_weedplants wordt geschreven
+-- Structuur van  tabel Ethnic-framework.player_weedplants wordt geschreven
 CREATE TABLE IF NOT EXISTS `player_weedplants` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `PlantId` int(11) DEFAULT NULL,
@@ -395,7 +395,7 @@ CREATE TABLE IF NOT EXISTS `player_weedplants` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.server_bans wordt geschreven
+-- Structuur van  tabel Ethnic-framework.server_bans wordt geschreven
 CREATE TABLE IF NOT EXISTS `server_bans` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
@@ -409,7 +409,7 @@ CREATE TABLE IF NOT EXISTS `server_bans` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.server_cardealer wordt geschreven
+-- Structuur van  tabel Ethnic-framework.server_cardealer wordt geschreven
 CREATE TABLE IF NOT EXISTS `server_cardealer` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `vehicle` varchar(50) DEFAULT NULL,
@@ -420,7 +420,7 @@ CREATE TABLE IF NOT EXISTS `server_cardealer` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.server_lapraces wordt geschreven
+-- Structuur van  tabel Ethnic-framework.server_lapraces wordt geschreven
 CREATE TABLE IF NOT EXISTS `server_lapraces` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
@@ -435,7 +435,7 @@ CREATE TABLE IF NOT EXISTS `server_lapraces` (
 
 -- Data exporteren was gedeselecteerd
 
--- Structuur van  tabel mercy-framework.server_users wordt geschreven
+-- Structuur van  tabel Ethnic-framework.server_users wordt geschreven
 CREATE TABLE IF NOT EXISTS `server_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
@@ -447,7 +447,7 @@ CREATE TABLE IF NOT EXISTS `server_users` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=140 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
--- Structuur van  tabel mercy-framework.server_logs wordt geschreven
+-- Structuur van  tabel Ethnic-framework.server_logs wordt geschreven
 CREATE TABLE IF NOT EXISTS `server_logs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `cid` varchar(50) DEFAULT NULL,

@@ -1,8 +1,8 @@
 @ECHO OFF
 color 09
-ECHO Thanks for using Mercy Framework, we hope you enjoy it!
+ECHO Welcome to EthnicAlbanian Roleplay, we hope you enjoy it!
 timeout /t 2 /nobreak >nul
-ECHO Starting Mercy Framework...
+ECHO Starting ...
 timeout /t 3 /nobreak >nul
 color 07
 cls

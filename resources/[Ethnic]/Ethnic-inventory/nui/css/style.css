@@ -1,0 +1,585 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Balthazar&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  user-select: none;
+  font-family: "Lato", sans-serif;
+  cursor: default;
+}
+
+.wrapper {
+  display: none;
+}
+
+.block-info {
+  display: none;
+}
+
+.inventory-info-container {
+  display: none;
+}
+
+.inventory-split {
+  display: none;
+}
+
+.inventory-item-info {
+  display: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.font-lato {
+  font-family: "Lato", sans-serif;
+}
+
+/* Item Info */
+
+.inventory-block.draghandle:hover {
+  cursor: grab;
+}
+
+.inventory-block,
+.inventory-hotbar-block {
+    float: left;
+    position: relative;
+
+    width: 10.6vh;
+    height: 12vh;
+
+    background-color: rgba(0, 0, 0, 0.329);
+    margin-bottom: 1vh;
+    margin-right: 1.4vh;
+    opacity: 1;
+    border-radius: 1vh;
+}
+
+.inventory-block:hover,
+.inventory-block-crafting:hover {
+  opacity: 0.7;
+}
+
+.inventory-block-number {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    margin: 0.6vh;
+
+    color: rgb(17, 17, 17);
+    font-weight: 700 !important;
+    font-size: 1.1vh;
+    background-color: rgb(255, 255, 255);
+
+    padding: 0.2vh;
+    padding-left: 0.5vh;
+    padding-right: 0.5vh;
+
+    text-align: center;
+    z-index: 60;
+
+    border-radius: 0.5vh;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+.inventory-block-img {
+    position: absolute;
+
+    width: 75%;
+    height: 70%;
+
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+
+    top: 53%;
+    transform: translateY(-50%);
+
+    z-index: 999;
+}
+
+.inventory-block-amount {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    margin: 0.6vh;
+
+    color: white;
+    font-weight: 700 !important;
+    font-size: 1.1vh;
+    background-color: rgb(56, 149, 44);
+
+    padding: 0.2vh;
+    padding-left: 0.5vh;
+    padding-right: 0.5vh;
+
+    text-align: center;
+
+    border-radius: 0.5vh;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
+
+    z-index: 1000;
+}
+
+.inventory-block-name {
+    position: absolute;
+
+    bottom: 0;
+
+    font-weight: bolder;
+
+    color: rgb(17, 17, 17);
+    font-size: 1vh;
+
+    text-align: center;
+    padding: 0.25vh;
+    padding-left: 0.5vh;
+    padding-right: 0.5vh;
+    border-radius: 0.5vh;
+
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    margin: 0.75vh;
+
+    background-color: rgba(255, 255, 255, 0.8);
+
+    text-transform: capitalize;
+
+    z-index: 1000;
+}
+
+.inventory-block-price {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    font-size: 1.1vh;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgb(56, 149, 44);
+
+    margin: 0.6vh;
+    padding: 0.2vh;
+    padding-left: 0.5vh;
+    padding-right: 0.5vh;
+
+    letter-spacing: 0.5px;
+    font-weight: 700 !important;
+    text-align: center;
+    border-radius: 0.5vh;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Crafting */
+
+.crafting-inventory-blocks {
+    position: relative;
+
+    width: 96%;
+    min-height: 12.5vh;
+    height: fit-content;
+    margin-left: .25vh;
+
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 0.3vh;
+    z-index: 10;
+}
+
+.inventory-block-crafting {
+    float: left;
+    position: relative;
+
+    width: 10.6vh;
+    min-height: 12vh;
+    height: fit-content;
+
+    margin: .5vh;
+
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    border-radius: 1vh;
+}
+
+.crafting-needed-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    width: 100%;
+    margin-bottom: .5vh;
+}
+
+.crafting-text {
+    float: left;
+    position: relative;
+    
+    height: fit-content;
+    width: fit-content;
+    margin: 0.1vh;
+
+    color: white;
+    font-weight: 700 !important;
+    font-size: 1.1vh;
+    background-color: rgb(44, 102, 149);
+
+    padding: 0.4vh;
+    padding-left: 0.5vh;
+    padding-right: 0.5vh;
+
+    text-align: center;
+
+    border-radius: 0.5vh;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+.crafting-img {
+    width: 2.5vh;
+    height: 2.5vh;
+}
+
+/* Item Slot Quality */
+
+.inventory-quality-fill {
+  width: 100%;
+  height: 0%;
+  max-height: 100%;
+  bottom: 0;
+  background-color: transparent;
+  border-radius: 1vh;
+  opacity: 0.2;
+}
+
+.quality-good {
+  opacity: 0.4;
+  background-color: #22dd60;
+}
+
+.quality-okay {
+  opacity: 0.4;
+  background-color: #bd5525;
+}
+
+.quality-bad {
+  opacity: 0.4;
+  background-color: #a72b2b;
+}
+
+.quality-broken {
+  opacity: 0.4;
+  background-color: #500000;
+}
+
+/* Ontvangen enz  */
+
+.item-box-block {
+  float: left;
+  position: relative;
+
+  width: 10.6vh;
+  height: 12vh;
+
+  background-color: rgba(0, 0, 0, 0.329);
+  margin-bottom: 1vh;
+  margin-right: 2vh;
+
+  opacity: 1;
+  border-radius: 1vh;
+}
+
+.item-box-name {
+  position: absolute;
+
+  bottom: 0;
+
+  font-weight: bolder;
+
+  color: rgb(17, 17, 17);
+  font-size: 1vh;
+
+  text-align: center;
+  padding: 0.25vh;
+  padding-left: 0.5vh;
+  padding-right: 0.5vh;
+  border-radius: 0.5vh;
+
+  max-width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  margin: 0.75vh;
+
+  background-color: rgba(255, 255, 255, 0.8);
+
+  text-transform: capitalize;
+
+  z-index: 1000;
+}
+
+.item-box-img {
+  position: absolute;
+
+  width: 75%;
+  height: 70%;
+
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+
+  top: 64%;
+  transform: translateY(-50%);
+
+  z-index: 999;
+}
+
+.item-box-display {
+  position: absolute;
+
+  top: 0;
+
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bolder;
+
+  color: rgb(17, 17, 17);
+  font-size: 1vh;
+
+  text-align: center;
+  padding: 0.25vh;
+  padding-left: 0.5vh;
+  padding-right: 0.5vh;
+  border-radius: 0.5vh;
+
+  max-width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  margin: 0.75vh;
+
+  background-color: rgba(255, 255, 255, 0.8);
+
+  text-transform: capitalize;
+
+  z-index: 1000;
+}
+
+.inventory-item-move {
+  display: none;
+  opacity: 0.7;
+}
+
+.inventory-item-move-name {
+  position: absolute;
+
+  bottom: 0;
+
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bolder;
+
+  color: rgb(17, 17, 17);
+  font-size: 1vh;
+
+  text-align: center;
+  padding: 0.25vh;
+  padding-left: 0.5vh;
+  padding-right: 0.5vh;
+  border-radius: 0.7vh;
+
+  max-width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  margin: 0.75vh;
+
+  background-color: rgba(255, 255, 255, 0.8);
+
+  text-transform: capitalize;
+
+  z-index: 1000;
+}
+
+.inventory-move-price {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  font-size: 1.1vh;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgb(56, 149, 44);
+
+  margin: 0.6vh;
+  padding: 0.2vh;
+  padding-left: 0.5vh;
+  padding-right: 0.5vh;
+
+  letter-spacing: 0.5px;
+  font-weight: 700 !important;
+  text-align: center;
+  border-radius: 0.5vh;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.inventory-item-move-amount {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  margin: 0.6vh;
+
+  color: white;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 700 !important;
+  font-size: 1.1vh;
+  background-color: rgb(56, 149, 44);
+
+  padding: 0.2vh;
+  padding-left: 0.5vh;
+  padding-right: 0.5vh;
+
+  text-align: center;
+
+  border-radius: 0.5vh;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
+
+  z-index: 1000;
+}
+
+.inventory-item-move-quality {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  transform: rotate(180deg);
+}
+
+.inventory-item-move-img {
+  position: absolute;
+
+  width: 75%;
+  height: 70%;
+
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+
+  top: 53%;
+  transform: translateY(-50%);
+
+  z-index: 999;
+}
+
+/* Utils */
+
+.zoomIn {
+  -webkit-animation: zoomIn 0.5s;
+  -moz-animation: zoomIn 0.5s;
+  -o-animation: zoomIn 0.5s;
+  animation: zoomIn 0.5s;
+}
+
+.zoomOut {
+  -webkit-animation: zoomOut 0.3s;
+  -moz-animation: zoomOut 0.3s;
+  -o-animation: zoomOut 0.3s;
+  animation: zoomOut 0.3s;
+}
+
+.fadeInDown {
+  -webkit-animation: fadeInDown 0.3s;
+  -moz-animation: fadeInDown 0.3s;
+  -o-animation: fadeInDown 0.3s;
+  animation: fadeInDown 0.3s;
+}
+
+.pulse {
+  -webkit-animation: pulse 0.3s;
+  -moz-animation: pulse 0.3s;
+  -o-animation: pulse 0.3s;
+  animation: pulse 0.3s;
+}
+
+/* ::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+  
+::-webkit-scrollbar{
+    width: 5px;
+}
+  
+::-webkit-scrollbar-thumb {
+    border-radius: .3vh;
+    background-color: rgba(0, 0, 0, 0.4);
+} */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  background: none;
+}
+
+/* Tooltips */
+
+.tippy-box[data-animation="scale"][data-placement^="top"] {
+  transform-origin: bottom;
+}
+
+.tippy-box[data-animation="scale"][data-placement^="bottom"] {
+  transform-origin: top;
+}
+
+.tippy-box[data-animation="scale"][data-placement^="left"] {
+  transform-origin: right;
+}
+
+.tippy-box[data-animation="scale"][data-placement^="right"] {
+  transform-origin: left;
+}
+
+.tippy-box[data-animation="scale"][data-state="hidden"] {
+  transform: scale(0.1);
+  opacity: 0;
+}
+
+.tippy-box[data-inertia][data-state="visible"] {
+     transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.tippy-box[data-theme~="vanity"] {
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    background-color: black;
+    border-radius: 4px;
+    font-size: 1.2vh;
+    box-shadow: black 0px 0px 4px 1px;
+    color: white;
+}
+
+.tippy-arrow::before {
+    color: transparent;
+}
+
+.tippy-box[data-theme~="vanity"] > .tippy-svg-arrow {
+    fill: rgb(24 24 27, 0.9);
+}

@@ -154,6 +154,10 @@ Config.PolicePad = {
         Model = 'm3g80umnon',
         Coords = vector4(437.01, -991.52, 25.7, 264.33),
     },
+    {
+        Model = 'mrkoctavia',
+        Coords = vector4(437.01, -991.52, 25.7, 264.33),
+    },
 }
 
 Config.PoliceStore = {

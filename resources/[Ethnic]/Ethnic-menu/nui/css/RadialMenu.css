@@ -40,16 +40,16 @@ svg.menu > g.sector > path {
 svg.menu > g.sector > text,
 svg.menu > g.sector > use {
     cursor: pointer;
-    fill: #2ecc71;
+    fill: whitesmoke;
 }
 
 svg.menu > g.sector.selected > path {
-    fill: #2D98DA;
-    fill-opacity: 0.6;
+    fill: #273746;
+    fill-opacity: 1.0;
 }
 
 svg.menu > g.center:hover > circle {
-    fill:#2D98DA;
+    fill:#273746;
     fill-opacity: 0.6;
 }
 
@@ -62,5 +62,5 @@ svg.menu > g.center > circle {
 svg.menu > g.center > text,
 svg.menu > g.center > use {
     cursor: pointer;
-    fill: #2ecc71;
+    fill: whitesmoke;
 }

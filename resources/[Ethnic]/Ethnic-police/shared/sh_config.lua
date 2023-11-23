@@ -138,6 +138,10 @@ Config.PolicePad = {
         Model = 'polvette',
         Coords = vector4(445.36, -996.95, 25.7, 90.4),
     },
+    {
+        Model = 'polexp',
+        Coords = vector4(445.36, -996.95, 25.7, 90.4),
+    },
 }
 
 Config.PoliceStore = {

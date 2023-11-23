@@ -7,7 +7,7 @@ SetupMenu = function(Event) {
         if (Menu != null) return;
         Menu = new RadialMenu({
             parent: document.getElementById('navMenu'),
-            size: 450,
+            size: 400,
             closeOnClick: false,
             menuItems: EventData.Data,
             onClick: function (Item) {

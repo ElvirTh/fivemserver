@@ -355,8 +355,8 @@ RadialMenu.prototype.createUseTag = function (x, y, link) {
     use.setAttribute('y', RadialMenu.numberToString(y));
     use.setAttribute('width', '10');
     use.setAttribute('height', '10');
-    use.setAttribute('fill', 'white');
-    use.setAttribute("style", "color:white");
+    use.setAttribute('fill', '#2ecc71');
+    use.setAttribute("style", "color:#2ecc71");
     use.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', link);
     return use;
 };
@@ -367,8 +367,8 @@ RadialMenu.prototype.appendSectorPath = function (startAngleDeg, endAngleDeg, sv
 
     var centerPoint = self.getSectorCenter(startAngleDeg, endAngleDeg);
     var translate = {
-        x: RadialMenu.numberToString((1 - self.scale) * centerPoint.x),
-        y: RadialMenu.numberToString((1 - self.scale) * centerPoint.y)
+        x: RadialMenu.numberToString((1.1 - self.scale) * centerPoint.x),
+        y: RadialMenu.numberToString((1.1 - self.scale) * centerPoint.y)
     };
 
     var g = document.createElementNS('http://www.w3.org/2000/svg', 'g');

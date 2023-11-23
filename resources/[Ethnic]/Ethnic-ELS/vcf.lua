@@ -1,3 +1,4 @@
 vcf_files = {
-	"mrkoctavia.xml"
+	"mrkoctavia.xml",
+	"charger19.xml"
 }

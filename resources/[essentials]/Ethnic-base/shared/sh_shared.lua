@@ -1888,6 +1888,17 @@ Shared.Vehicles = {
         ['Siren'] = 'VEHICLES_HORNS_SIREN_1',
         ['Price'] = 1,
     },
+    [GetHashKey('charger19')] = {
+        ['Vehicle'] = 'charger19',
+        ['Model'] = 'Mustang',
+        ['Name'] = 'Charger Police',
+        ['ShopClass'] = 'Police',
+        ['Class'] = 'S',
+        ['Picture'] = 'None',
+        ['Type'] = 'Car',
+        ['Siren'] = 'VEHICLES_HORNS_SIREN_1',
+        ['Price'] = 1,
+    },
     [GetHashKey('riot')] = {
         ['Vehicle'] = 'riot',
         ['Model'] = 'SWAT',

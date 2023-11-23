@@ -142,6 +142,10 @@ Config.PolicePad = {
         Model = 'polexp',
         Coords = vector4(445.36, -996.95, 25.7, 90.4),
     },
+    {
+        Model = 'charger19',
+        Coords = vector4(445.36, -996.95, 25.7, 90.4),
+    },
 }
 
 Config.PoliceStore = {
@@ -161,12 +165,6 @@ Config.PoliceStore = {
         ['ItemName'] = 'weapon_m6ic',
         ['Amount'] = 1,
         ['Slot'] = 3,
-        ['Info'] = {}
-    },
-    {
-        ['ItemName'] = 'weapon_remington',
-        ['Amount'] = 1,
-        ['Slot'] = 4,
         ['Info'] = {}
     },
     {

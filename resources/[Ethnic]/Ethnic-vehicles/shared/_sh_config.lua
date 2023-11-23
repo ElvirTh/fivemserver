@@ -8,4 +8,4 @@ Config.VehicleKeys = {}
 
 -- Gov Vehicles
 Config.EmsVehicles = { 'emsspeedo', 'emsexp', 'emstau', 'emsbike' }
-Config.PoliceVehicles = { 'polvic', 'polchal', 'polstang', 'polvette', 'poltaurus', 'polexp', 'polchar', 'polblazer', 'm3g80umnon','M5RB_VV','mrkoctavia'}
+Config.PoliceVehicles = { 'polvic', 'polchal', 'polstang', 'polvette', 'poltaurus', 'polexp', 'polchar', 'polblazer', 'm3g80umnon','M5RB_VV','mrkoctavia','charger19'}

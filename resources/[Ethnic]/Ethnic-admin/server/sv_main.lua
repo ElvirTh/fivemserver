@@ -181,6 +181,29 @@ Citizen.CreateThread(function()
             print(Lang:t('info.gave_revive'))
         end
     end, false)
+
+    RegisterCommand("tpm", function(source, args, rawCommand)
+	local waypointBlip = GetFirstBlipInfoId(GetWaypointBlipEnumId())
+	local blipPos = GetBlipInfoIdCoord(waypointBlip) -- GetGpsWaypointRouteEnd(false, 0, 0)
+
+	local z = GetHeightmapTopZForPosition(blipPos.x, blipPos.y)
+	local _, gz = GetGroundZFor_3dCoord(blipPos.x, blipPos.y, z, true)
+
+	SetEntityCoords(PlayerPedId(), blipPos.x, blipPos.y, z, true, false, false, false)
+	FreezeEntityPosition(PlayerPedId(), true)
+
+	repeat
+		Citizen.Wait(50)
+		_, gz = GetGroundZFor_3dCoord(blipPos.x, blipPos.y, z, true)
+	until gz ~= 0
+
+	SetEntityCoords(PlayerPedId(), blipPos.x, blipPos.y, gz, true, false, false, false)
+	FreezeEntityPosition(PlayerPedId(), false)
+    end, 
+false)
+
+
+    
         
     -- [ Callbacks ] --
 

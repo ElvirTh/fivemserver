@@ -40,7 +40,7 @@ svg.menu > g.sector > path {
 svg.menu > g.sector > text,
 svg.menu > g.sector > use {
     cursor: pointer;
-    fill: white;
+    fill: #2ecc71;
 }
 
 svg.menu > g.sector.selected > path {
@@ -62,5 +62,5 @@ svg.menu > g.center > circle {
 svg.menu > g.center > text,
 svg.menu > g.center > use {
     cursor: pointer;
-    fill: white;
+    fill: #2ecc71;
 }

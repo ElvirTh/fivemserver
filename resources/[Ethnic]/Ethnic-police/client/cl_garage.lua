@@ -116,7 +116,6 @@ RegisterNetEvent('Ethnic-police/client/take-out-pdvehicle',function(Data)
                 local Plate = GetVehicleNumberPlateText(Vehicle['Vehicle'])
                 exports['Ethnic-vehicles']:SetFuelLevel(Vehicle['Vehicle'], 100)
                 exports['Ethnic-vehicles']:SetVehicleKeys(Plate, true, false)
-                SetVehicleModKit(Vehicle['Vehicle'], 1)
                 if Player.Job.Department ~= nil and Player.Job.Department == 'LSPD' then
                     SetVehicleLivery(Vehicle['Vehicle'], 0)
                 elseif Player.Job.Department ~= nil and Player.Job.Department == 'BCSO' then

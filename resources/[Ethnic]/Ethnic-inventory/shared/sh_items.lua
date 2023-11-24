@@ -282,7 +282,7 @@ Shared.ItemList['weapon_katana'] = {
 	['DecayRate'] = 0.25,
 	['RemoveWhenDecayed'] = false,
 	['Prop'] = true,
-	['Price'] = 250,
+	['Price'] = 1,
 	['Cost'] = {
 		{ Item = 'steel', Amount = 1950 },
 		{ Item = 'aluminum',  Amount = 750 },
@@ -303,7 +303,7 @@ Shared.ItemList['weapon_crutch'] = {
 	['DecayRate'] = 0.25,
 	['RemoveWhenDecayed'] = false,
 	['Prop'] = true,
-	['Price'] = 250,
+	['Price'] = 1,
 }
 
 Shared.ItemList['weapon_unicorn'] = {
@@ -320,7 +320,7 @@ Shared.ItemList['weapon_unicorn'] = {
 	['DecayRate'] = 0.25,
 	['RemoveWhenDecayed'] = false,
 	['Prop'] = true,
-	['Price'] = 250,
+	['Price'] = 1,
 }
 
 -- Default
@@ -478,6 +478,40 @@ Shared.ItemList['weapon_m6ic'] = {
 	['Price'] = 1,
 }
 
+Shared.ItemList['weapon_g36a2'] = {
+    ['ItemName'] = "weapon_g36a2",
+	['Label'] = "G36",
+	['Weight'] = 17.0,
+	['Type'] = "Weapon",
+	['Metal'] = true,
+	['Melee'] = false,
+	['Image'] = "w_lwrc.png",
+	['Unique'] = true,
+	['Combinable'] = nil,
+	['Description'] = "ArmyPopThemHeads",
+	['DecayRate'] = 2.0,
+	['RemoveWhenDecayed'] = true,
+	['Prop'] = true,
+	['Price'] = 1,
+}
+
+
+Shared.ItemList['weapon_mp5sdfm'] = {
+    ['ItemName'] = "weapon_mp5sdfm",
+	['Label'] = "MP5 SDFM",
+	['Weight'] = 17.0,
+	['Type'] = "Weapon",
+	['Metal'] = true,
+	['Melee'] = false,
+	['Image'] = "w_mp5.png",
+	['Unique'] = true,
+	['Combinable'] = nil,
+	['Description'] = "PiuPiuPolice",
+	['DecayRate'] = 2.0,
+	['RemoveWhenDecayed'] = true,
+	['Prop'] = true,
+	['Price'] = 1,
+}
 
 Shared.ItemList['weapon_ak47'] = {
     ['ItemName'] = "weapon_ak47",
@@ -611,7 +645,7 @@ Shared.ItemList['weapon_paintball'] = {
 	['Description'] = "Sexy gun that shoots balls.",
 	['DecayRate'] = 2.0,
 	['RemoveWhenDecayed'] = true,
-	['Price'] = 250,
+	['Price'] = 1,
 }
 
 Shared.ItemList['weapon_beretta'] = {
@@ -627,7 +661,7 @@ Shared.ItemList['weapon_beretta'] = {
 	['Description'] = "This is a spicy gun init?",
 	['DecayRate'] = 2.0,
 	['RemoveWhenDecayed'] = true,
-	['Price'] = 250,
+	['Price'] = 1,
 }
 
 Shared.ItemList['weapon_colt'] = {
@@ -643,7 +677,7 @@ Shared.ItemList['weapon_colt'] = {
 	['Description'] = "I think this one is from call of duty.",
 	['DecayRate'] = 2.0,
 	['RemoveWhenDecayed'] = true,
-	['Price'] = 250,
+	['Price'] = 1,
 }
 
 Shared.ItemList['weapon_waltherp99'] = {
@@ -1014,7 +1048,7 @@ Shared.ItemList["taser-ammo"] = {
 	['Description'] = "Taser ammunition.",
 	['DecayRate'] = 0.1,
 	['RemoveWhenDecayed'] = true,
-	['Price'] = 25,
+	['Price'] = 1,
 }
 
 Shared.ItemList["pistol-ammo"] = {
@@ -1029,7 +1063,7 @@ Shared.ItemList["pistol-ammo"] = {
 	['Description'] = "Pistol ammunition.",
 	['DecayRate'] = 0.1,
 	['RemoveWhenDecayed'] = true,
-	['Price'] = 25,
+	['Price'] = 1,
 }
 
 Shared.ItemList["smg-ammo"] = {
@@ -1044,7 +1078,7 @@ Shared.ItemList["smg-ammo"] = {
 	['Description'] = "Smg ammunition.",
 	['DecayRate'] = 0.1,
 	['RemoveWhenDecayed'] = true,
-	['Price'] = 25,
+	['Price'] = 1,
 	['Cost'] = {
 		{Item = 'copper', Amount = 37},
 		{Item = 'aluminum', Amount = 25},
@@ -1078,7 +1112,7 @@ Shared.ItemList["rubber-shotgun-ammo"] = {
 	['Description'] = "Rubber Slugs.",
 	['DecayRate'] = 0.1,
 	['RemoveWhenDecayed'] = true,
-	['Price'] = 25,
+	['Price'] = 1,
 }
 
 Shared.ItemList["rifle-ammo"] = {
@@ -1093,7 +1127,7 @@ Shared.ItemList["rifle-ammo"] = {
 	['Description'] = "Rifle ammunition.",
 	['DecayRate'] = 0.1,
 	['RemoveWhenDecayed'] = true,
-	['Price'] = 25,
+	['Price'] = 1,
 	['Cost'] = {
 		{Item = 'copper', Amount = 37},
 		{Item = 'aluminum', Amount = 25},
@@ -1112,7 +1146,7 @@ Shared.ItemList["sniper-ammo"] = {
 	['Description'] = "Sniper ammunition.",
 	['DecayRate'] = 0.1,
 	['RemoveWhenDecayed'] = true,
-	['Price'] = 100,
+	['Price'] = 2,
 }
 
 Shared.ItemList["emp-ammo"] = {
@@ -1127,7 +1161,7 @@ Shared.ItemList["emp-ammo"] = {
 	['Description'] = "Emp ammunition.",
 	['DecayRate'] = 0.1,
 	['RemoveWhenDecayed'] = true,
-	['Price'] = 45,
+	['Price'] = 1,
 }
 
 Shared.ItemList["paintball-ammo"] = {
@@ -1142,7 +1176,7 @@ Shared.ItemList["paintball-ammo"] = {
 	['Description'] = "Paintball ammunition.",
 	['DecayRate'] = 0.1,
 	['RemoveWhenDecayed'] = true,
-	['Price'] = 35,
+	['Price'] = 1,
 }
 
 Shared.ItemList["revolver-ammo"] = {
@@ -1157,7 +1191,7 @@ Shared.ItemList["revolver-ammo"] = {
 	['Description'] = "Revolver ammunition.",
 	['DecayRate'] = 0.1,
 	['RemoveWhenDecayed'] = true,
-	['Price'] = 45,
+	['Price'] = 1,
 }
 
 -- [ Ingredients 
@@ -3516,7 +3550,7 @@ Shared.ItemList["metaldetector"] = {
 	['Description'] = "If I have to believe the internet, you can find similar gold diggers",
 	['DecayRate'] = 0.5,
 	['RemoveWhenDecayed'] = false,
-	['Price'] = 25000,
+	['Price'] = 100,
 }
 
 Shared.ItemList["pickaxe"] = {

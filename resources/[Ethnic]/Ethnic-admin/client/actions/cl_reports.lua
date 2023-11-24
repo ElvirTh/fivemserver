@@ -2,18 +2,18 @@
 
 -- [ Events ] --
 
-RegisterNetEvent("mc-admin/client/send-report", function(ReportData)
+RegisterNetEvent("Ethnic-admin/client/send-report", function(ReportData)
     if not HasReport() then
         exports['Ethnic-ui']:Notify("report-sent", Lang:t('info.report_sent'), 'success')
         Config.Reports[#Config.Reports + 1] = ReportData
-        TriggerServerEvent('mc-admin/server/sync-chat-data', 'Reports', Config.Reports, 1500)
+        TriggerServerEvent('Ethnic-admin/server/sync-chat-data', 'Reports', Config.Reports, 1500)
         ToggleMenu(true)
     else
         exports['Ethnic-ui']:Notify("report_already", Lang:t('info.report_already', { chatcommand = Config.Commands['ReportChat'], chatcommandclose = Config.Commands['ReportClose'] }), 'error')
     end
 end)
 
-RegisterNetEvent("mc-admin/client/close-report", function()
+RegisterNetEvent("Ethnic-admin/client/close-report", function()
     if HasReport() then
         local ReportId = GetPlayerReportFromName()
         if ReportId then
@@ -27,7 +27,7 @@ RegisterNetEvent("mc-admin/client/close-report", function()
     end
 end)
 
-RegisterNetEvent("mc-admin/client/reply-report", function(Message, Time)
+RegisterNetEvent("Ethnic-admin/client/reply-report", function(Message, Time)
     if HasReport() then
         local ReportId = GetPlayerReportFromName()
         if ReportId then
@@ -43,7 +43,7 @@ RegisterNetEvent("mc-admin/client/reply-report", function(Message, Time)
     end
 end)
 
-RegisterNetEvent('mc-admin/client/sync-chat-data', function(Type, Data, UpdateDelay)
+RegisterNetEvent('Ethnic-admin/client/sync-chat-data', function(Type, Data, UpdateDelay)
     if not PlayerModule.IsPlayerAdmin() then return end
     if Type == 'Staffchat' then Config.StaffChat = Data else Config.Reports = Data end
     if UpdateDelay then

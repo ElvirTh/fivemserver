@@ -140,11 +140,11 @@ Config.PolicePad = {
     },
     {
         Model = 'polexp',
-        Coords = vector4(445.36, -996.95, 25.7, 90.4),
+        Coords = vector4(437.23, -994.16, 25.7, 272.92),
     },
     {
         Model = 'charger19',
-        Coords = vector4(445.36, -996.95, 25.7, 90.4),
+        Coords = vector4(436.92, -996.91, 25.7, 265.46),
     },
 }
 
@@ -170,137 +170,137 @@ Config.PoliceStore = {
     {
         ['ItemName'] = 'weapon_rubberslug',
         ['Amount'] = 1,
-        ['Slot'] = 5,
+        ['Slot'] = 4,
         ['Info'] = {}
     },
     {
         ['ItemName'] = 'weapon_glock',
         ['Amount'] = 1,
-        ['Slot'] = 6,
+        ['Slot'] = 5,
         ['Info'] = {}
     },
     {
         ['ItemName'] = 'weapon_taser',
         ['Amount'] = 1,
-        ['Slot'] = 7,
+        ['Slot'] = 6,
         ['Info'] = {}
     },
     {
         ['ItemName'] = 'weapon_empgun',
         ['Amount'] = 1,
-        ['Slot'] = 8,
+        ['Slot'] = 7,
         ['Info'] = {}
     },
     {
         ['ItemName'] = 'weapon_flashlight',
         ['Amount'] = 1,
-        ['Slot'] = 9,
+        ['Slot'] = 8,
         ['Info'] = {}
     },
     {
         ['ItemName'] = 'rifle-ammo',
         ['Amount'] = 25,
-        ['Slot'] = 10,
+        ['Slot'] = 9,
     },
     {
         ['ItemName'] = 'smg-ammo',
         ['Amount'] = 25,
-        ['Slot'] = 11,
+        ['Slot'] = 10,
     },
     {
         ['ItemName'] = 'shotgun-ammo',
         ['Amount'] = 25,
-        ['Slot'] = 12,
+        ['Slot'] = 11,
     },
     {
         ['ItemName'] = 'rubber-shotgun-ammo',
         ['Amount'] = 25,
-        ['Slot'] = 13,
+        ['Slot'] = 12,
     },
     {
         ['ItemName'] = 'pistol-ammo',
         ['Amount'] = 25,
-        ['Slot'] = 14,
+        ['Slot'] = 13,
     },
     {
         ['ItemName'] = 'taser-ammo',
         ['Amount'] = 25,
-        ['Slot'] = 15,
+        ['Slot'] = 14,
     },
     {
         ['ItemName'] = 'emp-ammo',
         ['Amount'] = 25,
-        ['Slot'] = 16,
+        ['Slot'] = 15,
     },
     {
         ['ItemName'] = 'ifak',
         ['Amount'] = 25,
-        ['Slot'] = 17,
+        ['Slot'] = 16,
     },
     {
         ['ItemName'] = 'pdchestarmor',
         ['Amount'] = 25,
-        ['Slot'] = 18,
+        ['Slot'] = 17,
     },
     {
         ['ItemName'] = 'handcuffs',
         ['Amount'] = 5,
-        ['Slot'] = 19,
+        ['Slot'] = 18,
     },
     {
         ['ItemName'] = 'pdradio',
         ['Amount'] = 5,
-        ['Slot'] = 20,
+        ['Slot'] = 19,
     },
     {
         ['ItemName'] = 'spikes',
         ['Amount'] = 5,
-        ['Slot'] = 21,
+        ['Slot'] = 20,
     },
     {
         ['ItemName'] = 'evidence',
         ['Amount'] = 5,
-        ['Slot'] = 22,
+        ['Slot'] = 21,
     },
     {
         ['ItemName'] = 'megaphone',
         ['Amount'] = 5,
-        ['Slot'] = 23,
+        ['Slot'] = 22,
     },
     {
         ['ItemName'] = 'toolbox',
         ['Amount'] = 5,
-        ['Slot'] = 24,
+        ['Slot'] = 23,
     },
     {
         ['ItemName'] = 'tirekit',
         ['Amount'] = 5,
-        ['Slot'] = 25,
+        ['Slot'] = 24,
     },
     {
         ['ItemName'] = 'binoculars',
         ['Amount'] = 5,
-        ['Slot'] = 26,
+        ['Slot'] = 25,
     },
     {
         ['ItemName'] = 'pdcamera',
         ['Amount'] = 5,
-        ['Slot'] = 27,
+        ['Slot'] = 26,
     },
     {
         ['ItemName'] = 'gopropd',
         ['Amount'] = 5,
-        ['Slot'] = 28,
+        ['Slot'] = 27,
     },
     {
         ['ItemName'] = 'detcord',
         ['Amount'] = 10,
-        ['Slot'] = 29,
+        ['Slot'] = 28,
     },
     {
         ['ItemName'] = 'pdwatch',
         ['Amount'] = 1,
-        ['Slot'] = 30,
+        ['Slot'] = 29,
     },
 }
 

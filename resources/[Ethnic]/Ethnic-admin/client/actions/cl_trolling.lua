@@ -9,19 +9,19 @@ local DrunkPlayers = {}
 
 -- [ Events ] --
 
-RegisterNetEvent('mc-admin/client/fling-player', function()
+RegisterNetEvent('Ethnic-admin/client/fling-player', function()
     FlingPlayer()
 end)
 
-RegisterNetEvent("mc-admin/client/drunk", function()
+RegisterNetEvent("Ethnic-admin/client/drunk", function()
     drunkThread()
 end)
 
-RegisterNetEvent("mc-admin/client/animal-attack", function()
+RegisterNetEvent("Ethnic-admin/client/animal-attack", function()
     startWildAttack()
 end)
 
-RegisterNetEvent("mc-admin/client/set-fire", function()
+RegisterNetEvent("Ethnic-admin/client/set-fire", function()
     local playerPed = PlayerPedId()
     StartEntityFire(playerPed)
 end)

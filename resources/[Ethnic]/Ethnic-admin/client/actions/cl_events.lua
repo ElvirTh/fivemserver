@@ -102,13 +102,13 @@ end)
 RegisterNetEvent("Admin:Permissions:Set", function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
 
-    TriggerServerEvent('mc-admin/server/set-permissions', Result['player'], Result['group'])
+    TriggerServerEvent('Ethnic-admin/server/set-permissions', Result['player'], Result['group'])
 end)
 
 RegisterNetEvent("Admin:Permissions:Refresh", function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
 
-    TriggerServerEvent('mc-admin/server/refresh-permissions', Result['player'])
+    TriggerServerEvent('Ethnic-admin/server/refresh-permissions', Result['player'])
 end)
 
 RegisterNetEvent("Admin:Set:Ammo", function(Result)
@@ -119,50 +119,50 @@ end)
 
 RegisterNetEvent("Admin:Bennys", function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerEvent('mc-admin/client/force-close')
+    TriggerEvent('Ethnic-admin/client/force-close')
     SetTimeout(200, function()
-        TriggerServerEvent('mc-admin/server/open-bennys', Result['player'])
+        TriggerServerEvent('Ethnic-admin/server/open-bennys', Result['player'])
     end)
 end)
 
 RegisterNetEvent("Admin:Kill", function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/kill', Result['player'])
+    TriggerServerEvent('Ethnic-admin/server/kill', Result['player'])
 end)
 
 RegisterNetEvent("Admin:Set:Environment", function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/set-environment', Result['weather'], Result['hour'], Result['minute'])
+    TriggerServerEvent('Ethnic-admin/server/set-environment', Result['weather'], Result['hour'], Result['minute'])
 end)
 
 RegisterNetEvent("Admin:Delete:Area", function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/delete-area', Result['type'], Result['radius'])
+    TriggerServerEvent('Ethnic-admin/server/delete-area', Result['type'], Result['radius'])
 end)
 
 RegisterNetEvent("Admin:Infinite:Ammo", function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/toggle-infinite-ammo', Result['player'])
+    TriggerServerEvent('Ethnic-admin/server/toggle-infinite-ammo', Result['player'])
 end)
 
 RegisterNetEvent("Admin:Infinite:Stamina", function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/toggle-infinite-stamina', Result['player'])
+    TriggerServerEvent('Ethnic-admin/server/toggle-infinite-stamina', Result['player'])
 end)
 
 RegisterNetEvent("Admin:Cloak", function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/toggle-cloak', Result['player'])
+    TriggerServerEvent('Ethnic-admin/server/toggle-cloak', Result['player'])
 end)
 
 RegisterNetEvent("Admin:Godmode", function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/toggle-godmode', Result['player'])
+    TriggerServerEvent('Ethnic-admin/server/toggle-godmode', Result['player'])
 end)
 
 RegisterNetEvent('Admin:Toggle:Noclip', function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerEvent('mc-admin/client/force-close')
+    TriggerEvent('Ethnic-admin/client/force-close')
     SendNUIMessage({
         Action = "SetItemEnabled",
         Name = 'noclip',
@@ -173,19 +173,19 @@ end)
 
 RegisterNetEvent('Admin:Fix:Vehicle', function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerEvent('mc-admin/client/force-close')
+    TriggerEvent('Ethnic-admin/client/force-close')
     TriggerEvent('Ethnic-base/client/repair-vehicle')
 end)
 
 RegisterNetEvent('Admin:Delete:Vehicle', function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerEvent('mc-admin/client/force-close')
+    TriggerEvent('Ethnic-admin/client/force-close')
     TriggerEvent("Ethnic-base/client/delete-vehicle")
 end)
 
 RegisterNetEvent('Admin:Spawn:Vehicle', function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerEvent('mc-admin/client/force-close')
+    TriggerEvent('Ethnic-admin/client/force-close')
     if not IsModelValid(Result['model']) then
         exports['Ethnic-ui']:Notify("invalid-model", "Invalid model..", "error")
         return
@@ -195,48 +195,48 @@ end)
 
 RegisterNetEvent('Admin:Teleport:Marker', function(Result)
      if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerEvent('mc-admin/client/force-close')
+    TriggerEvent('Ethnic-admin/client/force-close')
     TriggerEvent('Ethnic-admin/client/command-go-to-marker')
 end)
 
 RegisterNetEvent('Admin:Teleport:Coords', function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
     if Result['x-coord'] ~= '' and Result['y-coord'] ~= '' and Result['z-coord'] ~= '' then
-        TriggerEvent('mc-admin/client/force-close')
+        TriggerEvent('Ethnic-admin/client/force-close')
         SetEntityCoords(PlayerPedId(), tonumber(Result['x-coord']), tonumber(Result['y-coord']), tonumber(Result['z-coord']))
     end
 end)
 
 RegisterNetEvent('Admin:Teleport', function(Result)
      if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerEvent('mc-admin/client/force-close')
-    TriggerServerEvent('mc-admin/server/teleport-player', Result['player'], Result['type'])
+    TriggerEvent('Ethnic-admin/client/force-close')
+    TriggerServerEvent('Ethnic-admin/server/teleport-player', Result['player'], Result['type'])
 end)
 
 RegisterNetEvent("Admin:Chat:Say", function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/chat-say', Result['message'])
+    TriggerServerEvent('Ethnic-admin/server/chat-say', Result['message'])
 end)
 
 RegisterNetEvent('Admin:Open:Clothing', function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerEvent('mc-admin/client/force-close')
-    TriggerServerEvent('mc-admin/server/open-clothing', Result['player'])
+    TriggerEvent('Ethnic-admin/client/force-close')
+    TriggerServerEvent('Ethnic-admin/server/open-clothing', Result['player'])
 end)
 
 RegisterNetEvent('Admin:Revive:Radius', function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/revive-in-distance', Result['radius'])
+    TriggerServerEvent('Ethnic-admin/server/revive-in-distance', Result['radius'])
 end)
 
 RegisterNetEvent('Admin:Revive', function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/revive-target', Result['player'])
+    TriggerServerEvent('Ethnic-admin/server/revive-target', Result['player'])
 end)
 
 RegisterNetEvent('Admin:Remove:Stress', function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/remove-stress', Result['player'])
+    TriggerServerEvent('Ethnic-admin/server/remove-stress', Result['player'])
 end)
 
 RegisterNetEvent('Admin:Change:Model', function(Result)
@@ -244,96 +244,96 @@ RegisterNetEvent('Admin:Change:Model', function(Result)
     if Result['model'] ~= '' then
         local Model = GetHashKey(Result['model'])
         if IsModelValid(Model) then
-            TriggerServerEvent('mc-admin/server/set-model', Result['player'], Model)
+            TriggerServerEvent('Ethnic-admin/server/set-model', Result['player'], Model)
         end
     end
 end)
 
 RegisterNetEvent('Admin:Reset:Model', function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/reset-skin', Result['player'])
+    TriggerServerEvent('Ethnic-admin/server/reset-skin', Result['player'])
 end)
 
 RegisterNetEvent('Admin:Armor', function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/set-armor', Result['player'])
+    TriggerServerEvent('Ethnic-admin/server/set-armor', Result['player'])
 end)
 
 RegisterNetEvent('Admin:Food:Drink', function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/set-food-drink', Result['player'])
+    TriggerServerEvent('Ethnic-admin/server/set-food-drink', Result['player'])
 end)
 
 -- RegisterNetEvent('Admin:Request:Gang', function(Result)
 --     if not PlayerModule.IsPlayerAdmin() then return end
---     TriggerServerEvent('mc-admin/server/request-gang', Result['player'], Result['gang'] ~= '' and Result['gang'] or 'none')
+--     TriggerServerEvent('Ethnic-admin/server/request-gang', Result['player'], Result['gang'] ~= '' and Result['gang'] or 'none')
 -- end)
 
 RegisterNetEvent('Admin:Request:Job', function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/request-job', Result['player'], Result['job'] ~= '' and Result['job'] or 'unemployed')
+    TriggerServerEvent('Ethnic-admin/server/request-job', Result['player'], Result['job'] ~= '' and Result['job'] or 'unemployed')
 end)
 
 RegisterNetEvent("Admin:Drunk", function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/drunk', Result['player'])
+    TriggerServerEvent('Ethnic-admin/server/drunk', Result['player'])
 end)
 
 RegisterNetEvent("Admin:Animal:Attack", function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/animal-attack', Result['player'])
+    TriggerServerEvent('Ethnic-admin/server/animal-attack', Result['player'])
 end)
 
 RegisterNetEvent('Admin:Set:Fire', function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/set-fire', Result['player'])
+    TriggerServerEvent('Ethnic-admin/server/set-fire', Result['player'])
 end)
 
 RegisterNetEvent('Admin:Fling:Player', function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/fling-player', Result['player'])
+    TriggerServerEvent('Ethnic-admin/server/fling-player', Result['player'])
 end)
 
 RegisterNetEvent("Admin:Freeze:Player", function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/freeze-player', Result['player'])
+    TriggerServerEvent('Ethnic-admin/server/freeze-player', Result['player'])
 end)
 
 RegisterNetEvent('Admin:SetMoney', function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/set-money', Result['player'], Result['moneytype'], Result['amount'])
+    TriggerServerEvent('Ethnic-admin/server/set-money', Result['player'], Result['moneytype'], Result['amount'])
 end)
 
 RegisterNetEvent('Admin:GiveMoney', function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
 
-    TriggerServerEvent('mc-admin/server/give-money', Result['player'], Result['moneytype'], Result['amount'])
+    TriggerServerEvent('Ethnic-admin/server/give-money', Result['player'], Result['moneytype'], Result['amount'])
 end)
 
 RegisterNetEvent('Admin:GiveItem', function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
 
-    TriggerServerEvent('mc-admin/server/give-item', Result['player'], Result['item'], Result['amount'])
+    TriggerServerEvent('Ethnic-admin/server/give-item', Result['player'], Result['item'], Result['amount'])
 end)
 
 RegisterNetEvent('Admin:Ban', function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/ban-player', Result['player'], Result['expire'], Result['reason'])
+    TriggerServerEvent('Ethnic-admin/server/ban-player', Result['player'], Result['expire'], Result['reason'])
 end)
 
 RegisterNetEvent('Admin:Unban', function(Result)
      if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent("mc-admin/server/unban-player", Result['player'])
+    TriggerServerEvent("Ethnic-admin/server/unban-player", Result['player'])
 end)
 
 RegisterNetEvent('Admin:Kick', function(Result)
      if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/kick-player', Result['player'], Result['reason'])
+    TriggerServerEvent('Ethnic-admin/server/kick-player', Result['player'], Result['reason'])
 end)
 
 RegisterNetEvent('Admin:Kick:All', function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-   TriggerServerEvent('mc-admin/server/kick-all-players', Result['reason'])
+   TriggerServerEvent('Ethnic-admin/server/kick-all-players', Result['reason'])
 end)
 
 RegisterNetEvent("Admin:Copy:Coords", function(Result)
@@ -357,7 +357,7 @@ end)
 
 RegisterNetEvent("Admin:Fart:Player", function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerServerEvent('mc-admin/server/play-sound', Result['player'], Result['fart'])
+    TriggerServerEvent('Ethnic-admin/server/play-sound', Result['player'], Result['fart'])
 end)
 
 RegisterNetEvent('Admin:Toggle:PlayerBlips', function()
@@ -393,7 +393,7 @@ end)
 
 RegisterNetEvent("Admin:OpenInv", function(Result)
     if not PlayerModule.IsPlayerAdmin() then return end
-    TriggerEvent('mc-admin/client/force-close')
+    TriggerEvent('Ethnic-admin/client/force-close')
     local PlayerCitizenId = PlayerModule.GetPlayerCitizenIdBySource(Result['player'])
     EventsModule.TriggerServer('Ethnic-inventory/server/open-other-inventory', PlayerCitizenId, 'Player', 45, 250.0)
 end)
@@ -407,7 +407,7 @@ RegisterNetEvent("Ethnic-admin/client/copy-to-clipboard", function(Text)
     })
 end)
 
-RegisterNetEvent("mc-admin/client/delete-area", function(Type, Radius)
+RegisterNetEvent("Ethnic-admin/client/delete-area", function(Type, Radius)
     Type = Type:lower()
     Radius = tonumber(Radius)
     if Type == 'peds' then
@@ -423,12 +423,12 @@ RegisterNetEvent("mc-admin/client/delete-area", function(Type, Radius)
     end
 end)
 
-RegisterNetEvent("mc-admin/client/freeze-player", function(Bool)
+RegisterNetEvent("Ethnic-admin/client/freeze-player", function(Bool)
     FreezeEntityPosition(GetPlayerPed(PlayerId()), Bool)
 end)
 
 local InfiniteAmmoEnabled = false
-RegisterNetEvent("mc-admin/client/toggle-infinite-ammo", function(Bool)
+RegisterNetEvent("Ethnic-admin/client/toggle-infinite-ammo", function(Bool)
     InfiniteAmmoEnabled = Bool
     while InfiniteAmmoEnabled == true do
         SetInfiniteAmmo(true)
@@ -439,7 +439,7 @@ RegisterNetEvent("mc-admin/client/toggle-infinite-ammo", function(Bool)
 end)
 
 local InfiniteStaminaEnabled = false
-RegisterNetEvent("mc-admin/client/toggle-infinite-stamina", function(Bool)
+RegisterNetEvent("Ethnic-admin/client/toggle-infinite-stamina", function(Bool)
     InfiniteStaminaEnabled = Bool
     while InfiniteStaminaEnabled == true do
         RestorePlayerStamina(PlayerId(), 1.0)
@@ -448,7 +448,7 @@ RegisterNetEvent("mc-admin/client/toggle-infinite-stamina", function(Bool)
 end)
 
 local GodmodeEnabled = false
-RegisterNetEvent("mc-admin/client/toggle-godmode", function(Bool)
+RegisterNetEvent("Ethnic-admin/client/toggle-godmode", function(Bool)
     GodmodeEnabled = Bool
     while GodmodeEnabled == true do
         SetPlayerInvincible(PlayerId(), true)
@@ -457,7 +457,7 @@ RegisterNetEvent("mc-admin/client/toggle-godmode", function(Bool)
     SetPlayerInvincible(PlayerId(), false)
 end)
 
-RegisterNetEvent("mc-admin/client/toggle-cloak", function(Bool)
+RegisterNetEvent("Ethnic-admin/client/toggle-cloak", function(Bool)
     if Bool then
         SetEntityVisible(PlayerPedId(), false)
     else
@@ -465,12 +465,12 @@ RegisterNetEvent("mc-admin/client/toggle-cloak", function(Bool)
     end
 end)
 
-RegisterNetEvent('mc-admin/client/teleport-player', function(Coords)
+RegisterNetEvent('Ethnic-admin/client/teleport-player', function(Coords)
     local Entity = PlayerPedId()    
     SetPedCoordsKeepVehicle(Entity, Coords.x, Coords.y, Coords.z)
 end)
 
-RegisterNetEvent('mc-admin/client/set-model', function(Model)
+RegisterNetEvent('Ethnic-admin/client/set-model', function(Model)
     if FunctionsModule.RequestModel(Model) then
         SetPlayerModel(PlayerId(), Model)
         SetPedComponentVariation(PlayerPedId(), 0, 0, 0, 0)
@@ -479,17 +479,17 @@ RegisterNetEvent('mc-admin/client/set-model', function(Model)
     end
 end)
 
-RegisterNetEvent('mc-admin/client/armor-up', function()
+RegisterNetEvent('Ethnic-admin/client/armor-up', function()
     SetPedArmour(PlayerPedId(), 100.0)
 end)
 
-RegisterNetEvent("mc-admin/client/play-sound", function(Sound)
+RegisterNetEvent("Ethnic-admin/client/play-sound", function(Sound)
     TriggerServerEvent("Ethnic-ui/client/play-sound", Sound, 0.3, 5)
 end)
 
 AddEventHandler('onResourceStop', function(resourceName)
     if resourceName == GetCurrentResourceName() then
-        TriggerEvent('mc-admin/client/force-close')
+        TriggerEvent('Ethnic-admin/client/force-close')
         -- Stop Noclip
         toggleFreecam(false)
         -- Stop Spectate

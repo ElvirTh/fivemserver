@@ -268,22 +268,6 @@ Config.Zones = {
             Secret = true,
         }
     },
-
-    -- MRPD
-    {
-        center = vector3(435.45, -976.01, 25.7),
-        length = 5.6,
-        width = 10.0,
-        heading = 0,
-        minZ = 24.7,
-        maxZ = 28.1,
-        ShowBlip = false,
-        data = {
-            Authorized = { Job = { "police" } },
-            Heading = 86.63,
-            Secret = true,
-        }
-    },
 }
 
 Config.Prices = {

@@ -9,14 +9,14 @@ CreateThread(function()
     while true do
         Wait(1000)
         if NetCheck1 or NetCheck2 then
-            TriggerServerEvent('mc-admin/server/get-player-blips')
+            TriggerServerEvent('Ethnic-admin/server/get-player-blips')
         end
     end
 end)
 
 -- [ Events ] --
 
-RegisterNetEvent('mc-admin/client/show', function(Players)
+RegisterNetEvent('Ethnic-admin/client/show', function(Players)
     for _, player in pairs(Players) do
         local playeridx = GetPlayerFromServerId(player.ServerId)
         local ped = GetPlayerPed(playeridx)

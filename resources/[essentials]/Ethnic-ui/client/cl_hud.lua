@@ -227,7 +227,7 @@ RegisterNetEvent("Ethnic-threads/entered-vehicle", function()
                 exports['Ethnic-ui']:SendUIMessage('Hud', 'UpdateVehicleHud', {
                     Speed = GetVehicleCurrentRpm(Vehicle),
                     -- RPM = RPM, -- Todo
-                    Mph = math.ceil(SpeedValue * 3.6),
+                    Mph = math.ceil(SpeedValue * 4.0),
                     Fuel = exports['Ethnic-vehicles']:GetVehicleMeta(Vehicle, 'Fuel'),
                     Belt = HasBelt,
                     -- BrokenEngine = GetVehicleEngineHealth(Vehicle) < 400.0, -- Todo: Add

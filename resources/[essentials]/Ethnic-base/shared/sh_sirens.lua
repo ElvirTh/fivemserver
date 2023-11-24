@@ -37,6 +37,9 @@ Config.SirenData = {
     [GetHashKey("M5RB_VV")] = {
         Ethnicounds = { "VEHICLES_HORNS_SIREN_1", "VEHICLES_HORNS_SIREN_2", "VEHICLES_HORNS_POLICE_WARNING" },
     },
+    [GetHashKey("riot")] = {
+        Ethnicounds = { "VEHICLES_HORNS_SIREN_1", "VEHICLES_HORNS_SIREN_2", "VEHICLES_HORNS_POLICE_WARNING" },
+    },
     [GetHashKey("polchal")] = {
         Ethnicounds = { "VEHICLES_HORNS_SIREN_1", "VEHICLES_HORNS_SIREN_2", "VEHICLES_HORNS_POLICE_WARNING" },
     },

@@ -252,6 +252,12 @@ Shared.Weapons = {
         ['SelectFire'] = true,
         ['MaxAmmo'] = 120,
     },
+    [GetHashKey('weapon_mp5sdfm')] = {
+        ['WeaponID'] = 'weapon_mp5sdfm',    
+        ['AmmoType'] = 'AMMO_SMG',
+        ['SelectFire'] = true,
+        ['MaxAmmo'] = 120,
+    },
     [GetHashKey('weapon_draco')] = {
         ['WeaponID'] = 'weapon_draco',    
         ['AmmoType'] = 'AMMO_SMG',
@@ -296,6 +302,12 @@ Shared.Weapons = {
     },
     [GetHashKey('weapon_M6IC')] = {
         ['WeaponID'] = 'weapon_M6IC',   
+        ['AmmoType'] = 'AMMO_RIFLE',
+        ['SelectFire'] = true,
+        ['MaxAmmo'] = 120,
+    },
+    [GetHashKey('weapon_G36A2')] = {
+        ['WeaponID'] = 'weapon_G36A2',   
         ['AmmoType'] = 'AMMO_RIFLE',
         ['SelectFire'] = true,
         ['MaxAmmo'] = 120,

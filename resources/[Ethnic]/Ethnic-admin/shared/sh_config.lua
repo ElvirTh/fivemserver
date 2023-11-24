@@ -11,6 +11,8 @@ Config.Commands = {
     ['ReportNew'] = 'reportnew',
     ['ReportChat'] = 'reportchat',
     ['ReportClose'] = 'reportclose',
+    ['Teleport'] ='teleport',
+    
     -- Console Commands
     ['APKick'] = 'apkick',
     ['APAddItem'] = 'apadditem',
@@ -22,6 +24,7 @@ Config.Commands = {
 Config.Settings = {
     ['Debug'] = false,
     ['DefaultOpenKeybind'] = 'INSERT', -- Keybind to open Menu
+    ['TpmKeybind'] = 'F11', -- Keybind to Teleporttomarker
     ['Pages'] = { -- Enable or disable certain pages.
         ['PlayerList'] = true,
         ['RecentBans'] = true,

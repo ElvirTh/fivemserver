@@ -348,7 +348,7 @@ Config.CommandList = {
                 -- Below Groups Table will not be used when Option above is enabled. 
                 -- Command Groups will be handled by KVP and can be changed thru a command ingame: menuperms [add,remove,list] [commandid] [group]
                 ['Groups'] = {'all'}, -- 'all', 'admin', 'god', 'mod'
-                ['Event'] = 'mc-admin/server/revive-all',
+                ['Event'] = 'Ethnic-admin/server/revive-all',
                 ['EventType'] = 'Server',
                 ['Collapse'] = false,
             },
@@ -590,7 +590,7 @@ Config.CommandList = {
                 -- Below Groups Table will not be used when Option above is enabled. 
                 -- Command Groups will be handled by KVP and can be changed thru a command ingame: menuperms [add,remove,list] [commandid] [group]
                 ['Groups'] = {'all'}, -- 'all', 'admin', 'god', 'mod'
-                ['Event'] = 'mc-admin/server/teleport-all',
+                ['Event'] = 'Ethnic-admin/server/teleport-all',
                 ['EventType'] = 'Server',
                 ['Collapse'] = false,
             },

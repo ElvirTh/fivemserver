@@ -29,9 +29,9 @@ keyboard = {
     guiKey = 199, -- P
     takedown = 83, -- =
     siren = {
-        tone_one = 137, -- 1
-        tone_two = 230, -- 2
-        tone_three = 231, -- 3
+        tone_one = 132, -- CapsLock
+        tone_two = 226, -- 2
+        tone_three = 227, -- 3
     },
     pattern = {
         primary = 163, -- 9

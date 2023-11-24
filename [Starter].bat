@@ -7,4 +7,4 @@ timeout /t 3 /nobreak >nul
 color 07
 cls
 
-C:\Users\elvir\Documents\fivemserver\server\artifacts\FXServer.exe +exec cfg/server.cfg
+C:\Users\elvir\Documents\fivemserver\server\artifacts\FXServer.exe +set serverProfile "default" +exec C:/Users/elvir/Documents/fivemserver/server/cfg/server.cfg

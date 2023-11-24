@@ -224,11 +224,11 @@ Hud.addNuiListener('SetComponentValues', (Data) => {
         } else if (Key === 'Voice') {
             if (Value.OnRadio) {
                 if ($('.hud-voice').find('i').hasClass('fas fa-microphone')) {
-                    $('.hud-voice').find('i').removeClass('fas fa-microphone').addClass('fa-headset');
+                    $('.hud-voice').find('i').removeClass('fas fa-microphone').addClass('fas fa-headset');
                 }
             } else {
-                if ($('.hud-voice').find('i').hasClass('fa-headset')) {
-                    $('.hud-voice').find('i').removeClass('fa-headset').addClass('fas fa-microphone');
+                if ($('.hud-voice').find('i').hasClass('fas fa-headset')) {
+                    $('.hud-voice').find('i').removeClass('fas fa-headset').addClass('fas fa-microphone');
                 }
             }
             if (CurrentHudValues.Voice.Value != Value.Value) {

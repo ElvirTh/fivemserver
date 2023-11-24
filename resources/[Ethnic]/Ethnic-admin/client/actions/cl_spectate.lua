@@ -20,7 +20,7 @@ function Spectate.Toggle(TargetSource)
     SetEntityVisible(PlayerPedId(), false, false)
     FreezeEntityPosition(PlayerPedId(), true)
 
-    local Result = CallbackModule.SendCallback('mc-admin/server/get-spectate-data', TargetSource)
+    local Result = CallbackModule.SendCallback('Ethnic-admin/server/get-spectate-data', TargetSource)
     if Result == nil then IsSpectating = false return end
     SetEntityCoords(PlayerPedId(), Result.x, Result.y, Result.z)
     Citizen.Wait(100)

@@ -9,7 +9,7 @@ local KeyNames = {
     b_171 = 'F2', b_172 = 'F3', b_173 = 'F4', b_174 = 'F5', b_175 = 'F6', b_176 = 'F7', b_177 = 'F8', b_178 = 'F9', b_179 = 'F10', b_180 = 'F11',
     b_181 = 'F12', b_182 = 'F13', b_183 = 'F14', b_184 = 'F15', b_185 = 'F16', b_186 = 'F17', b_187 = 'F18', b_188 = 'F19', b_189 = 'F20', b_190 = 'F21',
     b_191 = 'F22', b_192 = 'F23', b_193 = 'F24', b_194 = 'Up Arrow', b_195 = 'Down Arrow', b_196 = 'Left Arrow', b_197 = 'Right Arrow', b_198 = 'Del', b_199 = 'Esc', b_200 = 'Ins',
-    b_201 = 'End', b_202 = 'Suppr', b_203 = 'Échap', b_204 = 'Fin', b_205 = 'Entf', b_206 = 'Einfg', b_207 = 'Ende', b_208 = 'Canc', b_209 = 'Fine', b_210 = 'Supr',
+    b_201 = 'End', b_202 = 'Suppr', b_203 = 'Échap', b_204 = 'Fin', b_205 = 'Entf', b_206 = 'Einfg', b_207 = 'Ende', b_208 = 'Canc', b_209 = 'Fine', b_210 = 'Supr', b_344 ='F11',
     b_211 = 'Insertar', b_212 = 'Fin', b_213 = 'Supr', b_214 = 'Insertar', b_215 = 'Fin', b_216 = '¨', b_217 = '`', b_995 = '???', b_998 = '+', b_1000 = 'L Shift',
     b_1001 = 'R Shift', b_1002 = 'Tab', b_1003 = 'Enter', b_1004 = 'Backspace', b_1005 = 'Print Screen', b_1006 = 'Scroll Lock', b_1007 = 'Pause', b_1008 = 'Home', b_1009 = 'Page Up', b_1010 = 'Page Down',
     b_1011 = 'Num Lock', b_1012 = 'Caps', b_1013 = 'L Ctrl', b_1014 = 'R Ctrl', b_1015 = 'L Alt', b_1016 = 'R Alt', b_1017 = 'Menu', b_1018 = 'L Win', b_1019 = 'R Win', b_1020 = 'Imppr écran',

@@ -25,14 +25,14 @@ end)
 
 
 RegisterNetEvent('Ethnic-base/client/on-login', function()
-    Group = CallbackModule.SendCallback('mc-adminmenu/server/get-permission')
+    Group = CallbackModule.SendCallback('Ethnic-adminmenu/server/get-permission')
     Citizen.Wait(500)
     InitAdminMenu()
     -- exports[GetCurrentResourceName()]:CreateLog('Logged In', 'Player Logged In')
 end)
 
 RegisterNetEvent('Ethnic-base/client/on-logout', function()
-    Group = CallbackModule.SendCallback('mc-adminmenu/server/get-permission')
+    Group = CallbackModule.SendCallback('Ethnic-adminmenu/server/get-permission')
     -- exports[GetCurrentResourceName()]:CreateLog('Logged Out', 'Player Logged Out')
 end)
 
@@ -40,7 +40,7 @@ end)
 
 -- [ Events ] --
 
-RegisterNetEvent('mc-admin/client/try-open-menu', function(IsPressed)
+RegisterNetEvent('Ethnic-admin/client/try-open-menu', function(IsPressed)
     if not IsPressed then return end
     if not LocalPlayer.state.LoggedIn then return end
     if not PlayerModule.IsPlayerAdmin() then return end
@@ -48,17 +48,17 @@ RegisterNetEvent('mc-admin/client/try-open-menu', function(IsPressed)
     ToggleMenu(false)
 end)
 
-RegisterNetEvent("mc-admin/client/reset-menu", function()
+RegisterNetEvent("Ethnic-admin/client/reset-menu", function()
     if not PlayerModule.IsPlayerAdmin() then return end
     ResetMenuKvp()
-    TriggerEvent('mc-admin/client/force-close')
+    TriggerEvent('Ethnic-admin/client/force-close')
 end)
 
-RegisterNetEvent("mc-admin/client/force-close", function()
+RegisterNetEvent("Ethnic-admin/client/force-close", function()
     SendNUIMessage({ Action = 'Close', })
 end)
 
-RegisterNetEvent("mc-admin/client/toggle-debug", function()
+RegisterNetEvent("Ethnic-admin/client/toggle-debug", function()
     if not PlayerModule.IsPlayerAdmin() then return end
     Config.Settings['Debug'] = not Config.Settings['Debug']
     local Msg = Config.Settings['Debug'] and Lang:t('commands.enabled') or Lang:t('commands.disabled')
@@ -83,7 +83,7 @@ RegisterNetEvent("Ethnic-admin/client/toggle-noclip", function(IsPressed)
     toggleFreecam(not noClipEnabled)
 end)
 
-RegisterNetEvent("mc-admin/client/do-perms-action", function(Action, CommandId, Group)
+RegisterNetEvent("Ethnic-admin/client/do-perms-action", function(Action, CommandId, Group)
     DoPermsAction(Action, CommandId, Group)
 end)
 
@@ -95,7 +95,7 @@ RegisterNUICallback('ToggleKVP', function(Data, Cb)
 end)
 
 RegisterNUICallback("UnbanPlayer", function(Data, Cb)
-    TriggerServerEvent('mc-admin/server/unban-player', Data.PData.BanId)
+    TriggerServerEvent('Ethnic-admin/server/unban-player', Data.PData.BanId)
     SetTimeout(500, function()
         ToggleMenu(true)
     end)
@@ -103,7 +103,7 @@ RegisterNUICallback("UnbanPlayer", function(Data, Cb)
 end)
 
 RegisterNUICallback('GetCharData', function(Data, Cb)
-    local PlayerData = CallbackModule.SendCallback('mc-admin/server/get-player-data', Data.Identifier)
+    local PlayerData = CallbackModule.SendCallback('Ethnic-admin/server/get-player-data', Data.Identifier)
     Cb(PlayerData)
 end)
 
@@ -119,7 +119,7 @@ RegisterNUICallback("DevMode", function(Data, Cb)
 end)
 
 RegisterNUICallback("GetDateDifference", function(Data, Cb)
-    local FBans, CAmount = CallbackModule.SendCallback('mc-admin/server/get-date-difference', Data.BanList, Data.CType)
+    local FBans, CAmount = CallbackModule.SendCallback('Ethnic-admin/server/get-date-difference', Data.BanList, Data.CType)
     Cb({
         Bans = FBans, 
         Amount = CAmount,
@@ -143,7 +143,7 @@ RegisterNUICallback("DeleteReport", function(Data, Cb)
     if not PlayerModule.IsPlayerAdmin() then return end
     local Success, ServerId = DeleteReport(Data.Report['Id'])
     if Success then
-        TriggerServerEvent('mc-admin/server/send-chat-report', ServerId, Lang:t('info.report_closed', { chatcommand = Config.Commands['ReportNew'] }))
+        TriggerServerEvent('Ethnic-admin/server/send-chat-report', ServerId, Lang:t('info.report_closed', { chatcommand = Config.Commands['ReportNew'] }))
     end
     Cb("Ok")
 end)
@@ -158,7 +158,7 @@ RegisterNUICallback('SendChatsMessage', function(Data, Cb)
             ['Time'] = ChatTime,
             ['Sender'] = PlayerModule.GetPlayerData().Name,
         }
-        TriggerServerEvent('mc-admin/server/sync-chat-data', ChatChannel, Config.StaffChat, 0)
+        TriggerServerEvent('Ethnic-admin/server/sync-chat-data', ChatChannel, Config.StaffChat, 0)
     else
         local Report = GetReportIdFromId(Data.ReportId)
         if Report then -- Check if report exists
@@ -168,8 +168,8 @@ RegisterNUICallback('SendChatsMessage', function(Data, Cb)
                     ['Time'] = ChatTime,
                     ['Sender'] = PlayerModule.GetPlayerData().Name,
                 }
-                TriggerServerEvent('mc-admin/server/send-chat-report', Config.Reports[Report]['ServerId'], '[ADMIN] '..PlayerModule.GetPlayerData().Name..': '..ChatMessage)
-                TriggerServerEvent('mc-admin/server/sync-chat-data', ChatChannel, Config.Reports, 0)
+                TriggerServerEvent('Ethnic-admin/server/send-chat-report', Config.Reports[Report]['ServerId'], '[ADMIN] '..PlayerModule.GetPlayerData().Name..': '..ChatMessage)
+                TriggerServerEvent('Ethnic-admin/server/sync-chat-data', ChatChannel, Config.Reports, 0)
             end
         end
     end

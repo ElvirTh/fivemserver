@@ -5,7 +5,8 @@
 function InitAdminMenu()
     if PlayerModule.IsPlayerAdmin() then DebugPrint('permission', Lang:t("info.has_perm")) else DebugPrint('permission', Lang:t("info.has_no_perm")) end
     if (GetServerConvar('steam_webApiKey') == 'none') then DebugPrint('steam', Lang:t("info.steam_key")) end
-    KeybindsModule.Add("openAdminMenu", 'Admin', Lang:t('info.keymapping_desc'), Config.Settings['DefaultOpenKeybind'], nil, 'mc-admin/client/try-open-menu')
+    KeybindsModule.Add("openAdminMenu", 'Admin', Lang:t('info.keymapping_desc'), Config.Settings['DefaultOpenKeybind'], nil, 'Ethnic-admin/client/try-open-menu')
+    KeybindsModule.Add("TeleportToMarker", 'Admin', Lang:t('TeleportToMarker'), Config.Settings['TpmKeybind'], nil, 'Ethnic-admin/client/command-go-to-marker') 
     KeybindsModule.Add("toggleNoclip", 'Admin', 'Toggle Noclip', '', nil, 'Ethnic-admin/client/toggle-noclip')
     Citizen.Wait(100)
     RefreshMenu('all')
@@ -145,7 +146,7 @@ function SetKvp(Name, Data, SetData)
     else
         Config.ResourceKVPs[KvpId]['Value'][#Config.ResourceKVPs[KvpId]['Value'] + 1] = Data
     end
-    SetResourceKvp('mc-adminmenu-'..Name, json.encode(Config.ResourceKVPs[KvpId]['Value']))
+    SetResourceKvp('Ethnic-adminmenu-'..Name, json.encode(Config.ResourceKVPs[KvpId]['Value']))
     Wait(100)
     RefreshMenu(Name)
 end
@@ -202,7 +203,7 @@ end
 
 function ResetMenuKvp()
     for i = 1, #Config.ResourceKVPs do
-        SetResourceKvp("mc-adminmenu-" .. Config.ResourceKVPs[i]['Name'], "[]")
+        SetResourceKvp("Ethnic-adminmenu-" .. Config.ResourceKVPs[i]['Name'], "[]")
         Config.ResourceKVPs[i]['Value'] = {}
     end
     RefreshMenu('all')
@@ -214,20 +215,20 @@ function RefreshMenu(Type)
     if Type == 'all' then -- Generate All
         for i=1, #Config.ResourceKVPs do
             local KVP = Config.ResourceKVPs[i]
-            if GetResourceKvpString("mc-adminmenu-"..KVP['Name']) == nil or GetResourceKvpString("mc-adminmenu-"..KVP['Name']) == "[]" then
+            if GetResourceKvpString("Ethnic-adminmenu-"..KVP['Name']) == nil or GetResourceKvpString("Ethnic-adminmenu-"..KVP['Name']) == "[]" then
                 KVP['Value'] = GenerateKVP(KVP['Name'])
-                SetResourceKvp("mc-adminmenu-"..KVP['Name'], json.encode(KVP['Value']))
+                SetResourceKvp("Ethnic-adminmenu-"..KVP['Name'], json.encode(KVP['Value']))
             else
-                KVP['Value'] = json.decode(GetResourceKvpString("mc-adminmenu-"..KVP['Name']))
+                KVP['Value'] = json.decode(GetResourceKvpString("Ethnic-adminmenu-"..KVP['Name']))
             end
         end
     elseif Type == 'favorites' or Type == 'targets' or Type == 'options' or Type == 'command_perms' then
         local KVP = Config.ResourceKVPs[Type == 'favorites' and 1 or Type == 'targets' and 2 or Type == 'options' and 3 or Type == 'command_perms' and 4]
-        if GetResourceKvpString("mc-adminmenu-"..KVP['Name']) == nil or GetResourceKvpString("mc-adminmenu-"..KVP['Name']) == "[]" then
+        if GetResourceKvpString("Ethnic-adminmenu-"..KVP['Name']) == nil or GetResourceKvpString("Ethnic-adminmenu-"..KVP['Name']) == "[]" then
             KVP['Value'] = GenerateKVP(Type)
-            SetResourceKvp("mc-adminmenu-"..KVP['Name'], json.encode(KVP['Value']))
+            SetResourceKvp("Ethnic-adminmenu-"..KVP['Name'], json.encode(KVP['Value']))
         else
-            KVP['Value'] = json.decode(GetResourceKvpString("mc-adminmenu-" .. KVP['Name']))
+            KVP['Value'] = json.decode(GetResourceKvpString("Ethnic-adminmenu-" .. KVP['Name']))
         end
     end
     if Type == 'favorites' then -- Update Favorites
@@ -314,7 +315,7 @@ end
 
 function CreateLog(Type, Log, Data)
     if Type == nil or Log == nil then return end
-    local Result = CallbackModule.SendCallback('mc-admin/server/create-log', Type, Log, Data)
+    local Result = CallbackModule.SendCallback('Ethnic-admin/server/create-log', Type, Log, Data)
 end
 
 function HasReport()
@@ -336,7 +337,7 @@ function DeleteReport(ReportId)
             if Report['Id'] == ReportId then
                 SetTimeout(500, function()
                     table.remove(Config.Reports, i)
-                    TriggerServerEvent('mc-admin/server/sync-chat-data', 'Reports', Config.Reports, 1500)
+                    TriggerServerEvent('Ethnic-admin/server/sync-chat-data', 'Reports', Config.Reports, 1500)
                 end)
                 return true, Report['ServerId']
             end
@@ -357,7 +358,7 @@ function AddReportMessage(ReportId, Message, Time)
                         ['Sender'] = PlayerModule.GetPlayerData().Name,
                     }
                     Report['Chats'][#Report['Chats'] + 1] = NewMessage
-                    TriggerServerEvent('mc-admin/server/sync-chat-data', 'Reports', Config.Reports, 1500)
+                    TriggerServerEvent('Ethnic-admin/server/sync-chat-data', 'Reports', Config.Reports, 1500)
                 end)
                 return true
             end
@@ -412,7 +413,7 @@ end
 -- [ Get Functions ] --
 
 function GetServerConvar(Convar)
-    local ReturnData = CallbackModule.SendCallback('mc-adminmenu/server/get-convar', Convar)
+    local ReturnData = CallbackModule.SendCallback('Ethnic-adminmenu/server/get-convar', Convar)
     return ReturnData
 end
 
@@ -529,22 +530,22 @@ function GetPlayerRank()
 end
 
 function GetPlayersInArea(Coords, Radius)
-    local Players = CallbackModule.SendCallback('mc-admin/server/get-active-players-in-radius', Coords, Radius)
+    local Players = CallbackModule.SendCallback('Ethnic-admin/server/get-active-players-in-radius', Coords, Radius)
     return Players
 end
 
 function GetBans()
-    local Bans = CallbackModule.SendCallback('mc-admin/server/get-bans')
+    local Bans = CallbackModule.SendCallback('Ethnic-admin/server/get-bans')
     return Bans
 end
 
 function GetPlayers()
-    local Players = CallbackModule.SendCallback('mc-admin/server/get-players')
+    local Players = CallbackModule.SendCallback('Ethnic-admin/server/get-players')
     return Players
 end
 
 function GetLogs()
-    local Logs = CallbackModule.SendCallback('mc-admin/server/get-logs')
+    local Logs = CallbackModule.SendCallback('Ethnic-admin/server/get-logs')
     return Logs
 end
 

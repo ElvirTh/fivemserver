@@ -222,7 +222,7 @@ function InitMain()
         end
 
         local Speed = GetEntitySpeed(CurrentVehicleData.Vehicle)
-        local MPHSpeed = math.floor(Speed * 3.6)
+        local MPHSpeed = math.floor(Speed * 2.236936)
         if MPHSpeed < 35 then
             exports['Ethnic-ui']:Notify('limiter-error', "You can't set the limiter below 35mp/h", 'error')
             return

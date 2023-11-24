@@ -47,26 +47,31 @@ Citizen.CreateThread(function()
     end, 'admin')
 
     CommandsModule.Add(Config.Commands['MenuOpen'], Lang:t("info.keymapping_desc"), {}, false, function(source)
-        TriggerClientEvent('mc-admin/client/try-open-menu', source, true)
+        TriggerClientEvent('Ethnic-admin/client/try-open-menu', source, true)
     end, 'admin')
 
     CommandsModule.Add(Config.Commands['MenuDebug'], Lang:t("info.menu_debug"), {}, false, function(source)
-        TriggerClientEvent('mc-admin/client/toggle-debug', source, false)
+        TriggerClientEvent('Ethnic-admin/client/toggle-debug', source, false)
     end, 'god')
 
     CommandsModule.Add(Config.Commands['MenuReset'], Lang:t("info.reset_data"), {}, false, function(source)
-        TriggerClientEvent('mc-admin/client/reset-menu', -1, false)
+        TriggerClientEvent('Ethnic-admin/client/reset-menu', -1, false)
     end, 'god')
+
+    CommandsModule.Add(Config.Commands['Teleport'], Lang:t("TeleportToMarker"), {}, false, function(source)
+        TriggerClientEvent('Ethnic-admin/client/command-go-to-marker', source, true)
+    end, 'admin')
+    
 
     CommandsModule.Add(Config.Commands['MenuPerms'], Lang:t("info.menu_perms"), {{Name = "action", Help = Lang:t('info.perm_action')}, {Name = "commandid", Help = Lang:t('info.commandid')}, {Name = "group", Help = Lang:t('info.rankid')}}, false, function(source, args)
         local Action = args[1]:lower()
         local CommandId = args[2]
         local Group = args[3] ~= nil and args[3]:lower() or false
-        local Player = PlayerModule.GetPlayerBySource(source)
+        local Player = PlayerModule.GetPlayerBySource(source)   
         if Action ~= 'add' and Action ~= 'remove' and Action ~= 'list' then
             return Player.Functions.Notify('invalid-action', Lang:t('info.invalid_action'), 'error')
         end
-        TriggerClientEvent('mc-admin/client/do-perms-action', source, Action, CommandId, Group)
+        TriggerClientEvent('Ethnic-admin/client/do-perms-action', source, Action, CommandId, Group)
     end, 'god')
 
     CommandsModule.Add(Config.Commands['ReportNew'], Lang:t("info.send_report"), {{Name = "message", Help = Lang:t('info.message')}}, false, function(source, args)
@@ -84,19 +89,19 @@ Citizen.CreateThread(function()
                     }
                 },
             }
-            TriggerClientEvent('mc-admin/client/send-report', source, ReportData)
+            TriggerClientEvent('Ethnic-admin/client/send-report', source, ReportData)
         end
     end)
 
     CommandsModule.Add(Config.Commands['ReportChat'], Lang:t("info.reply_report"), {{Name = "message", Help = Lang:t('info.message')}}, false, function(source, args)
         local Message = table.concat(args, ' ')
         if Message ~= nil then
-            TriggerClientEvent('mc-admin/client/reply-report', source, Message, CalculateTimeToDisplay())
+            TriggerClientEvent('Ethnic-admin/client/reply-report', source, Message, CalculateTimeToDisplay())
         end
     end)
 
     CommandsModule.Add(Config.Commands['ReportClose'], Lang:t("info.close_report"), {}, false, function(source, args)
-        TriggerClientEvent('mc-admin/client/close-report', source)
+        TriggerClientEvent('Ethnic-admin/client/close-report', source)
     end)
 
     -- [ Console ] --
@@ -207,16 +212,16 @@ false)
         
     -- [ Callbacks ] --
 
-    CallbackModule.CreateCallback('mc-adminmenu/server/get-permission', function(Source, Cb)
+    CallbackModule.CreateCallback('Ethnic-adminmenu/server/get-permission', function(Source, Cb)
         local Group = PlayerModule.GetPermission(Source)
         Cb(Group)
     end)
 
-    CallbackModule.CreateCallback('mc-adminmenu/server/get-convar', function(source, Cb, ConvarName)
+    CallbackModule.CreateCallback('Ethnic-adminmenu/server/get-convar', function(source, Cb, ConvarName)
         Cb(GetConvar(ConvarName, 'none'))
     end)
 
-    CallbackModule.CreateCallback('mc-admin/server/get-active-players-in-radius', function(Source, Cb, Coords, Radius)
+    CallbackModule.CreateCallback('Ethnic-admin/server/get-active-players-in-radius', function(Source, Cb, Coords, Radius)
         local Coords, Radius = Coords ~= nil and vector3(Coords.x, Coords.y, Coords.z) or GetEntityCoords(GetPlayerPed(Source)), Radius ~= nil and Radius or 5.0
         local ActivePlayers = {}
         for k, v in pairs(PlayerModule.GetPlayers()) do
@@ -232,7 +237,7 @@ false)
         Cb(ActivePlayers)
     end)
 
-    CallbackModule.CreateCallback('mc-admin/server/get-bans', function(source, Cb)
+    CallbackModule.CreateCallback('Ethnic-admin/server/get-bans', function(source, Cb)
         local BanList = {}
         local BansData = MySQL.Sync.fetchAll('SELECT * FROM bans', {})
         if BansData and BansData[1] ~= nil then
@@ -254,7 +259,7 @@ false)
         Cb(BanList)
     end)
 
-    CallbackModule.CreateCallback('mc-admin/server/get-logs', function(source, Cb)
+    CallbackModule.CreateCallback('Ethnic-admin/server/get-logs', function(source, Cb)
         local LogsList = {}
         local LogsData = MySQL.query.await('SELECT * FROM logs', {})
         if LogsData and LogsData[1] ~= nil then
@@ -272,7 +277,7 @@ false)
         Cb(LogsList)
     end)
     
-    CallbackModule.CreateCallback('mc-admin/server/get-players', function(source, Cb)
+    CallbackModule.CreateCallback('Ethnic-admin/server/get-players', function(source, Cb)
         local PlayerList = {}
         for i=1, #PlayerModule.GetPlayers() do
             local Player = PlayerModule.GetPlayers()[i]
@@ -288,7 +293,7 @@ false)
         Cb(PlayerList)
     end)
 
-    CallbackModule.CreateCallback('mc-admin/server/get-player-data', function(source, Cb, Identifier)
+    CallbackModule.CreateCallback('Ethnic-admin/server/get-player-data', function(source, Cb, Identifier)
         local PlayerInfo = {}
         local TPlayer = nil
         if string.match(Identifier, "license:") then
@@ -312,17 +317,17 @@ false)
         end
     end)
 
-    CallbackModule.CreateCallback('mc-admin/server/get-date-difference', function(source, Cb, Bans, Type)
+    CallbackModule.CreateCallback('Ethnic-admin/server/get-date-difference', function(source, Cb, Bans, Type)
         local FilteredBans, BanAmount = GetDateDifference(Type, Bans) 
         Cb(FilteredBans, BanAmount)
     end)
 
-    CallbackModule.CreateCallback("mc-admin/server/create-log", function(source, Cb, Type, Log, Data)
+    CallbackModule.CreateCallback("Ethnic-admin/server/create-log", function(source, Cb, Type, Log, Data)
         if Type == nil or Log == nil then return end
         CreateLog(source, Type, Log, Data)
     end)
 
-    CallbackModule.CreateCallback("mc-admin/server/get-spectate-data", function(Source, Cb, TargetSource)
+    CallbackModule.CreateCallback("Ethnic-admin/server/get-spectate-data", function(Source, Cb, TargetSource)
         local Player = PlayerModule.GetPlayerBySource(TargetSource)
         if Player then
             local SpectateData = {
@@ -345,7 +350,7 @@ AddEventHandler('playerConnecting', onPlayerConnecting)
 
 -- User Commands
 
-RegisterNetEvent("mc-admin/server/unban-player", function(BanId)
+RegisterNetEvent("Ethnic-admin/server/unban-player", function(BanId)
     local src = source
     if not AdminCheck(src) then return end
 
@@ -359,7 +364,7 @@ RegisterNetEvent("mc-admin/server/unban-player", function(BanId)
     end
 end)
 
-RegisterNetEvent("mc-admin/server/ban-player", function(ServerId, Expires, Reason)
+RegisterNetEvent("Ethnic-admin/server/ban-player", function(ServerId, Expires, Reason)
     local src = source
     if not AdminCheck(src) then return end
 
@@ -401,7 +406,7 @@ RegisterNetEvent("mc-admin/server/ban-player", function(ServerId, Expires, Reaso
     end
 end)
 
-RegisterNetEvent("mc-admin/server/kick-all-players", function(Reason)
+RegisterNetEvent("Ethnic-admin/server/kick-all-players", function(Reason)
     local src = source
     if not AdminCheck(src) then return end
     for k, v in pairs(PlayerModule.GetPlayers()) do
@@ -412,7 +417,7 @@ RegisterNetEvent("mc-admin/server/kick-all-players", function(Reason)
     end
 end)
 
-RegisterNetEvent("mc-admin/server/kick-player", function(ServerId, Reason)
+RegisterNetEvent("Ethnic-admin/server/kick-player", function(ServerId, Reason)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
@@ -424,7 +429,7 @@ RegisterNetEvent("mc-admin/server/kick-player", function(ServerId, Reason)
     Player.Functions.Notify('kicked', Lang:t('info.kicked'), 'success')
 end)
 
-RegisterNetEvent("mc-admin/server/set-money", function(ServerId, MoneyType, MoneyAmount)
+RegisterNetEvent("Ethnic-admin/server/set-money", function(ServerId, MoneyType, MoneyAmount)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
@@ -437,7 +442,7 @@ RegisterNetEvent("mc-admin/server/set-money", function(ServerId, MoneyType, Mone
 end)
 
 
-RegisterNetEvent("mc-admin/server/give-money", function(ServerId, MoneyType, MoneyAmount)
+RegisterNetEvent("Ethnic-admin/server/give-money", function(ServerId, MoneyType, MoneyAmount)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
@@ -450,7 +455,7 @@ RegisterNetEvent("mc-admin/server/give-money", function(ServerId, MoneyType, Mon
     TPlayer.Functions.AddMoney(MoneyType, MoneyAmount, 'Admin-Menu-Give-Money')
 end)
 
-RegisterNetEvent("mc-admin/server/give-item", function(ServerId, ItemName, ItemAmount)
+RegisterNetEvent("Ethnic-admin/server/give-item", function(ServerId, ItemName, ItemAmount)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
@@ -463,7 +468,7 @@ RegisterNetEvent("mc-admin/server/give-item", function(ServerId, ItemName, ItemA
     TPlayer.Functions.Notify('item-given', Lang:t('info.gaveitem', {amount = ItemAmount, name = ItemName}), 'success')
 end)
 
-RegisterNetEvent("mc-admin/server/request-job", function(ServerId, JobName)
+RegisterNetEvent("Ethnic-admin/server/request-job", function(ServerId, JobName)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
@@ -474,54 +479,54 @@ RegisterNetEvent("mc-admin/server/request-job", function(ServerId, JobName)
     TPlayer.Functions.Notify('job-given', Lang:t('info.setjob', {jobname = JobName}), 'success')
 end)
 
-RegisterNetEvent("mc-admin/server/drunk", function(ServerId)
+RegisterNetEvent("Ethnic-admin/server/drunk", function(ServerId)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
     local PlayerSource = ServerId ~= nil and ServerId or src
 
-    TriggerClientEvent('mc-admin/client/drunk', PlayerSource)
+    TriggerClientEvent('Ethnic-admin/client/drunk', PlayerSource)
 end)
 
-RegisterNetEvent("mc-admin/server/animal-attack", function(ServerId)
+RegisterNetEvent("Ethnic-admin/server/animal-attack", function(ServerId)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
     local PlayerSource = ServerId ~= nil and ServerId or src
 
-    TriggerClientEvent('mc-admin/client/animal-attack', PlayerSource)
+    TriggerClientEvent('Ethnic-admin/client/animal-attack', PlayerSource)
 end)
 
-RegisterNetEvent("mc-admin/server/set-fire", function(ServerId)
+RegisterNetEvent("Ethnic-admin/server/set-fire", function(ServerId)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
     local PlayerSource = ServerId ~= nil and ServerId or src
 
-    TriggerClientEvent('mc-admin/client/set-fire', PlayerSource)
+    TriggerClientEvent('Ethnic-admin/client/set-fire', PlayerSource)
 end)
 
-RegisterNetEvent("mc-admin/server/fling-player", function(ServerId)
+RegisterNetEvent("Ethnic-admin/server/fling-player", function(ServerId)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
     local PlayerSource = ServerId ~= nil and ServerId or src
 
-    TriggerClientEvent('mc-admin/client/fling-player', PlayerSource)
+    TriggerClientEvent('Ethnic-admin/client/fling-player', PlayerSource)
 end)
 
-RegisterNetEvent("mc-admin/server/play-sound", function(ServerId, SoundId)
+RegisterNetEvent("Ethnic-admin/server/play-sound", function(ServerId, SoundId)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
     local PlayerSource = ServerId ~= nil and ServerId or src
 
-    TriggerClientEvent('mc-admin/client/play-sound', PlayerSource, SoundId)
+    TriggerClientEvent('Ethnic-admin/client/play-sound', PlayerSource, SoundId)
 end)
 
 -- Utility Commands
 
-RegisterNetEvent('mc-admin/server/get-player-blips', function()
+RegisterNetEvent('Ethnic-admin/server/get-player-blips', function()
     local src = source
     if not AdminCheck(src) then return end
 
@@ -533,11 +538,11 @@ RegisterNetEvent('mc-admin/server/get-player-blips', function()
             Coords = GetEntityCoords(GetPlayerPed(v)),
         }
     end
-    TriggerClientEvent('mc-admin/client/show', src, BlipData)
+    TriggerClientEvent('Ethnic-admin/client/show', src, BlipData)
 end)
 
 
-RegisterNetEvent("mc-admin/server/teleport-all", function()
+RegisterNetEvent("Ethnic-admin/server/teleport-all", function()
     local src = source
     if not AdminCheck(src) then return end
     
@@ -547,13 +552,13 @@ RegisterNetEvent("mc-admin/server/teleport-all", function()
         if SourcePlayer ~= nil and TPlayer ~= nil then 
             if SourcePlayer.PlayerData.CitizenId ~= TPlayer.PlayerData.CitizenId then
                 local SourceCoords = GetEntityCoords(GetPlayerPed(src))
-                TriggerClientEvent('mc-admin/client/teleport-player', v, SourceCoords)
+                TriggerClientEvent('Ethnic-admin/client/teleport-player', v, SourceCoords)
             end
         end
     end
 end)
 
-RegisterNetEvent("mc-admin/server/teleport-player", function(ServerId, Type)
+RegisterNetEvent("Ethnic-admin/server/teleport-player", function(ServerId, Type)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
@@ -566,23 +571,23 @@ RegisterNetEvent("mc-admin/server/teleport-player", function(ServerId, Type)
     if Type == 'Goto' then
         Msg = Lang:t('info.teleported_to') 
         local TCoords = GetEntityCoords(GetPlayerPed(PlayerSource))
-        TriggerClientEvent('mc-admin/client/teleport-player', src, TCoords)
+        TriggerClientEvent('Ethnic-admin/client/teleport-player', src, TCoords)
     elseif Type == 'Bring' then
         Msg = Lang:t('info.teleported_brought')
         local Coords = GetEntityCoords(GetPlayerPed(src))
-        TriggerClientEvent('mc-admin/client/teleport-player', PlayerSource, Coords)
+        TriggerClientEvent('Ethnic-admin/client/teleport-player', PlayerSource, Coords)
     end
     Player.Functions.Notify('teleported', Lang:t('info.teleported', {tpmsg = Msg}), 'success')
 end)
 
-RegisterNetEvent("mc-admin/server/chat-say", function(Message)
+RegisterNetEvent("Ethnic-admin/server/chat-say", function(Message)
     TriggerClientEvent('Ethnic-chat/client/post-message', -1, Lang:t('info.announcement'), Message, "normal")
 end)
 
 -- Player Commands
 
 -- Change this if needed changes
-RegisterNetEvent("mc-admin/server/set-environment", function(Weather, Hour, Minute)
+RegisterNetEvent("Ethnic-admin/server/set-environment", function(Weather, Hour, Minute)
     local src = source
     if not AdminCheck(src) then return end
     Hour, Minute = tonumber(Hour), tonumber(Minute)
@@ -606,7 +611,7 @@ RegisterNetEvent("mc-admin/server/set-environment", function(Weather, Hour, Minu
     end
 end)
 
-RegisterNetEvent("mc-admin/server/open-bennys", function(ServerId)
+RegisterNetEvent("Ethnic-admin/server/open-bennys", function(ServerId)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
@@ -615,7 +620,7 @@ RegisterNetEvent("mc-admin/server/open-bennys", function(ServerId)
     TriggerClientEvent('Ethnic-bennys/client/open-bennys', PlayerSource, true)
 end)
 
-RegisterNetEvent("mc-admin/server/set-permissions", function(ServerId, Permission)
+RegisterNetEvent("Ethnic-admin/server/set-permissions", function(ServerId, Permission)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
@@ -627,7 +632,7 @@ RegisterNetEvent("mc-admin/server/set-permissions", function(ServerId, Permissio
     Player.Functions.Notify('set-perm', 'You successfully set the permission group of '..Player.PlayerData.Name..' to '..Permission..'!', 'success')
 end)
 
-RegisterNetEvent("mc-admin/server/refresh-permissions", function(ServerId)
+RegisterNetEvent("Ethnic-admin/server/refresh-permissions", function(ServerId)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
@@ -640,7 +645,7 @@ RegisterNetEvent("mc-admin/server/refresh-permissions", function(ServerId)
 end)
 
 
-RegisterNetEvent("mc-admin/server/kill", function(ServerId)
+RegisterNetEvent("Ethnic-admin/server/kill", function(ServerId)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
@@ -649,14 +654,14 @@ RegisterNetEvent("mc-admin/server/kill", function(ServerId)
     TriggerClientEvent('Ethnic-hospital/client/kill-player', PlayerSource)
 end)
 
-RegisterNetEvent("mc-admin/server/delete-area", function(Type, Radius)
+RegisterNetEvent("Ethnic-admin/server/delete-area", function(Type, Radius)
     local src = source
     if not AdminCheck(src) then return end
 
-    TriggerClientEvent('mc-admin/client/delete-area', src, Type, Radius)
+    TriggerClientEvent('Ethnic-admin/client/delete-area', src, Type, Radius)
 end)
 
-RegisterNetEvent("mc-admin/server/freeze-player", function(ServerId)
+RegisterNetEvent("Ethnic-admin/server/freeze-player", function(ServerId)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
@@ -670,10 +675,10 @@ RegisterNetEvent("mc-admin/server/freeze-player", function(ServerId)
     FrozenPlayers[PData.CitizenId] = not FrozenPlayers[PData.CitizenId]
     local Msg = FrozenPlayers[PData.CitizenId] and Lang:t("info.gave_freeze", {frozenmsg =  Lang:t('commands.frozen')}) or Lang:t("info.gave_freeze", {frozenmsg =  Lang:t('commands.unfrozen')})
     Player.Functions.Notify('frozen-toggled', Msg, FrozenPlayers[PData.CitizenId] and 'success' or 'error')
-    TriggerClientEvent('mc-admin/client/freeze-player', PlayerSource, FrozenPlayers[PData.CitizenId])
+    TriggerClientEvent('Ethnic-admin/client/freeze-player', PlayerSource, FrozenPlayers[PData.CitizenId])
 end)
 
-RegisterNetEvent("mc-admin/server/toggle-infinite-ammo", function(ServerId)
+RegisterNetEvent("Ethnic-admin/server/toggle-infinite-ammo", function(ServerId)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
@@ -687,10 +692,10 @@ RegisterNetEvent("mc-admin/server/toggle-infinite-ammo", function(ServerId)
     AmmoEnabled[PData.CitizenId] = not AmmoEnabled[PData.CitizenId]
     local Msg = AmmoEnabled[PData.CitizenId] and Lang:t("commands.enabled") or Lang:t("commands.disabled")
     Player.Functions.Notify('infinite-ammo', 'Infinite Ammo '..Msg, AmmoEnabled[PData.CitizenId] and 'success' or 'error')
-    TriggerClientEvent('mc-admin/client/toggle-infinite-ammo', PlayerSource, AmmoEnabled[PData.CitizenId])
+    TriggerClientEvent('Ethnic-admin/client/toggle-infinite-ammo', PlayerSource, AmmoEnabled[PData.CitizenId])
 end)
 
-RegisterNetEvent("mc-admin/server/toggle-infinite-stamina", function(ServerId)
+RegisterNetEvent("Ethnic-admin/server/toggle-infinite-stamina", function(ServerId)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
@@ -704,10 +709,10 @@ RegisterNetEvent("mc-admin/server/toggle-infinite-stamina", function(ServerId)
     StaminaEnabled[PData.CitizenId] = not StaminaEnabled[PData.CitizenId]
     local Msg = StaminaEnabled[PData.CitizenId] and Lang:t("commands.enabled") or Lang:t("commands.disabled")
     Player.Functions.Notify('infinite-stamina', 'Infinite Stamina '..Msg, StaminaEnabled[PData.CitizenId] and 'success' or 'error')
-    TriggerClientEvent('mc-admin/client/toggle-infinite-stamina', PlayerSource, StaminaEnabled[PData.CitizenId])
+    TriggerClientEvent('Ethnic-admin/client/toggle-infinite-stamina', PlayerSource, StaminaEnabled[PData.CitizenId])
 end)
 
-RegisterNetEvent("mc-admin/server/toggle-cloak", function(ServerId)
+RegisterNetEvent("Ethnic-admin/server/toggle-cloak", function(ServerId)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
@@ -721,10 +726,10 @@ RegisterNetEvent("mc-admin/server/toggle-cloak", function(ServerId)
     CloakEnabled[PData.CitizenId] = not CloakEnabled[PData.CitizenId]
     local Msg = CloakEnabled[PData.CitizenId] and Lang:t("commands.enabled") or Lang:t("commands.disabled")
     Player.Functions.Notify('cloak-toggled', 'Cloak '..Msg, CloakEnabled[PData.CitizenId] and 'success' or 'error')
-    TriggerClientEvent('mc-admin/client/toggle-cloak', PlayerSource, CloakEnabled[PData.CitizenId])
+    TriggerClientEvent('Ethnic-admin/client/toggle-cloak', PlayerSource, CloakEnabled[PData.CitizenId])
 end)
 
-RegisterNetEvent("mc-admin/server/toggle-godmode", function(ServerId)
+RegisterNetEvent("Ethnic-admin/server/toggle-godmode", function(ServerId)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
@@ -739,10 +744,10 @@ RegisterNetEvent("mc-admin/server/toggle-godmode", function(ServerId)
     local Msg = GodmodeEnabled[PData.CitizenId] and Lang:t('commands.enabled') or Lang:t('commands.disabled')
     local MsgType = GodmodeEnabled[PData.CitizenId] and 'success' or 'error'
     Player.Functions.Notify('godmode-toggled', 'Godmode '..Msg, MsgType)
-    TriggerClientEvent('mc-admin/client/toggle-godmode', PlayerSource, GodmodeEnabled[PData.CitizenId])
+    TriggerClientEvent('Ethnic-admin/client/toggle-godmode', PlayerSource, GodmodeEnabled[PData.CitizenId])
 end)
 
-RegisterNetEvent("mc-admin/server/set-food-drink", function(ServerId)
+RegisterNetEvent("Ethnic-admin/server/set-food-drink", function(ServerId)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
@@ -757,7 +762,7 @@ RegisterNetEvent("mc-admin/server/set-food-drink", function(ServerId)
     Player.Functions.Notify('gave-needs', Lang:t('info.gave_needs'), 'success')
 end)
 
-RegisterNetEvent("mc-admin/server/remove-stress", function(ServerId)
+RegisterNetEvent("Ethnic-admin/server/remove-stress", function(ServerId)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
@@ -771,7 +776,7 @@ RegisterNetEvent("mc-admin/server/remove-stress", function(ServerId)
     Player.Functions.Notify('removed-stress', Lang:t('info.removed_stress'), 'success')
 end)
 
-RegisterNetEvent("mc-admin/server/set-armor", function(ServerId)
+RegisterNetEvent("Ethnic-admin/server/set-armor", function(ServerId)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
@@ -785,7 +790,7 @@ RegisterNetEvent("mc-admin/server/set-armor", function(ServerId)
     Player.Functions.Notify('gave-armor', Lang:t('info.gave_armor'), 'success')
 end)
 
-RegisterNetEvent("mc-admin/server/reset-skin", function(ServerId)
+RegisterNetEvent("Ethnic-admin/server/reset-skin", function(ServerId)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
@@ -803,16 +808,16 @@ RegisterNetEvent("mc-admin/server/reset-skin", function(ServerId)
     end
 end)
 
-RegisterNetEvent("mc-admin/server/set-model", function(ServerId, Model)
+RegisterNetEvent("Ethnic-admin/server/set-model", function(ServerId, Model)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
     local PlayerSource = ServerId ~= nil and ServerId or src
 
-    TriggerClientEvent('mc-admin/client/set-model', PlayerSource, Model)
+    TriggerClientEvent('Ethnic-admin/client/set-model', PlayerSource, Model)
 end)
 
-RegisterNetEvent("mc-admin/server/revive-all", function()
+RegisterNetEvent("Ethnic-admin/server/revive-all", function()
     local src = source
     if not AdminCheck(src) then return end
 
@@ -827,7 +832,7 @@ RegisterNetEvent("mc-admin/server/revive-all", function()
 	end
 end)
 
-RegisterNetEvent("mc-admin/server/revive-in-distance", function(Radius)
+RegisterNetEvent("Ethnic-admin/server/revive-in-distance", function(Radius)
     local src = source
     if not AdminCheck(src) then return end
 
@@ -847,7 +852,7 @@ RegisterNetEvent("mc-admin/server/revive-in-distance", function(Radius)
 	end
 end)
 
-RegisterNetEvent("mc-admin/server/revive-target", function(ServerId)
+RegisterNetEvent("Ethnic-admin/server/revive-target", function(ServerId)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
@@ -863,7 +868,7 @@ RegisterNetEvent("mc-admin/server/revive-target", function(ServerId)
     end
 end)
 
-RegisterNetEvent("mc-admin/server/open-clothing", function(ServerId)
+RegisterNetEvent("Ethnic-admin/server/open-clothing", function(ServerId)
     local src = source
     if not AdminCheck(src) then return end
     ServerId = tonumber(ServerId)
@@ -878,16 +883,16 @@ RegisterNetEvent("mc-admin/server/open-clothing", function(ServerId)
 end)
 
 
-RegisterNetEvent('mc-admin/server/sync-chat-data', function(Type, Data, UpdateDelay)
+RegisterNetEvent('Ethnic-admin/server/sync-chat-data', function(Type, Data, UpdateDelay)
     UpdateDelay = UpdateDelay == nil and false or UpdateDelay
     if Type == 'Staffchat' then 
         Config.StaffChat = Data 
     else 
         Config.Reports = Data 
     end
-    TriggerClientEvent('mc-admin/client/sync-chat-data', -1, Type, Type == 'Staffchat' and Config.StaffChat or Config.Reports, UpdateDelay)
+    TriggerClientEvent('Ethnic-admin/client/sync-chat-data', -1, Type, Type == 'Staffchat' and Config.StaffChat or Config.Reports, UpdateDelay)
 end)
 
-RegisterNetEvent("mc-admin/server/send-chat-report", function(ServerId, Message)
+RegisterNetEvent("Ethnic-admin/server/send-chat-report", function(ServerId, Message)
     TriggerClientEvent('Ethnic-chat/client/post-message', ServerId, 'Report', Message, "normal")
 end)

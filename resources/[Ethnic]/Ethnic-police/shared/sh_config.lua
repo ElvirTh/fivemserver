@@ -143,7 +143,7 @@ Config.PolicePad = {
         Coords = vector4(437.23, -994.16, 25.7, 272.92),
     },
     {
-        Model = 'charger19',
+        Model = 'polchar',
         Coords = vector4(436.92, -996.91, 25.7, 265.46),
     },
 }

@@ -118,6 +118,16 @@ RegisterNetEvent('Ethnic-police/client/take-out-pdvehicle',function(Data)
                 exports['Ethnic-vehicles']:SetFuelLevel(Vehicle['Vehicle'], 100)
                 exports['Ethnic-vehicles']:SetVehicleKeys(Plate, true, false)
                 SetVehicleModKit(Vehicle['Vehicle'], 0)
+
+                SetVehicleMod(Vehicle['Vehicle'],11,3,false) --engine
+                SetVehicleMod(Vehicle['Vehicle'],12,2,false) --brakes
+                SetVehicleMod(Vehicle['Vehicle'],13,2,false) --transmission
+                SetVehicleMod(Vehicle['Vehicle'],15,3,false) --suspension
+                SetVehicleMod(Vehicle['Vehicle'],16,4,false) --armor
+                SetVehicleMod(Vehicle['Vehicle'],18,0,false) --turbo
+
+                SetVehicleDirtLevel(Vehicle['Vehicle'], 0.0) --spawn car clean
+
                 SetVehicleExtra(Vehicle['Vehicle'],1,0)
                 SetVehicleExtra(Vehicle['Vehicle'],2,0)
                 SetVehicleExtra(Vehicle['Vehicle'],3,0)
@@ -129,21 +139,13 @@ RegisterNetEvent('Ethnic-police/client/take-out-pdvehicle',function(Data)
                 SetVehicleMod(Vehicle['Vehicle'],2,2,false) -- rear bumper
                 SetVehicleMod(Vehicle['Vehicle'],3,0,false) -- skirts
                 SetVehicleMod(Vehicle['Vehicle'],6,0,false) -- grille
+                SetVehicleMod(Vehicle['Vehicle'],4,0,false) -- Exhaust
 
                 SetVehicleMod(Vehicle['Vehicle'],28,0,false) --ornament
                 SetVehicleMod(Vehicle['Vehicle'],29,0,false) --dasboard
                 
                 SetVehicleMod(Vehicle['Vehicle'],48,2,false) --livery
 
-
-                if Player.Job.Department ~= nil and Player.Job.Department == 'LSPD' then
-                    SetVehicleLivery(Vehicle['Vehicle'], 0)
-                elseif Player.Job.Department ~= nil and Player.Job.Department == 'BCSO' then
-                    SetVehicleLivery(Vehicle['Vehicle'], 1)
-                else
-                    SetVehicleLivery(Vehicle['Vehicle'], 2)
-                end
-                NetworkFadeInEntity(Vehicle['Vehicle'], 1)
             end)
         end
     end

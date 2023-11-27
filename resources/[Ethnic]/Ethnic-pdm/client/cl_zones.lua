@@ -30,35 +30,6 @@ function InitPdmZones()
                 }
             }
         })
-        exports['Ethnic-ui']:AddEyeEntry("pdm_tablet_2", {
-            Type = 'Zone',
-            SpriteDistance = 5.0,
-            Distance = 4.0,
-            ZoneData = {
-                Center = vector3(-40.22, -1106.79, 26.42),
-                Length = 0.2,
-                Width = 0.35,
-                Data = {
-                    debugPoly = false, -- Optional, shows the box zone (Default: false)
-                    heading = 340.0,
-                    minZ = 26.42,
-                    maxZ = 26.62
-                },
-            },
-            Options = {
-                {
-                    Name = 'pdm_tablet',
-                    Icon = 'fas fa-shopping-basket',
-                    Label = 'View Catalog',
-                    EventType = 'Client',
-                    EventName = 'Ethnic-pdm/client/open-pdm-catalog',
-                    EventParams = {},
-                    Enabled = function(Entity)
-                        return true
-                    end,
-                }
-            }
-        })
         exports['Ethnic-ui']:AddEyeEntry("pdm-store", {
             Type = 'Entity',
             EntityType = 'Ped',

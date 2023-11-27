@@ -393,7 +393,7 @@ Config.Outfits = {
                 OutfitData = {
                     ['Pants'] = { Item = 24, Texture = 0 }, -- Pants
                     ['Arms'] = { Item = 19, Texture = 0 }, -- Arms
-                    ['UnderShirt'] = { Item = -1, Texture = 0 }, -- T Shirt
+                    ['UnderShirt'] = { Item = 129, Texture = 0 }, -- T Shirt
                     ['ArmorVest'] = { Item = 9, Texture = 0 }, -- Body Vest
                     ['Shirts'] = { Item = 55, Texture = 0 }, -- Jacket
                     ['Shoes'] = { Item = 51, Texture = 0 }, -- Shoes
@@ -409,7 +409,7 @@ Config.Outfits = {
                 OutfitData = {
                     ['Pants'] = { Item = 24, Texture = 0 }, -- Pants
                     ['Arms'] = { Item = 20, Texture = 0 }, -- Arms
-                    ['UnderShirt'] = { Item = -1, Texture = 0 }, -- T Shirt
+                    ['UnderShirt'] = { Item = 129, Texture = 0 }, -- T Shirt
                     ['ArmorVest'] = { Item = 9, Texture = 0 }, -- Body Vest
                     ['Shirts'] = { Item = 317, Texture = 0 }, -- Jacket
                     ['Shoes'] = { Item = 51, Texture = 0 }, -- Shoes
@@ -425,7 +425,7 @@ Config.Outfits = {
                 OutfitData = {
                     ['Pants'] = { Item = 24, Texture = 0 }, -- Pants
                     ['Arms'] = { Item = 20, Texture = 0 }, -- Arms
-                    ['UnderShirt'] = { Item = -1, Texture = 0 }, -- T Shirt
+                    ['UnderShirt'] = { Item = 129, Texture = 0 }, -- T Shirt
                     ['ArmorVest'] = { Item = 9, Texture = 0 }, -- Body Vest
                     ['Shirts'] = { Item = 317, Texture = 3 }, -- Jacket
                     ['Shoes'] = { Item = 51, Texture = 0 }, -- Shoes
@@ -441,7 +441,7 @@ Config.Outfits = {
                 OutfitData = {
                     ['Pants'] = { Item = 24, Texture = 0 }, -- Pants
                     ['Arms'] = { Item = 20, Texture = 0 }, -- Arms
-                    ['UnderShirt'] = { Item = -1, Texture = 0 }, -- T Shirt
+                    ['UnderShirt'] = { Item = 129, Texture = 0 }, -- T Shirt
                     ['ArmorVest'] = { Item = 9, Texture = 0 }, -- Body Vest
                     ['Shirts'] = { Item = 317, Texture = 8 }, -- Jacket
                     ['Shoes'] = { Item = 51, Texture = 0 }, -- Shoes

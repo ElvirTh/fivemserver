@@ -256,12 +256,12 @@ RegisterNUICallback("AppClick", function(Data, Cb)
         JobCenter.Render()
     elseif App == 'employment' then
         Employment.Render()
-    -- elseif App == 'sportsback' then
-        -- SportsBack.Render()
+     elseif App == 'sportsback' then
+        SportsBack.Render()
     elseif App == 'dark' then
         Dark.Render()
-    -- elseif App == 'race' then
-    --     Racing.Render()
+     elseif App == 'race' then
+         Racing.Render()
     elseif App == 'calculator' then
         Calculator.Render()
     elseif App == 'cameras' then

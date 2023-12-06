@@ -144,7 +144,6 @@ RegisterNetEvent('Ethnic-police/client/take-out-pdvehicle',function(Data)
                 SetVehicleMod(Vehicle['Vehicle'],28,0,false) --ornament
                 SetVehicleMod(Vehicle['Vehicle'],29,0,false) --dasboard
                 
-                SetVehicleMod(Vehicle['Vehicle'],48,2,false) --livery
 
             end)
         end

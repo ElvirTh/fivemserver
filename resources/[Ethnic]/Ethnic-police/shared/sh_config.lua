@@ -146,6 +146,10 @@ Config.PolicePad = {
         Model = 'polchar',
         Coords = vector4(436.92, -996.91, 25.7, 265.46),
     },
+    {
+        Model = 'polvic',
+        Coords = vector4(436.75, -991.52, 25.7, 264.42),
+    },
 }
 
 Config.PoliceStore = {
@@ -180,7 +184,7 @@ Config.PoliceStore = {
         ['Info'] = {}
     },
     {
-        ['ItemName'] = 'weapon_taser',
+        ['ItemName'] = 'weapon_stungun',
         ['Amount'] = 1,
         ['Slot'] = 6,
         ['Info'] = {}
@@ -223,84 +227,79 @@ Config.PoliceStore = {
         ['Slot'] = 13,
     },
     {
-        ['ItemName'] = 'taser-ammo',
+        ['ItemName'] = 'emp-ammo',
         ['Amount'] = 25,
         ['Slot'] = 14,
     },
     {
-        ['ItemName'] = 'emp-ammo',
+        ['ItemName'] = 'ifak',
         ['Amount'] = 25,
         ['Slot'] = 15,
     },
     {
-        ['ItemName'] = 'ifak',
+        ['ItemName'] = 'pdchestarmor',
         ['Amount'] = 25,
         ['Slot'] = 16,
     },
     {
-        ['ItemName'] = 'pdchestarmor',
-        ['Amount'] = 25,
-        ['Slot'] = 17,
-    },
-    {
         ['ItemName'] = 'handcuffs',
         ['Amount'] = 5,
-        ['Slot'] = 18,
+        ['Slot'] = 17,
     },
     {
         ['ItemName'] = 'pdradio',
         ['Amount'] = 5,
-        ['Slot'] = 19,
+        ['Slot'] = 18,
     },
     {
         ['ItemName'] = 'spikes',
         ['Amount'] = 5,
-        ['Slot'] = 20,
+        ['Slot'] = 19,
     },
     {
         ['ItemName'] = 'evidence',
         ['Amount'] = 5,
-        ['Slot'] = 21,
+        ['Slot'] = 20,
     },
     {
         ['ItemName'] = 'megaphone',
         ['Amount'] = 5,
-        ['Slot'] = 22,
+        ['Slot'] = 21,
     },
     {
         ['ItemName'] = 'toolbox',
         ['Amount'] = 5,
-        ['Slot'] = 23,
+        ['Slot'] = 22,
     },
     {
         ['ItemName'] = 'tirekit',
         ['Amount'] = 5,
-        ['Slot'] = 24,
+        ['Slot'] = 23,
     },
     {
         ['ItemName'] = 'binoculars',
         ['Amount'] = 5,
-        ['Slot'] = 25,
+        ['Slot'] = 24,
     },
     {
         ['ItemName'] = 'pdcamera',
         ['Amount'] = 5,
-        ['Slot'] = 26,
+        ['Slot'] = 25,
     },
     {
         ['ItemName'] = 'gopropd',
         ['Amount'] = 5,
-        ['Slot'] = 27,
+        ['Slot'] = 26,
     },
     {
         ['ItemName'] = 'detcord',
         ['Amount'] = 10,
-        ['Slot'] = 28,
+        ['Slot'] = 27,
     },
     {
         ['ItemName'] = 'pdwatch',
         ['Amount'] = 1,
-        ['Slot'] = 29,
+        ['Slot'] = 28,
     },
 }
 

@@ -98,7 +98,33 @@ Config.Zones = {
         }
     },
 
-    -- Paleto Bay
+    -- Tuner Shop
+    {
+        center = vector3(144.64, -3030.44, 7.04),
+        length = 7,
+        width = 5,
+        minZ = 6.0,
+        maxZ = 9.0,
+        heading = 0.0,
+        ShowBlip = true,
+        data = {
+            Heading = 180.0,
+        }
+    },
+    {
+        center = vector3(136.0, -3030.7, 7.04),
+        length = 7,
+        width = 5,
+        minZ = 6.0,
+        maxZ = 9.0,
+        heading = 0.0,
+        ShowBlip = true,
+        data = {
+            Heading = 180.0,
+        }
+    },
+
+
     {
         center = vector3(110.8, 6626.46, 31.89),
         length = 7.4,

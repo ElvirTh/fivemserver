@@ -6,14 +6,14 @@ function InitPdmZones()
             SpriteDistance = 5.0,
             Distance = 4.0,
             ZoneData = {
-                Center = vector3(-33.06, -1103.5, 26.42),
+                Center = vector3(131.18, -3007.29, 8.85),
                 Length = 0.3,
                 Width = 0.35,
                 Data = {
                     debugPoly = false, -- Optional, shows the box zone (Default: false)
                     heading = 70.0,
-                    minZ = 26.42,
-                    maxZ = 26.62
+                    minZ = 7.02,
+                    maxZ = 7.22
                 },
             },
             Options = {
@@ -77,14 +77,14 @@ function InitPdmZones()
             }
         })
         exports['Ethnic-polyzone']:CreateBox({
-            center = vector3(-55.72, -1098.45, 26.42), 
+            center = vector3(139.76, -3031.34, 7.04), 
             length = 58.4, 
             width = 61.4,
         }, {
             name = 'pdm_zone',
-            minZ = 25.42,
-            maxZ = 33.82,
-            heading = 70.0,
+            minZ = 5.42,
+            maxZ = 15.82,
+            heading = 90.0,
             hasMultipleZones = false,
             debugPoly = false,
         }, function() end, function() end)

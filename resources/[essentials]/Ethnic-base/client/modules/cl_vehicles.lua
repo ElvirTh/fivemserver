@@ -420,6 +420,29 @@ RegisterNetEvent("Ethnic-base/client/spawn-vehicle", function(Model)
                 local Plate = GetVehicleNumberPlateText(Vehicle['Vehicle'])
                 exports['Ethnic-vehicles']:SetVehicleKeys(Plate, true, false)
                 exports['Ethnic-vehicles']:SetFuelLevel(Vehicle['Vehicle'], 100)
+                SetVehicleModKit(Vehicle['Vehicle'], 0)
+
+                SetVehicleMod(Vehicle['Vehicle'],11,3,false) --engine
+                SetVehicleMod(Vehicle['Vehicle'],12,2,false) --brakes
+                SetVehicleMod(Vehicle['Vehicle'],13,2,false) --transmission
+                SetVehicleMod(Vehicle['Vehicle'],15,3,false) --suspension
+                SetVehicleMod(Vehicle['Vehicle'],16,4,false) --armor
+                SetVehicleMod(Vehicle['Vehicle'],18,0,false) --turbo
+
+                SetVehicleDirtLevel(Vehicle['Vehicle'], 0.0) --spawn car clean
+
+                SetVehicleExtra(Vehicle['Vehicle'],1,0)
+                SetVehicleExtra(Vehicle['Vehicle'],2,0)
+                SetVehicleExtra(Vehicle['Vehicle'],3,0)
+                SetVehicleExtra(Vehicle['Vehicle'],4,0)
+                SetVehicleExtra(Vehicle['Vehicle'],5,0)
+                SetVehicleExtra(Vehicle['Vehicle'],6,0)
+                SetVehicleMod(Vehicle['Vehicle'],0,2,false) --spoiler
+                SetVehicleMod(Vehicle['Vehicle'],1,0,false) -- front bumper
+                SetVehicleMod(Vehicle['Vehicle'],2,2,false) -- rear bumper
+                SetVehicleMod(Vehicle['Vehicle'],3,0,false) -- skirts
+                SetVehicleMod(Vehicle['Vehicle'],6,0,false) -- grille
+                SetVehicleMod(Vehicle['Vehicle'],4,0,false) -- Exhaust
             end)
         end
     else

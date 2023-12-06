@@ -3,24 +3,24 @@ NearBollards = nil
 function InitZones()
     Citizen.CreateThread(function()
         exports['Ethnic-polyzone']:CreateBox({
-            center = vector3(410.9, -1028.66, 29.2), 
-            length = 5.2, 
-            width = 12.6,
+            center = vector3(410.12, -1028.21, 29.39),
+            length = 6.0, 
+            width = 17.0,
         }, {
             name = 'police_bollards_01',
-            minZ = 28.2,
+            minZ = 28.0,
             maxZ = 32.2,
             heading = 0.0,
             hasMultipleZones = false,
             debugPoly = false,
         }, function() end, function() end)
         exports['Ethnic-polyzone']:CreateBox({
-            center = vector3(412.76, -1020.29, 29.35), 
-            length = 5.0, 
-            width = 14.2,
+            center = vector3(410.01, -1020.72, 29.41), 
+            length = 6.0, 
+            width = 17.0,
         }, {
             name = 'police_bollards_02',
-            minZ = 28.35,
+            minZ = 28.0,
             maxZ = 32.35,
             heading = 0.0,
             hasMultipleZones = false,
@@ -39,26 +39,26 @@ function InitZones()
             debugPoly = false,
         }, function() end, function() end)
         exports['Ethnic-polyzone']:CreateBox({
-            center = vector3(431.44, -1001.39, 25.79), 
-            length = 30,
-            width = 6,
+            center = vector3(452.22, -1000.84, 27.67), 
+            length = 6.6, 
+            width = 20.6,
         }, {
             name = 'police_garage_01',
-            minZ = 24.7,
-            maxZ = 33,
-            heading = 0.0,
+            minZ = 24.0,
+            maxZ = 32.5,
+            heading = 90.0,
             hasMultipleZones = false,
             debugPoly = false,
         }, function() end, function() end)
         exports['Ethnic-polyzone']:CreateBox({
-            center = vector3(452.49, -1001.44, 25.79), 
-            length = 30, 
-            width = 6,
+            center = vector3(431.35, -1000.73, 27.71), 
+            length = 6.6,
+            width = 20.6,
         }, {
             name = 'police_garage_02',
-            minZ = 24.7,
-            maxZ = 33,
-            heading = 0.0,
+            minZ = 24.0,
+            maxZ = 32.5,
+            heading = 90.0,
             hasMultipleZones = false,
             debugPoly = false,
         }, function() end, function() end)
@@ -72,9 +72,9 @@ RegisterNetEvent('Ethnic-polyzone/client/enter-polyzone', function(PolyData, Coo
         NearBollards = 'MRPD_BOLLARDS_01'
     elseif PolyData.name == 'police_bollards_03' then
         NearBollards = 'PBSO_BOLLARDS_01'
-    elseif PolyData.name =='police_garage_01' then
+    elseif PolyData.name == 'police_garage_01' then
         NearBollards = 'MRPD_GARAGE_01'
-    elseif PolyData.name == 'police_garage_02' then 
+    elseif PolyData.name == 'police_garage_02' then
         NearBollards = 'MRPD_GARAGE_02'
     else
         return
@@ -82,7 +82,7 @@ RegisterNetEvent('Ethnic-polyzone/client/enter-polyzone', function(PolyData, Coo
 end)
 
 RegisterNetEvent('Ethnic-polyzone/client/leave-polyzone', function(PolyData, Coords)
-    if PolyData.name == 'police_bollards_01' or PolyData.name == 'police_bollards_02' or PolyData.name == 'police_bollards_03'  or PolyData.name == 'police_garage_01' or PolyData.name =='police_garage_02' then
+    if PolyData.name == 'police_bollards_01' or PolyData.name == 'police_bollards_02' or PolyData.name == 'police_bollards_03' or  PolyData.name == 'police_garage_01'or PolyData.name == 'police_garage_02' then
         NearBollards = nil
     else
         return

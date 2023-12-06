@@ -813,6 +813,22 @@ Shared.ItemList["weapon_taser"] = {
 	['Price'] = 1,
 }
 
+Shared.ItemList["weapon_stungun"] = {
+	['ItemName'] = "weapon_stungun",
+	['Label'] = "PD Taser",
+	['Weight'] = 8.5,
+	['Type'] = "Weapon",
+	['Metal'] = true,
+	['Melee'] = false,
+	['Image'] = "w_taser.png",
+	['Unique'] = true,
+	['Combinable'] = nil,
+	['Description'] = "PD Issued taser.",
+	['DecayRate'] = 2.0,
+	['RemoveWhenDecayed'] = true,
+	['Price'] = 1,
+}
+
 Shared.ItemList["weapon_sledgeham"] = {
 	['ItemName'] = "weapon_sledgeham",
 	['Label'] = "Sledgehammer",

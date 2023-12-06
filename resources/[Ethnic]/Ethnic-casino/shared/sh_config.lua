@@ -15,7 +15,7 @@ Config = Config or {}
 Config.Casino = {
     ['Rent'] = 750,
 }
-Config.WheelURL = "file:///C:/Users/elvir/Documents/fivemserver/Ethnic-framework/Ethnic-CasinoWheelUI/" -- URL where you host the wheel here.
+Config.WheelURL = "file:///C:/Users/elvir/Documents/fivemserver/server/Ethnic-CasinoWheelUI/" -- URL where you host the wheel here.
 Config.TVImage = "https://i.imgur.com/yUoVJ5M.png" -- Image for TV
 Config.Debug = true
 

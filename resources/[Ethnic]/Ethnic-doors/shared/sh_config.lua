@@ -398,14 +398,43 @@ Config.Doors = {
             Business = {}
         },
     },
-
     -- MRPD
+    {
+        Info = 'MRPD_PROP_GARAGE_01',
+        Coords = vector3(459.39, -1015.07, 28.12),
+        Model = 'prop_com_gar_door_01',
+        Locked = 1,
+        IsGate = false,
+        CanDetcord = false,
+        Disabled = false,
+        Connected = {},
+        Access = {
+            Job = {'judge' },
+            CitizenId = {},
+            Business = {}
+        },
+    },
+    {
+        Info = 'MRPD_PROP_GARAGE_02',
+        Coords = vector3(459.47, -1019.53, 28.1),
+        Model = 'prop_com_gar_door_01',
+        Locked = 1,
+        IsGate = false,
+        CanDetcord = false,
+        Disabled = false,
+        Connected = {},
+        Access = {
+            Job = {'judge' },
+            CitizenId = {},
+            Business = {}
+        },
+    },
     {
         Info = 'MRPD_GARAGE_01',
         Coords = vector3(452.31, -1000.84, 25.72),
         Model = 'gabz_mrpd_garage_door',
         Locked = 1,
-        IsGate = true,
+        IsGate = false,
         CanDetcord = false,
         Disabled = false,
         Connected = {},
@@ -420,7 +449,7 @@ Config.Doors = {
         Coords = vector3(431.35, -1000.73, 25.71),
         Model = 'gabz_mrpd_garage_door',
         Locked = 1,
-        IsGate = true,
+        IsGate = false,
         CanDetcord = false,
         Disabled = false,
         Connected = {},
@@ -454,6 +483,36 @@ Config.Doors = {
         CanDetcord = true,
         Disabled = false,
         Connected = {},
+        Access = {
+            Job = { 'police', 'ems', 'judge' },
+            CitizenId = {},
+            Business = {}
+        },
+    },
+    {
+        Info = 'MRPD_BACK_DOORS_LEFT',
+        Coords = vector3(467.52, -1000.54, 26.41),
+        Model = -288803980,
+        Locked = 1,
+        IsGate = false,
+        CanDetcord = true,
+        Disabled = false,
+        Connected = { 'MRPD_BACK_DOORS_RIGHT' },
+        Access = {
+            Job = { 'police', 'ems', 'judge' },
+            CitizenId = {},
+            Business = {}
+        },
+    },
+    {
+        Info = 'MRPD_BACK_DOORS_RIGHT',
+        Coords = vector3(469.93, -1000.54, 26.41),
+        Model = -288803980,
+        Locked = 1,
+        IsGate = false,
+        CanDetcord = true,
+        Disabled = false,
+        Connected = { 'MRPD_BACK_DOORS_LEFT' },
         Access = {
             Job = { 'police', 'ems', 'judge' },
             CitizenId = {},
@@ -720,7 +779,7 @@ Config.Doors = {
         Coords = vector3(410.01, -1020.72, 29.41),
         Model = 'gabz_mrpd_bollards1',
         Locked = 1,
-        IsGate = true,
+        IsGate = false,
         CanDetcord = false,
         Connected = {},
         Access = {
@@ -734,7 +793,7 @@ Config.Doors = {
         Coords = vector3(410.12, -1028.21, 29.39),
         Model = 'gabz_mrpd_bollards2',
         Locked = 1,
-        IsGate = true,
+        IsGate = false,
         CanDetcord = false,
         Connected = {},
         Access = {
@@ -1416,6 +1475,35 @@ Config.Doors = {
             Business = { 'Premium Deluxe Motorsports' }
         },
     },
+    -- Extra Houses
+    {
+        Info = 'TOMMYT_HOUSE_GATE_01',
+        Coords = vector3(-418.12, 3045.1, 29.91),
+        Model = 825488425,
+        Locked = 1,
+        IsGate = true,
+        CanDetcord = false,
+        Connected = {},
+        Access = {
+            Job = {},
+            CitizenId = {'5122'},
+            Business = {},
+        },
+    },
+    {
+        Info = 'TOMMYT_HOUSE_DOOR_01',
+        Coords = vector3(-402.4, 3039.1, 29.2),
+        Model = 1187994459,
+        Locked = 1,
+        IsGate = false,
+        CanDetcord = false,
+        Connected = {},
+        Access = {
+            Job = {},
+            CitizenId = {'5122'},
+            Business = {},
+        },
+    },    
 
     -- Tuner Shop
     {

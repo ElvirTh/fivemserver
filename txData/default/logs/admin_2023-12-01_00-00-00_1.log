@@ -1,0 +1,28 @@
+
+================================================================
+======== txAdmin v6.0.2 atop fxserver 6683 Starting - 12/1/2023, 5:33:54 PM
+================================================================
+
+================================================================
+======== Log Rotated - 12/1/2023, 5:33:54 PM                    
+================================================================
+
+================================================================
+======== txAdmin v6.0.2 atop fxserver 6683 Starting - 12/1/2023, 6:39:02 PM
+================================================================
+[18:47:32][Elvir_Thaqi1] logged in via in-game ui
+[21:42:49][Elvir_Thaqi1] logged in from via NUI iframe
+[21:43:04][Elvir_Thaqi1] executed "stop "Ethnic-ui""
+
+================================================================
+======== txAdmin v6.0.2 atop fxserver 6683 Starting - 12/1/2023, 11:07:28 PM
+================================================================
+[23:11:39][Elvir_Thaqi1] logged in via in-game ui
+[23:22:51][Elvir_Thaqi1] logged in from 127.0.0.1 via citizenfx
+[23:22:56][Elvir_Thaqi1] executed "refresh"
+[23:23:01][Elvir_Thaqi1] executed "ensure cfx-extracars"
+[23:23:03][Elvir_Thaqi1] executed "clear"
+[23:24:01][Elvir_Thaqi1] logged in via in-game ui
+[23:32:40][Elvir_Thaqi1] executed "refresh"
+[23:32:45][Elvir_Thaqi1] executed "ensure cfx-extracars"
+[23:33:33][Elvir_Thaqi1] logged in via in-game ui

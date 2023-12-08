@@ -3,7 +3,7 @@ local WheelDui, DuiObject = false, nil
 
 -- [ Events ] --
 
-RegisterNetEvent('mc-wheel/client/sync-wheel', function(Bool)
+RegisterNetEvent('Ethnic-wheel/client/sync-wheel', function(Bool)
     if Bool then
         InitWheel(true)
     else
@@ -11,15 +11,15 @@ RegisterNetEvent('mc-wheel/client/sync-wheel', function(Bool)
     end
 end)
 
-RegisterNetEvent('mc-wheel/client/sync-wheel-status', function(Bool)
+RegisterNetEvent('Ethnic-wheel/client/sync-wheel-status', function(Bool)
     IsWheelSpun = Bool
 end)
 
-RegisterNetEvent('mc-wheel/client/do-spin', function(Data)
+RegisterNetEvent('Ethnic-wheel/client/do-spin', function(Data)
     if not HasCasinoMembership() then return end
     if IsWheelActive() then return end
     local Type = Data.Type
-    local Paid = CallbackModule.SendCallback("mc-wheel/server/check-cash", Type)
+    local Paid = CallbackModule.SendCallback("Ethnic-wheel/server/check-cash", Type)
     if Paid then
         for i = 1, Config.Options['Wheel']['Types'][Type]['SpinAmount'] do
             -- Get Chances for next or current slot
@@ -62,15 +62,15 @@ RegisterNetEvent('mc-wheel/client/do-spin', function(Data)
                 end
             end
             -- Sync Everything
-            TriggerServerEvent("mc-wheel/server/set-wheel-status", true)
-            TriggerServerEvent("mc-wheel/server/sync-spin", Speed, Slot, Type)
+            TriggerServerEvent("Ethnic-wheel/server/set-wheel-status", true)
+            TriggerServerEvent("Ethnic-wheel/server/sync-spin", Speed, Slot, Type)
             Citizen.Wait(Config.Options['Wheel']['Types'][Type]['Time'])
-            EventsModule.TriggerServer("mc-wheel/server/give-reward", Slot)
+            EventsModule.TriggerServer("Ethnic-wheel/server/give-reward", Slot)
         end
     end
 end)
 
-RegisterNetEvent('mc-wheel/client/sync-spin', function(WheelSpeed, WheelSlot, WheelType)
+RegisterNetEvent('Ethnic-wheel/client/sync-spin', function(WheelSpeed, WheelSlot, WheelType)
     if DuiObject == nil then return print('No DUI found for Wheel') end
     SendDuiMessage(DuiObject, json.encode({
         Action = "DoWheel",
@@ -78,7 +78,7 @@ RegisterNetEvent('mc-wheel/client/sync-spin', function(WheelSpeed, WheelSlot, Wh
         Slot = WheelSlot,
     }))
     Citizen.Wait(Config.Options['Wheel']['Types'][WheelType]['Time'])
-    TriggerServerEvent("mc-wheel/server/set-wheel-status", false)
+    TriggerServerEvent("Ethnic-wheel/server/set-wheel-status", false)
 end)
 
 -- [ Functions ] --

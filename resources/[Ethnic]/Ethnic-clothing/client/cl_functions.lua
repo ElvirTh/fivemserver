@@ -8,7 +8,7 @@ HairColors, MakeUpColors = {}, {}
 -- [ Functions ] --
 
 function InitMenu()
-    TriggerServerEvent("mc-clothing/server/load-skin")
+    TriggerServerEvent("Ethnic-clothing/server/load-skin")
     CreateBlips()
     DebugLog('PolyZones', 'Using polyzones for shops and rooms.')
     Citizen.CreateThread(PolyClothing)
@@ -88,7 +88,7 @@ function PolyClothing()
                 if Room ~= nil then
                     if IsControlJustReleased(0, 38) then
                         PlayerModule.GetPlayerData(function(PlayerData)
-                            TriggerEvent('mc-clothing/client/get-outfits', Room['Job'])
+                            TriggerEvent('Ethnic-clothing/client/get-outfits', Room['Job'])
                         end)
                     end
                 end
@@ -999,12 +999,12 @@ end
 
 function SaveSkin(Price)
     if Price ~= 0 then
-        local HasPaid = CallbackModule.SendCallback('mc-clothing/server/pay-for-clothes', Price)
+        local HasPaid = CallbackModule.SendCallback('Ethnic-clothing/server/pay-for-clothes', Price)
         if HasPaid then
-            TriggerServerEvent("mc-clothing/server/save-skin", Config.SkinData)
+            TriggerServerEvent("Ethnic-clothing/server/save-skin", Config.SkinData)
         end
     else
-        TriggerServerEvent("mc-clothing/server/save-skin", Config.SkinData)
+        TriggerServerEvent("Ethnic-clothing/server/save-skin", Config.SkinData)
     end
 end
 

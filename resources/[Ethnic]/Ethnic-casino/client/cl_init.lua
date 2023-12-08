@@ -21,7 +21,7 @@ Citizen.CreateThread(function()
             Icon ="fas fa-dollar-sign",
             Label = name.. " Spin! ($"..data['Amount']..")",
             EventType = 'Client',
-            EventName = "mc-wheel/client/do-spin",
+            EventName = "Ethnic-wheel/client/do-spin",
             EventParams = {Type = name},
             Enabled = function(Entity)
                 return true

@@ -198,6 +198,12 @@ Shared.Weapons = {
         ['SelectFire'] = false,
         ['MaxAmmo'] = 50,
     },
+    [GetHashKey('weapon_glock19gen4')] = {
+        ['WeaponID'] = 'weapon_glock19gen4',   
+        ['AmmoType'] = 'AMMO_PISTOL',
+        ['SelectFire'] = false,
+        ['MaxAmmo'] = 50,
+    },
     [GetHashKey('weapon_waltherp99')] = {
         ['WeaponID'] = 'weapon_waltherp99',   
         ['AmmoType'] = 'AMMO_PISTOL',

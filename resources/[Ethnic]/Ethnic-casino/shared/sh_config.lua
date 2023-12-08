@@ -15,8 +15,8 @@ Config = Config or {}
 Config.Casino = {
     ['Rent'] = 750,
 }
-Config.WheelURL = "file:///C:/Users/elvir/Documents/fivemserver/server/Ethnic-CasinoWheelUI/" -- URL where you host the wheel here.
-Config.TVImage = "https://i.imgur.com/yUoVJ5M.png" -- Image for TV
+Config.WheelURL = "http://localhost/Ethnic-CasinoWheelUI/" -- URL where you host the wheel here.
+Config.TVImage = "" -- Image for TV
 Config.Debug = true
 
 Config.CasinoLocations = {
@@ -129,7 +129,7 @@ Config.Options = {
             { ['Id'] = 20, ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", },
             { ['Id'] = 21, ['Type'] = 'Money', ['Amount'] = "500",  ['Colour'] = "#F2ED52", },
             { ['Id'] = 22, ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", },
-            { ['Id'] = 23, ['Type'] = 'Vehicle', ['Model'] = 'sultanrs', ['Colour'] = "#FF0221", },
+            { ['Id'] = 23, ['Type'] = 'Vehicle', ['Model'] = 'gtr', ['Colour'] = "#FF0221", },
         }
     },
     ['Slots'] = {

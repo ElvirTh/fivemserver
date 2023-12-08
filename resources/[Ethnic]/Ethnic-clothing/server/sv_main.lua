@@ -49,7 +49,7 @@ Citizen.CreateThread(function()
     CommandsModule.Add('addoutfit', 'Put your current outfit in your closet.', {{Name = 'name', Help = 'Outfit Name'}}, false, function(source, args)
         local OutfitName = args[1] ~= nil and args[1] or 'outfit-'..math.random(111111, 999999)
         DebugLog('Menu', 'Adding outfit '..OutfitName..' to closet.')
-        TriggerClientEvent('mc-clothing/client/save-current-outfit', source, OutfitName)
+        TriggerClientEvent('Ethnic-clothing/client/save-current-outfit', source, OutfitName)
     end)
 
     CommandsModule.Add('skin', 'Clothing Menu', {}, false, function(source, args)
@@ -95,18 +95,18 @@ Citizen.CreateThread(function()
 
     -- [ Callbacks ] --
 
-    CallbackModule.CreateCallback('mc-clothing/server/pay-for-clothes', function(Source, Cb, Price)
+    CallbackModule.CreateCallback('Ethnic-clothing/server/pay-for-clothes', function(Source, Cb, Price)
         local Player = PlayerModule.GetPlayerBySource(Source)
         if Player.Functions.RemoveMoney('Cash', Price) then
             Cb(true)
         else
             Cb(false)
-            TriggerClientEvent("mc-clothing/client/load-player-skin", Source)
+            TriggerClientEvent("Ethnic-clothing/client/load-player-skin", Source)
             Player.Functions.Notify('no-money', Lang:t('info.no_money'), "error")
         end
     end)
 
-    CallbackModule.CreateCallback('mc-clothing/server/get-outfits', function(Source, Cb)
+    CallbackModule.CreateCallback('Ethnic-clothing/server/get-outfits', function(Source, Cb)
         local Player = PlayerModule.GetPlayerBySource(Source)
         local OutfitList = {}
         DatabaseModule.Execute('SELECT * FROM player_outfits WHERE citizenid = ?', {Player.PlayerData.CitizenId}, function(OutfitResult)
@@ -128,7 +128,7 @@ end)
 
 -- [ Events ] --
 
-RegisterNetEvent("mc-clothing/server/rename-outfit", function(OutfitName, OutfitId, NewName)
+RegisterNetEvent("Ethnic-clothing/server/rename-outfit", function(OutfitName, OutfitId, NewName)
     local src = source
     local Player = PlayerModule.GetPlayerBySource(src)
     if Player then
@@ -143,7 +143,7 @@ RegisterNetEvent("mc-clothing/server/rename-outfit", function(OutfitName, Outfit
     end
 end)
 
-RegisterNetEvent("mc-clothing/server/save-skin", function(Data)
+RegisterNetEvent("Ethnic-clothing/server/save-skin", function(Data)
     local src = source
     local Player = PlayerModule.GetPlayerBySource(src)
     if Player and Data ~= nil then
@@ -166,7 +166,7 @@ RegisterNetEvent("mc-clothing/server/save-skin", function(Data)
                     DatabaseModule.Execute('SELECT * FROM player_skins WHERE citizenid = ?', {Player.PlayerData.CitizenId}, function(SkinResult)
                         if SkinResult[1] ~= nil then
                             DebugLog('Skin', 'Saved skin for '..Player.PlayerData.CitizenId)
-                            TriggerClientEvent("mc-clothing/client/load-skin", src, SkinResult[1].model, json.decode(SkinResult[1].skin), json.decode(SkinResult[1].tatoos))
+                            TriggerClientEvent("Ethnic-clothing/client/load-skin", src, SkinResult[1].model, json.decode(SkinResult[1].skin), json.decode(SkinResult[1].tatoos))
                         else
                             DebugLog('Skin', 'Unable to save skin for '..Player.PlayerData.CitizenId)
                         end
@@ -180,15 +180,15 @@ RegisterNetEvent("mc-clothing/server/save-skin", function(Data)
     end
 end)
 
-RegisterNetEvent("mc-clothing/server/load-skin", function()
+RegisterNetEvent("Ethnic-clothing/server/load-skin", function()
     local src = source
     local Player = PlayerModule.GetPlayerBySource(src)
     if Player then
         DatabaseModule.Execute('SELECT * FROM player_skins WHERE citizenid = ?', {Player.PlayerData.CitizenId}, function(SkinResult)
             if SkinResult[1] ~= nil then
-                TriggerClientEvent("mc-clothing/client/load-skin", src, SkinResult[1].model, json.decode(SkinResult[1].skin), json.decode(SkinResult[1].tatoos))
+                TriggerClientEvent("Ethnic-clothing/client/load-skin", src, SkinResult[1].model, json.decode(SkinResult[1].skin), json.decode(SkinResult[1].tatoos))
             else
-                TriggerClientEvent("mc-clothing/client/load-skin", src)
+                TriggerClientEvent("Ethnic-clothing/client/load-skin", src)
             end
         end)
     else
@@ -196,7 +196,7 @@ RegisterNetEvent("mc-clothing/server/load-skin", function()
     end
 end)
 
-RegisterNetEvent("mc-clothing/server/save-outfit", function(OutfitName, SkinData)
+RegisterNetEvent("Ethnic-clothing/server/save-outfit", function(OutfitName, SkinData)
     local src = source
     local Player = PlayerModule.GetPlayerBySource(src)
     if Player and SkinData ~= nil then
@@ -213,7 +213,7 @@ RegisterNetEvent("mc-clothing/server/save-outfit", function(OutfitName, SkinData
     end
 end)
 
-RegisterNetEvent("mc-clothing/server/remove-outfit", function(OutfitName, OutfitId)
+RegisterNetEvent("Ethnic-clothing/server/remove-outfit", function(OutfitName, OutfitId)
     local src = source
     local Player = PlayerModule.GetPlayerBySource(src)
     if Player then

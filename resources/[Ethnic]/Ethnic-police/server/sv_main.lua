@@ -29,7 +29,7 @@ Citizen.CreateThread(function()
         Citizen.Wait(200)
     end
 
-    -- [ Commands ] --
+    -- [ Commands ] -w
     
     CommandsModule.Add({"barricade", "placebarricade"}, "Place down", {}, false, function(source, args)
         local Player = PlayerModule.GetPlayerBySource(source)

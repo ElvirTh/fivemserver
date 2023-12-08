@@ -51,7 +51,7 @@ Citizen.CreateThread(function()
 
     -- Wheel
 
-    EventsModule.RegisterServer("mc-wheel/server/give-reward", function(Source, Slot)
+    EventsModule.RegisterServer("Ethnic-wheel/server/give-reward", function(Source, Slot)
         local Player = PlayerModule.GetPlayerBySource(Source)
         if not Player then return end
         local SlotData = GetSlotData(Slot)
@@ -169,7 +169,7 @@ Citizen.CreateThread(function()
 
     -- Main Casino
 
-    CallbackModule.CreateCallback("mc-wheel/server/check-cash", function(Source, Cb, Type)
+    CallbackModule.CreateCallback("Ethnic-wheel/server/check-cash", function(Source, Cb, Type)
         local Player = PlayerModule.GetPlayerBySource(Source)
         if not Player then return end
 
@@ -388,16 +388,16 @@ RegisterNetEvent('Ethnic-casino/server/rooms/change-password', function(Password
     end)
 end)
 
-RegisterNetEvent("mc-wheel/server/sync-wheel", function(Bool)
-    TriggerClientEvent("mc-wheel/client/sync-wheel", -1, Bool)
+RegisterNetEvent("Ethnic-wheel/server/sync-wheel", function(Bool)
+    TriggerClientEvent("Ethnic-wheel/client/sync-wheel", -1, Bool)
 end)
 
-RegisterNetEvent("mc-wheel/server/set-wheel-status", function(Bool)
-    TriggerClientEvent("mc-wheel/client/sync-wheel-status", -1, Bool)
+RegisterNetEvent("Ethnic-wheel/server/set-wheel-status", function(Bool)
+    TriggerClientEvent("Ethnic-wheel/client/sync-wheel-status", -1, Bool)
 end)
 
-RegisterNetEvent("mc-wheel/server/sync-spin", function(Speed, Slot, Type)
-    TriggerClientEvent("mc-wheel/client/sync-spin", -1, Speed, Slot, Type)
+RegisterNetEvent("Ethnic-wheel/server/sync-spin", function(Speed, Slot, Type)
+    TriggerClientEvent("Ethnic-wheel/client/sync-spin", -1, Speed, Slot, Type)
 end)
 
 -- [ Functions ] --

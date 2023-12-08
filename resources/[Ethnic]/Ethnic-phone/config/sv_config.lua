@@ -201,19 +201,19 @@ ServerConfig.DarkItems = {
         },
     },
     --Future use O_O
-    { 
-         Icon = 'fas fa-usb-drive',
-         Name = 'darkmarketdeliveries',
-         Label = 'Phone Dongle',
-         Payment = {
-             Amount = 50,
-             Label = 'Guinea'
-         },
-         DropOffs = {
-             {
-                 Label = 'Drop Off 1',
-                 Coords = vector3(508.83, 3099.87, 41.31),
-             },
-         },
-     },
+    --{ 
+     --    Icon = 'fas fa-usb-drive',
+     --    Name = 'darkmarketdeliveries',
+     --    Label = 'Phone Dongle',
+     --    Payment = {
+     --        Amount = 50,
+     --        Label = 'Guinea'
+     --    },
+     --    DropOffs = {
+     --        {
+     --            Label = 'Drop Off 1',
+     --            Coords = vector3(508.83, 3099.87, 41.31),
+    --       },
+    --     },
+    -- },
 }

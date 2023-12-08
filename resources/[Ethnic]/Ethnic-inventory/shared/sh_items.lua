@@ -781,6 +781,22 @@ Shared.ItemList["weapon_glock"] = {
 	['Price'] = 1,
 }
 
+Shared.ItemList["weapon_glock19gen4"] = {
+	['ItemName'] = "weapon_glock19gen4",
+	['Label'] = "PD Glock",
+	['Weight'] = 8.5,
+	['Type'] = "Weapon",
+	['Metal'] = true,
+	['Melee'] = false,
+	['Image'] = "w_glock.png",
+	['Unique'] = true,
+	['Combinable'] = nil,
+	['Description'] = "PD Issued pistol.",
+	['DecayRate'] = 2.0,
+	['RemoveWhenDecayed'] = true,
+	['Price'] = 1,
+}
+
 Shared.ItemList["weapon_glock18c"] = {
 	['ItemName'] = "weapon_glock18c",
 	['Label'] = "Glock 18C",

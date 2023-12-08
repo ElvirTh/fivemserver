@@ -31,7 +31,7 @@ end)
 
 RegisterNetEvent('Ethnic-clothing/client/open-wardrobe', function(Forced) -- Apps
     if Forced then
-        local POutfits = CallbackModule.SendCallback('mc-clothing/server/get-outfits')
+        local POutfits = CallbackModule.SendCallback('Ethnic-clothing/server/get-outfits')
         OpenMenu('Outfits', {POutfits})
     end
 end)
@@ -61,29 +61,29 @@ RegisterNetEvent('Ethnic-clothing/client/create-new-char', function()
     end)
 end)
 
-RegisterNetEvent('mc-clothing/client/add-outfit', function()
+RegisterNetEvent('Ethnic-clothing/client/add-outfit', function()
     local OutfitName = 'outfit-' .. math.random(11111, 99999)
-    TriggerEvent('mc-clothing/client/save-current-outfit', OutfitName)
+    TriggerEvent('Ethnic-clothing/client/save-current-outfit', OutfitName)
 end)
 
-RegisterNetEvent("mc-clothing/client/save-current-outfit", function(Name)
-    TriggerServerEvent('mc-clothing/server/save-outfit', Name, Config.SkinData)
+RegisterNetEvent("Ethnic-clothing/client/save-current-outfit", function(Name)
+    TriggerServerEvent('Ethnic-clothing/server/save-outfit', Name, Config.SkinData)
     exports['Ethnic-ui']:Notify("clothes-saved", Lang:t('info.saved_outfit', { outfit = Name}), "success")
 end)
 
 RegisterNetEvent('Ethnic-clothing/client/open-menu', function() -- /skin
-    local POutfits = CallbackModule.SendCallback('mc-clothing/server/get-outfits')
+    local POutfits = CallbackModule.SendCallback('Ethnic-clothing/server/get-outfits')
     OpenMenu('All', {POutfits})
 end)
 
-RegisterNetEvent('mc-clothing/client/get-outfits', function(Job)
+RegisterNetEvent('Ethnic-clothing/client/get-outfits', function(Job)
     local Model = GetEntityModel(PlayerPedId())
     local Gender = Model == 'mp_f_freemode_01' and "Female" or "Male"
-    local POutfits = CallbackModule.SendCallback('mc-clothing/server/get-outfits')
+    local POutfits = CallbackModule.SendCallback('Ethnic-clothing/server/get-outfits')
     OpenMenu('Room', {POutfits, Config.Outfits[Job][Gender]})
 end)
 
-RegisterNetEvent("mc-clothing/client/load-skin", function(Model, Skin, Tattoos)
+RegisterNetEvent("Ethnic-clothing/client/load-skin", function(Model, Skin, Tattoos)
     local SkinData = {}
     local Player = PlayerModule.GetPlayerData()
     Model = Model ~= nil and Model or Player.CharInfo.Gender == 'Male' and "mp_m_freemode_01" or 'mp_f_freemode_01'
@@ -411,7 +411,7 @@ RegisterNetEvent('Ethnic-clothing/client/load-clothing', function(Data, PlayerPe
     Config.SkinData['Tattoos'] = TattoosData
 end)
 
-RegisterNetEvent("mc-clothing/client/load-outfit", function(Data)
+RegisterNetEvent("Ethnic-clothing/client/load-outfit", function(Data)
     local PlayerPed = PlayerPedId()
     local OutfitName = Data.OutfitName
     Data = Data.OutfitData['Skin'] or Data.OutfitData
@@ -537,14 +537,14 @@ RegisterNetEvent("mc-clothing/client/load-outfit", function(Data)
     exports['Ethnic-ui']:Notify("clothes-chosen", Lang:t('info.chosen_outfit', { name = OutfitName }), 'success')
 end)
 
-RegisterNetEvent("mc-clothing/client/load-player-skin", function()
-    TriggerServerEvent('mc-clothing/server/load-skin')
+RegisterNetEvent("Ethnic-clothing/client/load-player-skin", function()
+    TriggerServerEvent('Ethnic-clothing/server/load-skin')
 end)
 
 -- [ NUI Callbacks ] --
 
 RegisterNUICallback('SelectOutfit', function(Data, Cb)
-    TriggerEvent('mc-clothing/client/load-outfit', Data)
+    TriggerEvent('Ethnic-clothing/client/load-outfit', Data)
     Cb('Ok')
 end)
 
@@ -639,7 +639,7 @@ RegisterNUICallback("Rotate", function(Data, Cb)
 end)
 
 RegisterNUICallback('ResetOutfit', function(Data, Cb)
-    TriggerServerEvent("mc-clothing/server/load-skin")
+    TriggerServerEvent("Ethnic-clothing/server/load-skin")
     Config.SkinData = json.decode(SavedSkin)
     SavedSkin = {}
     Cb('Ok')
@@ -679,9 +679,9 @@ RegisterNUICallback('UpdateSkinOnInput', function(Data, Cb)
 end)
 
 RegisterNUICallback('RemoveOutfit', function(Data, Cb)
-    TriggerServerEvent('mc-clothing/server/remove-outfit', Data.OutfitName, Data.OutfitId)
+    TriggerServerEvent('Ethnic-clothing/server/remove-outfit', Data.OutfitName, Data.OutfitId)
     Citizen.SetTimeout(500, function()
-        local POutfits = CallbackModule.SendCallback('mc-clothing/server/get-outfits')
+        local POutfits = CallbackModule.SendCallback('Ethnic-clothing/server/get-outfits')
         SendNUIMessage({
             Action = "ReloadMyOutfits",
             Outfits = POutfits
@@ -716,7 +716,7 @@ end)
 RegisterNUICallback('SaveClothing', function(Data, Cb)
     SaveSkin(Data.OutfitPrice)
     if Data.OutfitName ~= nil then -- Outfit Wardrobe
-        TriggerServerEvent('mc-clothing/server/save-outfit', Data.OutfitName, Config.SkinData)
+        TriggerServerEvent('Ethnic-clothing/server/save-outfit', Data.OutfitName, Config.SkinData)
         exports['Ethnic-ui']:Notify("added-outfit", Lang:t('info.added_outfit', { outfit = Data.OutfitName}), 'success')
     end
     Cb('Ok')
@@ -724,9 +724,9 @@ end)
 
 RegisterNUICallback("RenameOutfit", function(Data, Cb)
     local OutfitData = Data.OutfitData
-    TriggerServerEvent('mc-clothing/server/rename-outfit', OutfitData.OutfitName, OutfitData.OutfitId, Data.Name)
+    TriggerServerEvent('Ethnic-clothing/server/rename-outfit', OutfitData.OutfitName, OutfitData.OutfitId, Data.Name)
     Citizen.SetTimeout(500, function()
-        local POutfits = CallbackModule.SendCallback('mc-clothing/server/get-outfits')
+        local POutfits = CallbackModule.SendCallback('Ethnic-clothing/server/get-outfits')
         SendNUIMessage({
             Action = "ReloadMyOutfits",
             Outfits = POutfits
@@ -787,7 +787,7 @@ RegisterNetEvent('Ethnic-clothing/client/take-off-face-wear', function(Type, Ext
         SetPedComponentVariation(PlayerPedId(), 6, Extra, 0, 0)
     end
     ClearPedTasks(PlayerPedId())
-    TriggerServerEvent("mc-clothing/server/save-skin", Config.SkinData)
+    TriggerServerEvent("Ethnic-clothing/server/save-skin", Config.SkinData)
 end)
 
 RegisterNetEvent('Ethnic-clothing/client/take-on-face-wear', function(Type, Info, Slot, Ignore)
@@ -852,14 +852,14 @@ RegisterNetEvent('Ethnic-clothing/client/take-on-face-wear', function(Type, Info
         end
     end
     ClearPedTasks(PlayerPedId())
-    TriggerServerEvent("mc-clothing/server/save-skin", Config.SkinData)
+    TriggerServerEvent("Ethnic-clothing/server/save-skin", Config.SkinData)
 end)
 
 RegisterNetEvent('Ethnic-clothing/client/set-hair-color', function(ColorNumber)
     Config.SkinData['Skin']['Hair'].Texture = ColorNumber
     SetPedHairColor(PlayerPedId(), ColorNumber, Config.SkinData['Skin']['Hair'].Texture2)
     Citizen.SetTimeout(10, function()
-        TriggerServerEvent("mc-clothing/server/save-skin", Config.SkinData)
+        TriggerServerEvent("Ethnic-clothing/server/save-skin", Config.SkinData)
     end)
 end)
 

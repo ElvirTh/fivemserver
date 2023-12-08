@@ -490,8 +490,23 @@ Config.Doors = {
         },
     },
     {
+        Info = 'MRPD_BACK_GATE',
+        Coords = vector3(488.56, -1020.18, 28.05),
+        Model = -1603817716,
+        Locked = 1,
+        IsGate = false,
+        CanDetcord = false,
+        Disabled = false,
+        Connected = {},
+        Access = {
+            Job = { 'police', 'ems', 'judge' },
+            CitizenId = {},
+            Business = {}
+        },
+    },
+    {
         Info = 'MRPD_BACK_DOORS_LEFT',
-        Coords = vector3(467.52, -1000.54, 26.41),
+        Coords = vector3(488.89, -1017.21, 27.15),
         Model = -288803980,
         Locked = 1,
         IsGate = false,
@@ -1482,7 +1497,7 @@ Config.Doors = {
         Model = 825488425,
         Locked = 1,
         IsGate = true,
-        CanDetcord = false,
+        CanDetcord = true,
         Connected = {},
         Access = {
             Job = {},
@@ -1496,7 +1511,7 @@ Config.Doors = {
         Model = 1187994459,
         Locked = 1,
         IsGate = false,
-        CanDetcord = false,
+        CanDetcord = true,
         Connected = {},
         Access = {
             Job = {},

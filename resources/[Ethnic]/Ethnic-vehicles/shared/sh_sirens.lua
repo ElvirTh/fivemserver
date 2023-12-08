@@ -61,7 +61,7 @@ Config.SirenData = {
     [GetHashKey("polblazer")] = {
         SirenSounds = { "VEHICLES_HORNS_SIREN_1", "VEHICLES_HORNS_SIREN_2", "VEHICLES_HORNS_POLICE_WARNING" },
     },
-    [GetHashKey("polmotor")] = {
+    [GetHashKey("polbike")] = {
         SirenSounds = { "RESIDENT_VEHICLES_SIREN_WAIL_03", "RESIDENT_VEHICLES_SIREN_QUICK_03" },
     },
     [GetHashKey("policeb")] = {

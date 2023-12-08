@@ -27,7 +27,7 @@ function CreateCustom(ElementId){
 Hud.onReady(() => {
     $('.hud-car-wrapper').show();
 
-    if (Voice == undefined) Voice = CreateHud('hud-voice', 'rgb(148, 153, 151)', 'rgb(39, 55, 70,1.0,1.0)', 650);
+    if (Voice == undefined) Voice = CreateHud('hud-voice', 'rgb(148, 153, 151)', 'rgb(39, 55, 70,1.0)', 650);
     if (Health == undefined) Health = CreateHud('hud-health', 'rgb(0, 255, 0)', 'rgb(39, 55, 70,1.0)', 650);
     if (Armor == undefined) Armor = CreateHud('hud-armor', 'rgb(196, 237, 14)', 'rgb(39, 55, 70,1.0)', 650);
     if (Food == undefined) Food = CreateHud('hud-hunger', 'rgb(226, 10, 250)', 'rgb(39, 55, 70,1.0)', 650);

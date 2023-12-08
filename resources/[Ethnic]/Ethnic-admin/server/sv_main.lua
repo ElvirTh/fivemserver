@@ -800,9 +800,9 @@ RegisterNetEvent("Ethnic-admin/server/reset-skin", function(ServerId)
     if Player then
         DatabaseModule.Execute('SELECT * FROM player_skins WHERE citizenid = ?', {Player.PlayerData.CitizenId}, function(SkinResult)
             if SkinResult[1] ~= nil then
-                TriggerClientEvent("mc-clothing/client/load-skin", Player.PlayerData.Source, SkinResult[1].model, json.decode(SkinResult[1].skin), json.decode(SkinResult[1].tatoos))
+                TriggerClientEvent("Ethnic-clothing/client/load-skin", Player.PlayerData.Source, SkinResult[1].model, json.decode(SkinResult[1].skin), json.decode(SkinResult[1].tatoos))
             else
-                TriggerClientEvent("mc-clothing/client/load-skin", Player.PlayerData.Source)
+                TriggerClientEvent("Ethnic-clothing/client/load-skin", Player.PlayerData.Source)
             end
         end)
     end

@@ -114,10 +114,6 @@ Config.HeliPad = {
     {
         Model = 'airone',
         Coords = vector4(449.34, -981.22, 43.69, 85.08),
-    },
-    {
-        Model = 'caicz10',
-        Coords = vector4(449.34, -981.22, 43.69, 85.08),
     }
 }
 
@@ -150,6 +146,10 @@ Config.PolicePad = {
         Model = 'polvic',
         Coords = vector4(436.75, -991.52, 25.7, 264.42),
     },
+    {
+        Model = 'polbike',
+        Coords = vector4(437.1, -988.88, 25.7, 275.39),
+    },
 }
 
 Config.PoliceStore = {
@@ -178,7 +178,7 @@ Config.PoliceStore = {
         ['Info'] = {}
     },
     {
-        ['ItemName'] = 'weapon_glock',
+        ['ItemName'] = 'weapon_glock19gen4',
         ['Amount'] = 1,
         ['Slot'] = 5,
         ['Info'] = {}

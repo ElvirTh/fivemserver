@@ -111,7 +111,8 @@ RegisterNetEvent('Ethnic-police/client/take-out-pdvehicle',function(Data)
     if PoliceData ~= nil then
         local VehicleCoords = {['X'] = PoliceData.Coords.x, ['Y'] = PoliceData.Coords.y, ['Z'] = PoliceData.Coords.z, ['Heading'] = PoliceData.Coords.w}
         local Vehicle = VehicleModule.SpawnVehicle(PoliceData.Model, VehicleCoords, nil, false)
-        local vehicle = SetVehicleColours(Vehicle['Vehicle'],119,0)
+        local vehicle = SetVehicleColours(Vehicle['Vehicle'],0,0)
+        
         if Vehicle ~= nil then
             Citizen.SetTimeout(250, function()
                 local Plate = GetVehicleNumberPlateText(Vehicle['Vehicle'])
@@ -128,23 +129,27 @@ RegisterNetEvent('Ethnic-police/client/take-out-pdvehicle',function(Data)
 
                 SetVehicleDirtLevel(Vehicle['Vehicle'], 0.0) --spawn car clean
 
+
                 SetVehicleExtra(Vehicle['Vehicle'],1,0)
                 SetVehicleExtra(Vehicle['Vehicle'],2,0)
                 SetVehicleExtra(Vehicle['Vehicle'],3,0)
                 SetVehicleExtra(Vehicle['Vehicle'],4,0)
                 SetVehicleExtra(Vehicle['Vehicle'],5,0)
                 SetVehicleExtra(Vehicle['Vehicle'],6,0)
-                SetVehicleMod(Vehicle['Vehicle'],0,2,false) --spoiler
+                SetVehicleExtra(Vehicle['Vehicle'],7,0)
+                SetVehicleExtra(Vehicle['Vehicle'],8,0)
+                SetVehicleMod(Vehicle['Vehicle'],0,0,false) --spoiler
                 SetVehicleMod(Vehicle['Vehicle'],1,0,false) -- front bumper
                 SetVehicleMod(Vehicle['Vehicle'],2,2,false) -- rear bumper
                 SetVehicleMod(Vehicle['Vehicle'],3,0,false) -- skirts
                 SetVehicleMod(Vehicle['Vehicle'],6,0,false) -- grille
                 SetVehicleMod(Vehicle['Vehicle'],4,0,false) -- Exhaust
 
+                SetVehicleMod(Vehicle['Vehicle'],23,2,false) --front wheels
+
                 SetVehicleMod(Vehicle['Vehicle'],28,0,false) --ornament
                 SetVehicleMod(Vehicle['Vehicle'],29,0,false) --dasboard
                 
-
             end)
         end
     end

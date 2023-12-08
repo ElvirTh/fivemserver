@@ -718,7 +718,7 @@ PlayerModule = {
             self.PlayerData.Inventory = ItemData
             PlayerModule.SaveInventory(self.PlayerData.CitizenId, self.PlayerData.Inventory)
             self.Functions.UpdatePlayerData()
-            -- TriggerEvent("mc-logs/server/send-log", "inventory", "Inventory (Set)", "white", "**"..GetPlayerName(self.PlayerData.Source) .. "** ("..self.PlayerData.CitizenId.." | "..self.PlayerData.Source..") \n **Items:** " ..json.encode(items))
+            -- TriggerEvent("Ethnic-logs/server/send-log", "inventory", "Inventory (Set)", "white", "**"..GetPlayerName(self.PlayerData.Source) .. "** ("..self.PlayerData.CitizenId.." | "..self.PlayerData.Source..") \n **Items:** " ..json.encode(items))
         end
     
         self.Functions.ClearInventory = function()

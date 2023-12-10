@@ -192,5 +192,4 @@ Config.BoostingTiers = {
     "A",
     "S",
     "S+",
-    "MAX",
 }

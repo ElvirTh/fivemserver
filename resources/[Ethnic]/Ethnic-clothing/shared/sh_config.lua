@@ -190,6 +190,18 @@ Config.Stores = {
             ['Label'] = 'Clothing Store',
         }
     },
+    --Mrpd clothing
+    {
+        ['Type'] = 'clothing',
+        ['Coords'] = vector3(462.0, -996.84, 30.69),
+        ['Width'] = 5,
+        ['Length'] = 5,
+        ['BlipSettings'] = {
+            ['Sprite'] = 366,
+            ['Color'] = 47,
+            ['Label'] = 'Clothing Store',
+        }
+    },
     {
         ['Type'] = 'barber',
         ['Coords'] = vector3(-814.3, -183.8, 36.6),
@@ -389,46 +401,46 @@ Config.Outfits = {
             -- Grade Level
             [1] = {
                 -- Outfits
-                OutfitLabel = 'Short Sleeve',
+                OutfitLabel = 'Cadet',
                 OutfitData = {
-                    ['Pants'] = { Item = 24, Texture = 0 }, -- Pants
-                    ['Arms'] = { Item = 19, Texture = 0 }, -- Arms
-                    ['UnderShirt'] = { Item = 129, Texture = 0 }, -- T Shirt
-                    ['ArmorVest'] = { Item = 9, Texture = 0 }, -- Body Vest
-                    ['Shirts'] = { Item = 55, Texture = 0 }, -- Jacket
-                    ['Shoes'] = { Item = 51, Texture = 0 }, -- Shoes
+                    ['Pants'] = { Item = 26, Texture = 0 }, -- Pants
+                    ['Arms'] = { Item = 20, Texture = 0 }, -- Arms
+                    ['UnderShirt'] = { Item = 75, Texture = 0 }, -- T Shirt
+                    ['ArmorVest'] = { Item = 65, Texture = 0 }, -- Body Vest
+                    ['Shirts'] = { Item = 78, Texture = 0 }, -- Jacket
+                    ['Shoes'] = { Item = 114, Texture = 0 }, -- Shoes
                     ['Necklace'] = { Item = 0, Texture = 0 }, -- Neck Accessory
                     ['Bag'] = { Item = 0, Texture = 0 }, -- Bag
-                    ['Hat'] = { Item = -1, Texture = -1 }, -- Hat
+                    ['Hat'] = { Item = 34, Texture = 0 }, -- Hat
                     ['Glasses'] = { Item = 0, Texture = 0 }, -- Glasses
                     ['Mask'] = { Item = 0, Texture = 0 } -- Mask
                 }
             },
             [2] = {
-                OutfitLabel = 'Long Sleeve',
+                OutfitLabel = 'Officer',
                 OutfitData = {
-                    ['Pants'] = { Item = 24, Texture = 0 }, -- Pants
+                    ['Pants'] = { Item = 26, Texture = 0 }, -- Pants
                     ['Arms'] = { Item = 20, Texture = 0 }, -- Arms
-                    ['UnderShirt'] = { Item = 129, Texture = 0 }, -- T Shirt
-                    ['ArmorVest'] = { Item = 9, Texture = 0 }, -- Body Vest
-                    ['Shirts'] = { Item = 317, Texture = 0 }, -- Jacket
-                    ['Shoes'] = { Item = 51, Texture = 0 }, -- Shoes
+                    ['UnderShirt'] = { Item = 30, Texture = 0 }, -- T Shirt
+                    ['ArmorVest'] = { Item = 28, Texture = 0 }, -- Body Vest
+                    ['Shirts'] = { Item = 70, Texture = 0 }, -- Jacket
+                    ['Shoes'] = { Item = 114, Texture = 0 }, -- Shoes
                     ['Necklace'] = { Item = 0, Texture = 0 }, -- Neck Accessory
                     ['Bag'] = { Item = 0, Texture = 0 }, -- Bag
-                    ['Hat'] = { Item = -1, Texture = -1 }, -- Hat
+                    ['Hat'] = { Item = -1, Texture = 0 }, -- Hat
                     ['Glasses'] = { Item = 0, Texture = 0 }, -- Glasses
                     ['Mask'] = { Item = 0, Texture = 0 } -- Mask
                 }
             },
             [3] = {
-                OutfitLabel = 'Trooper Tan',
+                OutfitLabel = 'Sergent',
                 OutfitData = {
-                    ['Pants'] = { Item = 24, Texture = 0 }, -- Pants
+                    ['Pants'] = { Item = 26, Texture = 0 }, -- Pants
                     ['Arms'] = { Item = 20, Texture = 0 }, -- Arms
-                    ['UnderShirt'] = { Item = 129, Texture = 0 }, -- T Shirt
-                    ['ArmorVest'] = { Item = 9, Texture = 0 }, -- Body Vest
-                    ['Shirts'] = { Item = 317, Texture = 3 }, -- Jacket
-                    ['Shoes'] = { Item = 51, Texture = 0 }, -- Shoes
+                    ['UnderShirt'] = { Item = 80, Texture = 0 }, -- T Shirt
+                    ['ArmorVest'] = { Item = 35, Texture = 0 }, -- Body Vest
+                    ['Shirts'] = { Item = 70, Texture = 1 }, -- Jacket
+                    ['Shoes'] = { Item = 114, Texture = 0 }, -- Shoes
                     ['Necklace'] = { Item = 0, Texture = 0 }, -- Neck Accessory
                     ['Bag'] = { Item = 0, Texture = 0 }, -- Bag
                     ['Hat'] = { Item = -1, Texture = 0 }, -- Hat
@@ -437,17 +449,17 @@ Config.Outfits = {
                 }
             },
             [4] = {
-                OutfitLabel = 'Trooper Black',
+                OutfitLabel = 'Trooper-Sheriff',
                 OutfitData = {
-                    ['Pants'] = { Item = 24, Texture = 0 }, -- Pants
+                    ['Pants'] = { Item = 26, Texture = 0 }, -- Pants
                     ['Arms'] = { Item = 20, Texture = 0 }, -- Arms
-                    ['UnderShirt'] = { Item = 129, Texture = 0 }, -- T Shirt
-                    ['ArmorVest'] = { Item = 9, Texture = 0 }, -- Body Vest
-                    ['Shirts'] = { Item = 317, Texture = 8 }, -- Jacket
-                    ['Shoes'] = { Item = 51, Texture = 0 }, -- Shoes
+                    ['UnderShirt'] = { Item = 180, Texture = 0 }, -- T Shirt
+                    ['ArmorVest'] = { Item = 38, Texture = 0 }, -- Body Vest
+                    ['Shirts'] = { Item = 105, Texture = 1 }, -- Jacket
+                    ['Shoes'] = { Item = 114, Texture = 0 }, -- Shoes
                     ['Necklace'] = { Item = 0, Texture = 0 }, -- Neck Accessory
                     ['Bag'] = { Item = 0, Texture = 0 }, -- Bag
-                    ['Hat'] = { Item = -1, Texture = 0 }, -- Hat
+                    ['Hat'] = { Item = 13, Texture = 1 }, -- Hat
                     ['Glasses'] = { Item = 0, Texture = 0 }, -- Glasses
                     ['Mask'] = { Item = 0, Texture = 0 } -- Mask
                 }
@@ -455,23 +467,23 @@ Config.Outfits = {
             [5] = {
                 OutfitLabel = 'SWAT',
                 OutfitData = {
-                    ['Pants'] = { Item = 130, Texture = 1 }, -- Pants
-                    ['Arms'] = { Item = 172, Texture = 0 }, -- Arms
-                    ['UnderShirt'] = { Item = 15, Texture = 0 }, -- T Shirt
-                    ['ArmorVest'] = { Item = 15, Texture = 2 }, -- Body Vest
-                    ['Shirts'] = { Item = 336, Texture = 3 }, -- Jacket
-                    ['Shoes'] = { Item = 24, Texture = 0 }, -- Shoes
-                    ['Necklace'] = { Item = 133, Texture = 0 }, -- Neck Accessory
-                    ['Hat'] = { Item = 150, Texture = 0 }, -- Hat
+                    ['Pants'] = { Item = 44, Texture = 0 }, -- Pants
+                    ['Arms'] = { Item = 20, Texture = 0 }, -- Arms
+                    ['UnderShirt'] = { Item = 18, Texture = 0 }, -- T Shirt
+                    ['ArmorVest'] = { Item = 51, Texture = 0 }, -- Body Vest
+                    ['Shirts'] = { Item = 80, Texture = 2 }, -- Jacket
+                    ['Shoes'] = { Item = 42, Texture = 0 }, -- Shoes
+                    ['Necklace'] = { Item = 0, Texture = 0 }, -- Neck Accessory
+                    ['Hat'] = { Item = 143, Texture = 21 }, -- Hat
                     ['Glasses'] = { Item = 0, Texture = 0 }, -- Glasses
-                    ['Mask'] = { Item = 52, Texture = 0 } -- Mask
+                    ['Mask'] = { Item = 146, Texture = 9 } -- Mask
                 }
             }
         },
         ['Female'] = {
             -- Grade Level
             [1] = {
-                OutfitLabel = 'Short Sleeve',
+                OutfitLabel = 'Cadet',
                 OutfitData = {
                     ['Pants'] = { Item = 133, Texture = 0 }, -- Pants
                     ['Arms'] = { Item = 31, Texture = 0 }, -- Arms
@@ -487,7 +499,7 @@ Config.Outfits = {
                 }
             },
             [2] = {
-                OutfitLabel = 'Long Sleeve',
+                OutfitLabel = 'Officer',
                 OutfitData = {
                     ['Pants'] = { Item = 133, Texture = 0 }, -- Pants
                     ['Arms'] = { Item = 31, Texture = 0 }, -- Arms
@@ -503,7 +515,7 @@ Config.Outfits = {
                 }
             },
             [3] = {
-                OutfitLabel = 'Trooper Tan',
+                OutfitLabel = 'Sergent',
                 OutfitData = {
                     ['Pants'] = { Item = 133, Texture = 0 }, -- Pants
                     ['Arms'] = { Item = 31, Texture = 0 }, -- Arms
@@ -519,7 +531,7 @@ Config.Outfits = {
                 }
             },
             [4] = {
-                OutfitLabel = 'Trooper Black',
+                OutfitLabel = 'Trooper-Sheriff',
                 OutfitData = {
                     ['Pants'] = { Item = 133, Texture = 0 }, -- Pants
                     ['Arms'] = { Item = 31, Texture = 0 }, -- Arms

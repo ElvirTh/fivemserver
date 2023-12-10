@@ -1431,17 +1431,15 @@ Config.Doors = {
     -- Illegal Bench
     {
         Info = "ILLEGAL_BENCH_DOOR",
-        Coords = vector3(441.45, 3520.73, 33.68),
-        Model = "prop_ld_contain_dr",
+        Coords = vector3(838.38, -2882.32, 11.66),
+        Model = -2125774984,
         Locked = 1,
         IsGate = false,
         CanDetcord = false,
         Connected = {},
         Access = {
             Job = {},
-            CitizenId = {
-                -- '2000', -- Character Name
-            },
+            CitizenId = {'5122'},
             Business = {}
         },
     },

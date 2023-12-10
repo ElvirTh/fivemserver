@@ -45,7 +45,7 @@ function InitZones()
         }, {
             name = 'police_garage_01',
             minZ = 24.0,
-            maxZ = 32.5,
+            maxZ = 29.5,
             heading = 90.0,
             hasMultipleZones = false,
             debugPoly = false,
@@ -57,7 +57,7 @@ function InitZones()
         }, {
             name = 'police_garage_02',
             minZ = 24.0,
-            maxZ = 32.5,
+            maxZ = 29.5,
             heading = 90.0,
             hasMultipleZones = false,
             debugPoly = false,

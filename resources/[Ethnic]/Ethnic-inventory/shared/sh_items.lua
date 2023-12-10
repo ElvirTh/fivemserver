@@ -121,6 +121,22 @@ Shared.ItemList['weapon_nightstick'] = {
 	['Price'] = 1,
 }
 
+Shared.ItemList['weapon_colbaton'] = {
+    ['ItemName'] = "weapon_colbaton",
+	['Label'] = "Colbaton",
+	['Weight'] = 2.0,
+	['Type'] = "Weapon",
+	['Metal'] = true,
+	['Melee'] = true,
+	['Image'] = "w_colbaton.png",
+	['Unique'] = true,
+	['Combinable'] = nil,
+	['Description'] = "Government (PD/EMS/DOC) Issued Equipment",
+	['DecayRate'] = 2.0,
+	['RemoveWhenDecayed'] = false,
+	['Price'] = 1,
+}
+
 Shared.ItemList['weapon_hammer'] = {
     ['ItemName'] = "weapon_hammer",
 	['Label'] = "Hammer",
@@ -5773,7 +5789,7 @@ Shared.ItemList["tracker-disabler"] = {
 		{ Item = 'aluminum', Amount = 100 },
 	}
 }
-
+/*
 Shared.ItemList["racing-usb"] = {
 	['ItemName'] = "racing-usb",
 	['Label'] = "Racing Dongle",
@@ -5818,7 +5834,7 @@ Shared.ItemList["racingtablet"] = {
 	['RemoveWhenDecayed'] = true,
 	['Price'] = 1,
 }
-
+*/
 -- Crime update
 
 Shared.ItemList["methlab_stage_01"] = {

@@ -200,6 +200,22 @@ ServerConfig.DarkItems = {
             },
         },
     },
+    {
+        Icon = 'fas fa-laptop',
+        Name = 'security_hacking_device',
+        Label = 'Security Hacking Device',
+        Hidden = false, -- Hide from phone market
+        Payment = {
+            Amount = 50,
+            Label = 'Shungite'
+        },
+        DropOffs = {
+            {
+                Label = 'Drop Off 1',
+                Coords = vector3(508.83, 3099.87, 41.31),
+            },
+        },
+    },
     --Future use O_O
     --{ 
      --    Icon = 'fas fa-usb-drive',

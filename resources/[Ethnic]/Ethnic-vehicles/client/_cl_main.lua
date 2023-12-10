@@ -58,6 +58,7 @@ RegisterNetEvent('Ethnic-base/client/on-login', function()
         InitNitrous() 
         InitSirens()
         InitGasStations()
+        DisableReports()
         KeybindsModule.Add('toggleDriftMode', 'Vehicle', 'Toggle Drift Mode', '', false, 'Ethnic-vehicles/client/toggle-driftmode')
         -- Set Keys
         local Keys = CallbackModule.SendCallback('Ethnic-vehicles/server/get-keys')
@@ -222,7 +223,7 @@ function InitMain()
         end
 
         local Speed = GetEntitySpeed(CurrentVehicleData.Vehicle)
-        local MPHSpeed = math.floor(Speed * 2.236936)
+        local MPHSpeed = math.floor(Speed * 4.0)
         if MPHSpeed < 35 then
             exports['Ethnic-ui']:Notify('limiter-error', "You can't set the limiter below 35mp/h", 'error')
             return
@@ -328,4 +329,8 @@ function ToggleHeliSubmix(Bool)
     else
         SetAudioSubmixEffectParamInt(0, 0, GetHashKey('enabled'), 0)
     end
+end
+
+function DisableReports()
+    DisablePoliceReports()
 end

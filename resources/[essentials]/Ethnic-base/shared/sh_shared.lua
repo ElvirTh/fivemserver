@@ -1266,6 +1266,16 @@ Shared.Vehicles = {
         ['Type'] = 'Car',
         ['Price'] = 275000,
     },
+    [GetHashKey('jes')] = {
+        ['Vehicle'] = 'jes',
+        ['Model'] = 'Koenigsegg',
+        ['Name'] = 'Jesko',
+        ['ShopClass'] = '',
+        ['Class'] = 'S',
+        ['Picture'] = 'None',
+        ['Type'] = 'Car',
+        ['Price'] = 275000,
+    },
 
     
     --ExtraCopCars--

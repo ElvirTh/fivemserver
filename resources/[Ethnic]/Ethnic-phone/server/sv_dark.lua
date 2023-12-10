@@ -52,10 +52,11 @@ end)
 -- [ Functions ] --
 
 function GetDropOffLocation(Id)
+    local DarkItems = {}
     for k, v in pairs(ServerConfig.DarkItems) do
-        if v.Name == Id then
-            return v.DropOffs[math.random(1, #v.DropOffs)]
+        if not v.Hidden then
+            table.insert(DarkItems, v)
         end
     end
-    return false
+    Cb(DarkItems)
 end

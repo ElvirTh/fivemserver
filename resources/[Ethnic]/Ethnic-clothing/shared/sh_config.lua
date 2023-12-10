@@ -197,8 +197,8 @@ Config.Stores = {
         ['Width'] = 5,
         ['Length'] = 5,
         ['BlipSettings'] = {
-            ['Sprite'] = 366,
-            ['Color'] = 47,
+            ['Sprite'] = 0,
+            ['Color'] = 0,
             ['Label'] = 'Clothing Store',
         }
     },

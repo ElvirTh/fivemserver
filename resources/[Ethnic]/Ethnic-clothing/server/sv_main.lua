@@ -29,11 +29,7 @@ Citizen.CreateThread(function()
         Citizen.Wait(100)
     end
     -- [ Commands ] --
-
-    CommandsModule.Add("h0", "Take hat off..", {}, false, function(source, args)
-        TriggerClientEvent('Ethnic-clothing/client/take-off-face-wear', source, 'Hat', nil, nil, true)
-    end)
-
+    --Off wear
     CommandsModule.Add("g0", "Take glasses off..", {}, false, function(source, args)
         TriggerClientEvent('Ethnic-clothing/client/take-off-face-wear', source, 'Glasses', nil, nil, true)
     end)
@@ -44,6 +40,23 @@ Citizen.CreateThread(function()
 
     CommandsModule.Add("v0", "Take vest off..", {}, false, function(source, args)
         TriggerClientEvent('Ethnic-clothing/client/take-off-face-wear', source, 'Vest', nil, nil, true)
+    end)
+
+    --On wear
+    CommandsModule.Add("g1", "Take glasses on..", {}, false, function(source, args)
+        TriggerClientEvent('Ethnic-clothing/client/take-on-face-wear', source, 'Glasses', nil, nil, true)
+    end)
+
+    CommandsModule.Add("m1", "Take mask on..", {}, false, function(source, args)
+        TriggerClientEvent('Ethnic-clothing/client/take-on-face-wear', source, 'Mask', nil, nil, true)
+    end)
+
+    CommandsModule.Add("v1", "Take vest on..", {}, false, function(source, args)
+        TriggerClientEvent('Ethnic-clothing/client/take-on-face-wear', source, 'Vest', nil, nil, true)
+    end)
+    --hat wear on/off
+    CommandsModule.Add("hat", "Take hat on/off..", {}, false, function(source, args)
+        TriggerClientEvent('hats', source)
     end)
 
     CommandsModule.Add('addoutfit', 'Put your current outfit in your closet.', {{Name = 'name', Help = 'Outfit Name'}}, false, function(source, args)

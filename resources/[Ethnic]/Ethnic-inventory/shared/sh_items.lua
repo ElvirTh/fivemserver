@@ -358,6 +358,40 @@ Shared.ItemList['weapon_sniperrifle2'] = {
 	['Price'] = 500,
 }
 
+Shared.ItemList['weapon_arisaka'] = {
+    ['ItemName'] = "weapon_arisaka",
+	['Label'] = "Hunting Rifle",
+	['Weight'] = 17.0,
+	['Type'] = "Weapon",
+	['Metal'] = true,
+	['Melee'] = false,
+	['Image'] = "w_huntingrifle.png",
+	['Unique'] = true,
+	['Combinable'] = nil,
+	['Description'] = "Only shoot on animals please!",
+	['DecayRate'] = 2.0,
+	['RemoveWhenDecayed'] = true,
+	['Prop'] = true,
+	['Price'] = 500,
+}
+
+Shared.ItemList['weapon_marksmanrifle'] = {
+    ['ItemName'] = "weapon_marksmanrifle",
+	['Label'] = "Hunting Rifle",
+	['Weight'] = 17.0,
+	['Type'] = "Weapon",
+	['Metal'] = true,
+	['Melee'] = false,
+	['Image'] = "w_huntingrifle.png",
+	['Unique'] = true,
+	['Combinable'] = nil,
+	['Description'] = "Only shoot on animals please!",
+	['DecayRate'] = 2.0,
+	['RemoveWhenDecayed'] = true,
+	['Prop'] = true,
+	['Price'] = 500,
+}
+
 Shared.ItemList['weapon_empgun'] = {
     ['ItemName'] = "weapon_empgun",
 	['Label'] = "EMP Gun",
@@ -369,6 +403,23 @@ Shared.ItemList['weapon_empgun'] = {
 	['Unique'] = true,
 	['Combinable'] = nil,
 	['Description'] = "There goes your vehicle..",
+	['DecayRate'] = 2.0,
+	['RemoveWhenDecayed'] = true,
+	['Prop'] = true,
+	['Price'] = 1,
+}
+
+Shared.ItemList['weapon_m1014'] = {
+    ['ItemName'] = "weapon_m1014",
+	['Label'] = "PD Shotgun",
+	['Weight'] = 17.0,
+	['Type'] = "Weapon",
+	['Metal'] = true,
+	['Melee'] = false,
+	['Image'] = "w_remington.png",
+	['Unique'] = true,
+	['Combinable'] = nil,
+	['Description'] = "So much fire power!",
 	['DecayRate'] = 2.0,
 	['RemoveWhenDecayed'] = true,
 	['Prop'] = true,

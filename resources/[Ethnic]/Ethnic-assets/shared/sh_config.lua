@@ -738,7 +738,19 @@ Config.AttachBackProps = {
 		Type = 1,
 		Id = 'weapon_sniperrifle2',
 		Name = 'Hunting Rifle',
-		Model = 'w_sr_huntingrifle',
+		Model = 'w_sr_sniperrifle2',
+		PropCoords = {
+			Z = 0.0,
+			RX = 0.0,
+			RY = 0.0,
+			RZ = 0.0,
+		}
+	},
+	{
+		Type = 1,
+		Id = 'weapon_sniperrifle',
+		Name = 'Hunting Rifle',
+		Model = 'w_sr_sniperrifle',
 		PropCoords = {
 			Z = 0.0,
 			RX = 0.0,

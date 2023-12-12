@@ -1,44 +1,11 @@
 
 ================================================================
-======== Log Rotated - 12/10/2023, 12:00:00 AM                  
+======== txAdmin Starting - 12/12/2023, 3:30:23 AM              
 ================================================================
-[1:48:36 AM] [yfAiT#2] EliSkzzz: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[2:31:23 AM] [yfAiT#2] EliSkzzz: disconnected ([txAdmin] Server restarting (requested by Elvir_Thaqi1).)
-[2:32:30 AM] txAdmin: Logger started
-[2:35:28 AM] [WmzfR#1] EliSkzzz: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[4:06:48 AM] [WmzfR#1] EliSkzzz: disconnected (Game crashed: GTA5_b2944.exe!sub_1416606F0 (0x43))
-[4:17:05 AM] [WmzfR#2] EliSkzzz: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[4:20:02 AM] [WmzfR#2] EliSkzzz: disconnected (Exiting)
-[4:20:41 AM] [WmzfR#3] EliSkzzz: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[4:23:08 AM] [WmzfR#3] EliSkzzz: disconnected (Exiting)
-[4:24:49 AM] txAdmin: Logger started
-[4:26:32 AM] [kWfEC#1] EliSkzzz: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[4:31:14 AM] [kWfEC#1] EliSkzzz: disconnected ([txAdmin] Server restarting (requested by Elvir_Thaqi1).)
-[4:32:30 AM] txAdmin: Logger started
-[4:32:49 AM] [pzq4g#1] EliSkzzz: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[5:33:07 AM] [pzq4g#1] EliSkzzz: disconnected (Game crashed: An exception occurred (c0000005 at 0x7ff6f00e9ebb) during removing of resources:/cfx-Ethnic-weapons/metas/[GLOCK19]/weapons.meta in data file mounter 0x141b20678. The game will be terminated.)
-[5:35:03 AM] txAdmin: Logger started
-[5:37:07 AM] [ygRHR#1] EliSkzzz: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[5:38:57 AM] [ygRHR#1] EliSkzzz: enabled noclip
-[5:39:06 AM] [ygRHR#1] EliSkzzz: became mortal (standard mode)
-[5:40:17 AM] [ygRHR#1] EliSkzzz: enabled noclip
-[5:40:18 AM] [ygRHR#1] EliSkzzz: became mortal (standard mode)
-[5:40:29 AM] [ygRHR#1] EliSkzzz: enabled noclip
-[5:40:31 AM] [ygRHR#1] EliSkzzz: became mortal (standard mode)
-[5:59:19 AM] [ygRHR#1] EliSkzzz: disconnected ([txAdmin] Server restarting (requested by Elvir_Thaqi1).)
-[6:00:47 AM] txAdmin: Logger started
-[6:01:05 AM] [dtkNi#1] EliSkzzz: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[6:03:05 AM] [dtkNi#1] EliSkzzz: disconnected (Exiting)
-[6:04:44 AM] txAdmin: Logger started
-[6:08:58 AM] [WzV3C#1] EliSkzzz: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[6:11:11 AM] [WzV3C#1] EliSkzzz: enabled noclip
-[6:11:12 AM] [WzV3C#1] EliSkzzz: became mortal (standard mode)
-[6:11:20 AM] [WzV3C#1] EliSkzzz: disconnected (Game crashed: Invalid fixup, address is neither virtual nor physical (in hsmansorymc20.yft))
-[6:11:55 AM] [WzV3C#2] EliSkzzz: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[6:13:44 AM] [WzV3C#2] EliSkzzz: disconnected (Server->client connection timed out. Last seen 35336 msec ago.)
-[6:14:35 AM] [WzV3C#3] EliSkzzz: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[6:28:10 AM] [WzV3C#3] EliSkzzz: enabled noclip
-[6:28:23 AM] [WzV3C#3] EliSkzzz: became mortal (standard mode)
-[6:28:51 AM] [WzV3C#3] EliSkzzz: enabled noclip
-[6:29:28 AM] [WzV3C#3] EliSkzzz: became mortal (standard mode)
-[6:33:20 AM] [WzV3C#3] EliSkzzz: disconnected ([txAdmin] Server restarting (requested by Elvir_Thaqi1).)
+
+================================================================
+======== Log Rotated - 12/12/2023, 3:30:23 AM                   
+================================================================
+[3:31:34 AM] txAdmin: Logger started
+[3:34:28 AM] [8Deht#1] EliSkzzz: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
+[5:11:28 AM] [8Deht#1] EliSkzzz: disconnected (Exiting)

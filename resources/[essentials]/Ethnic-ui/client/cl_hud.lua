@@ -230,7 +230,7 @@ RegisterNetEvent("Ethnic-threads/entered-vehicle", function()
                     Mph = math.ceil(SpeedValue * 4.0),
                     Fuel = exports['Ethnic-vehicles']:GetVehicleMeta(Vehicle, 'Fuel'),
                     Belt = HasBelt,
-                    -- BrokenEngine = GetVehicleEngineHealth(Vehicle) < 400.0, -- Todo: Add
+                    BrokenEngine = GetVehicleEngineHealth(Vehicle) < 400.0, -- Todo: Add
                     Waypoint = WaypointDistance ~= nil and WaypointDistance or 0,
                 })
 

@@ -28,7 +28,7 @@ Citizen.CreateThread(function()
             if not InsideHuntingZone() then
                 if IsPedArmed(PlayerPedId(), 6) then
                     local Weapon = GetSelectedPedWeapon(PlayerPedId())
-                    if Weapon == GetHashKey('weapon_sniperrifle2') then
+                    if Weapon == GetHashKey('weapon_marksmanrifle') then
                         TriggerEvent('Ethnic-inventory/client/reset-weapon')
                     end
                 end

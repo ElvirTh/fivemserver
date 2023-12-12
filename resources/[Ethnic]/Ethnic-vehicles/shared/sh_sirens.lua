@@ -31,6 +31,9 @@ Config.SirenData = {
     [GetHashKey("sjcop1")] = {
         SirenSounds = { "VEHICLES_HORNS_SIREN_1", "VEHICLES_HORNS_SIREN_2", "VEHICLES_HORNS_POLICE_WARNING" },
     },
+    [GetHashKey("expedition")] = {
+        SirenSounds = { "VEHICLES_HORNS_SIREN_1", "VEHICLES_HORNS_SIREN_2", "VEHICLES_HORNS_POLICE_WARNING" },
+    },
     [GetHashKey("22530i")] = {
         SirenSounds = { "VEHICLES_HORNS_SIREN_1", "VEHICLES_HORNS_SIREN_2", "VEHICLES_HORNS_POLICE_WARNING" },
     },

@@ -324,6 +324,12 @@ Shared.Weapons = {
         ['SelectFire'] = false,
         ['MaxAmmo'] = 24,
     },
+    [GetHashKey('weapon_m1014')] = {
+        ['WeaponID'] = 'weapon_m1014',   
+        ['AmmoType'] = 'AMMO_SHOTGUN',
+        ['SelectFire'] = false,
+        ['MaxAmmo'] = 24,
+    },
     [GetHashKey('weapon_rubberslug')] = {
         ['WeaponID'] = 'weapon_rubberslug',   
         ['AmmoType'] = 'AMMO_RUBBER_SHOTGUN',
@@ -335,6 +341,18 @@ Shared.Weapons = {
         ['AmmoType'] = 'AMMO_SNIPER',
         ['SelectFire'] = false,
         ['MaxAmmo'] = 12,
+    },
+    [GetHashKey('weapon_huntrifle')] = {
+        ['WeaponID'] = 'weapon_huntrifle',   
+        ['AmmoType'] = 'AMMO_SNIPER',
+        ['SelectFire'] = false,
+        ['MaxAmmo'] = 15,
+    },
+    [GetHashKey('weapon_marksmanrifle')] = {
+        ['WeaponID'] = 'weapon_marksmanrifle',   
+        ['AmmoType'] = 'AMMO_SNIPER',
+        ['SelectFire'] = false,
+        ['MaxAmmo'] = 15,
     },
     [GetHashKey('weapon_empgun')] = {
         ['WeaponID'] = 'weapon_empgun',  
@@ -1276,6 +1294,16 @@ Shared.Vehicles = {
         ['Type'] = 'Car',
         ['Price'] = 275000,
     },
+    [GetHashKey('m6f13')] = {
+        ['Vehicle'] = 'm6f13',
+        ['Model'] = 'BMW',
+        ['Name'] = 'M6-F13',
+        ['ShopClass'] = '',
+        ['Class'] = 'A',
+        ['Picture'] = 'None',
+        ['Type'] = 'Car',
+        ['Price'] = 275000,
+    },
 
     
     --ExtraCopCars--
@@ -1288,6 +1316,17 @@ Shared.Vehicles = {
         ['Picture'] = 'None',
         ['Type'] = 'Car',
         ['Price'] = 150000,
+    },
+    [GetHashKey('expedition')] = {
+        ['Vehicle'] = 'expedition',
+        ['Model'] = 'Ford',
+        ['Name'] = 'Expedition',
+        ['ShopClass'] = '',
+        ['Class'] = 'A',
+        ['Picture'] = 'None',
+        ['Type'] = 'Car',
+        ['Siren'] = 'VEHICLES_HORNS_SIREN_1',
+        ['Price'] = 100,
     },
     [GetHashKey('m3g80umnon')] = {
         ['Vehicle'] = 'm3g80umnon',

@@ -6,8 +6,8 @@
 
 .hud-status {
     position: absolute;
-    left: 0.5vh;
-    bottom: 0.2vh;
+    left: 2vh;
+    bottom: 1vh;
 }
 
 .hud-circle > i {
@@ -161,6 +161,9 @@
     color: #2ecc71;
 }
 
+.hud-engine {
+    position: relative;
+}
 .hud-car-border {
     display: none;
     position: absolute;

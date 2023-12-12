@@ -378,3 +378,4 @@ function GetTotalOndutyCops()
 	return ActiveCops
 end
 exports('GetTotalOndutyCops', GetTotalOndutyCops)
+	

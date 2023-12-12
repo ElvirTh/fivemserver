@@ -164,6 +164,15 @@ Citizen.CreateThread(function()
             end
         end
     end)
+
+    CommandsModule.Add({"handcuff"},"Handcuff a player",{},false,function(source,args)
+        if Player.PlayerData.Job.Name == 'police' and Player.PlayerData.Job.Duty then
+            TriggerClientEvent('Ethnic-police/client/used-cuffs', Source)
+            Player.Functions.Notify('Handcuffed', 'Succesfully Handcuffed', 'success')
+        else
+            Player.Functions.Notify('no-perm', 'No Permission..', 'error')
+        end
+    end)
     
     CommandsModule.Add({"sethighcommand", "sethigh"}, "Set someone's highcommand status", {{Name="ID", Help="PlayerId"}, {Name="Status", Help="True/False"}}, true, function(source, args)
         if args ~= nil then

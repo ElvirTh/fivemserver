@@ -12,12 +12,16 @@ client_scripts {
 	'@Ethnic-polyzone/client/cl_main.lua',
 	'@Ethnic-polyzone/client/BoxZone.lua',
 	'@Ethnic-polyzone/client/ComboZone.lua',
+	'@Ethnic-base/shared/sh_shared.lua',
+    '@Ethnic-inventory/shared/sh_items.lua',
 	"client/**.lua",
 }
 
 server_script {
 	"shared/sv_*.lua",
 	"server/**.lua",
+	'@Ethnic-base/shared/sh_shared.lua',
+    '@Ethnic-inventory/shared/sh_items.lua',
 }
 
 lua54 'yes'

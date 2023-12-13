@@ -7,7 +7,7 @@ RegisterNetEvent('Ethnic-illegal/client/open-pickup-store', function()
     MenuData[#MenuData + 1] = {
         ['Title'] = 'Green Laptop',
         ['Desc'] = 'Cost: 15 SHUNG; 1 Green USB',
-        ['Data'] = {['Event'] = 'mercy-illegal/client/do-purchase', ['Type'] = 'Client', ['BuyData'] = {Price = 15, Item = 'heist-usb-green', Reward = 'heist-laptop-green'} },
+        ['Data'] = {['Event'] = 'Ethnic-illegal/client/do-purchase', ['Type'] = 'Client', ['BuyData'] = {Price = 15, Item = 'heist-usb-green', Reward = 'heist-laptop-green'} },
         ['Disabled'] = false
     }
     MenuData[#MenuData + 1] = {
@@ -27,13 +27,13 @@ end)
 
 RegisterNetEvent('Ethnic-illegal/client/do-purchase', function(Data)
     local BuyData = Data.BuyData
-    if not HasEnoughCrypto('shungite', BuyData.Price) or not exports['mercy-inventory']:HasEnoughOfItem(BuyData.Item, 1) then return end
+    if not HasEnoughCrypto('shungite', BuyData.Price) or not exports['Ethnic-inventory']:HasEnoughOfItem(BuyData.Item, 1) then return end
 
-    CallbackModule.SendCallback('mercy-base/server/remove-item', BuyData.Item, 1, false, true)
-    EventsModule.TriggerServer('mercy-base/server/remove-crypto', 'shungite', BuyData.Price)
+    CallbackModule.SendCallback('Ethnic-base/server/remove-item', BuyData.Item, 1, false, true)
+    EventsModule.TriggerServer('Ethnic-base/server/remove-crypto', 'shungite', BuyData.Price)
 
-    TriggerEvent('mercy-phone/client/dark/start-drop-off', BuyData.Reward)
-    TriggerServerEvent("mercy-phone/server/mails/send-mail", "Dark Market", "#A-1001", "You know where to go.")
+    TriggerEvent('Ethnic-phone/client/dark/start-drop-off', BuyData.Reward)
+    TriggerServerEvent("Ethnic-phone/server/mails/send-mail", "Dark Market", "#A-1001", "You know where to go.")
 end)
 
 -- [ Functions ] --

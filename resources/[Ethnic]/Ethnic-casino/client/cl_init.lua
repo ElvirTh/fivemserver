@@ -73,7 +73,7 @@ Citizen.CreateThread(function()
         EntityType = 'Ped',
         SpriteDistance = 10.0,
         Distance = 5.0,
-        Position = vector4(966.41, 47.43, 70.7, 145.22),
+        Position = vector4(965.44, 48.09, 70.7, 141.24),
         Model = 'u_f_m_casinocash_01',
         Options = {
             {
@@ -82,6 +82,27 @@ Citizen.CreateThread(function()
                 Label = 'Interact',
                 EventType = 'Client',
                 EventName = 'Ethnic-casino/client/hotel-availability',
+                EventParams = {},
+                Enabled = function(Entity)
+                    return true
+                end,
+            },
+        }
+    })
+    exports['Ethnic-ui']:AddEyeEntry("Buy_membership_card", {
+        Type = 'Entity',
+        EntityType = 'Ped',
+        SpriteDistance = 10.0,
+        Distance = 5.0,
+        Position = vector4(967.18, 47.01, 70.7, 141.93),
+        Model = 'u_f_m_casinocash_01',
+        Options = {
+            {
+                Name = 'casino_membercard',
+                Icon = 'fas fa-id-card',
+                Label = 'Buy Casino Membership($3500)',
+                EventType = 'Server',
+                EventName = 'Ethnic-casino/server/buy-membership',
                 EventParams = {},
                 Enabled = function(Entity)
                     return true

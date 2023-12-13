@@ -1304,6 +1304,17 @@ Shared.Vehicles = {
         ['Type'] = 'Car',
         ['Price'] = 275000,
     },
+    [GetHashKey('22b')] = {
+        ['Vehicle'] = '22b',
+        ['Model'] = 'Subaru',
+        ['Name'] = 'Impreza 22B-STi',
+        ['ShopClass'] = '',
+        ['Class'] = 'A',
+        ['Picture'] = 'None',
+        ['Type'] = 'Car',
+        ['Price'] = 175000,
+    },
+    
 
     
     --ExtraCopCars--

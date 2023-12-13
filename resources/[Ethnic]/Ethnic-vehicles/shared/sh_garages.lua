@@ -109,7 +109,7 @@ Config.Garages = {
             vector4(314.93, -1369.59, 31.31, 318.31)
         },
     },  
-    ['pizzeria_1'] = {
+    /*['pizzeria_1'] = {
         Blip = { Sprite = 357, Color = 3, Text = "Garage" },
         Zone = { vector3(805.49, -727.63, 27.01), 17.0, 7.6, 40, 26.01, 30.01 },
         Spots = {
@@ -119,7 +119,7 @@ Config.Garages = {
             vector4(807.61, -730.11, 26.97, 132.15),
             vector4(809.67, -733.17, 26.97, 134.34),
         },
-    },
+    },*/
     ['airport_1'] = {
         Blip = { Sprite = 307, Color = 3, Text = "Vliegtuig Garage" },
         Zone = { vector3(-1664.01, -3131.58, 13.99), 20.0, 20.0, 330, 12.9, 18.9 },

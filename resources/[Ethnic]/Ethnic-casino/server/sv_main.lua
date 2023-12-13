@@ -1,4 +1,4 @@
-CallbackModule, PlayerModule, DatabaseModule, EventsModule = nil, nil, nil, nil
+CallbackModule, PlayerModule, DatabaseModule, FunctionsModule, CommandsModule, EventsModule = nil, nil, nil, nil, nil, nil
 local ActiveSlotSeats = {}
 
 _Ready = false
@@ -7,12 +7,16 @@ AddEventHandler('Modules/server/ready', function()
         'Callback',
         'Player',
         'Database',
+        'Functions',
+        'Commands',
         'Events',
     }, function(Succeeded)
         if not Succeeded then return end
         CallbackModule = exports['Ethnic-base']:FetchModule('Callback')
         PlayerModule = exports['Ethnic-base']:FetchModule('Player')
         DatabaseModule = exports['Ethnic-base']:FetchModule('Database')
+        FunctionsModule = exports['Ethnic-base']:FetchModule('Functions')
+        CommandsModule = exports['Ethnic-base']:FetchModule('Commands')
         EventsModule = exports['Ethnic-base']:FetchModule('Events')
         _Ready = true
     end)
@@ -257,6 +261,16 @@ function GetSlotData(Slot)
 end
 
 -- [ Events ] --
+
+RegisterNetEvent("Ethnic-casino/server/buy-membership", function()
+    local Player = PlayerModule.GetPlayerBySource(source)
+    local CardPrice = Shared.ItemList['casinomember']['Price']
+    if Player.Functions.RemoveMoney('Cash', CardPrice, 'Member-Card') then
+        Player.Functions.AddItem('casinomember', 1, false, false, true)
+    else
+        Player.Functions.Notify('no-money-card', 'Not enough money..', 'error')
+    end
+end)
 
 RegisterNetEvent('Ethnic-casino/server/rooms/rent-start', function(Password)
     local src = source

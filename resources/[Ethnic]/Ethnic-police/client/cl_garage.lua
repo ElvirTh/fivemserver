@@ -111,7 +111,7 @@ RegisterNetEvent('Ethnic-police/client/take-out-pdvehicle',function(Data)
     if PoliceData ~= nil then
         local VehicleCoords = {['X'] = PoliceData.Coords.x, ['Y'] = PoliceData.Coords.y, ['Z'] = PoliceData.Coords.z, ['Heading'] = PoliceData.Coords.w}
         local Vehicle = VehicleModule.SpawnVehicle(PoliceData.Model, VehicleCoords, nil, false)
-        local vehicle = SetVehicleColours(Vehicle['Vehicle'],0,0)
+        local vehicle = SetVehicleColours(Vehicle['Vehicle'],61,61)
         
         if Vehicle ~= nil then
             Citizen.SetTimeout(250, function()

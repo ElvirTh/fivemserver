@@ -1,13 +1,15 @@
-CommandsModule, PlayerModule = nil, nil
+CommandsModule, PlayerModule, EventsModule = nil, nil, nil
 
 AddEventHandler('Modules/server/ready', function()
     TriggerEvent('Modules/server/request-dependencies', {
         'Commands',
         'Player',
+        'Events'
     }, function(Succeeded)
         if not Succeeded then return end
         CommandsModule = exports['Ethnic-base']:FetchModule('Commands')
         PlayerModule = exports['Ethnic-base']:FetchModule('Player')
+        EventsModule = exports['mercy-base']:FetchModule('Events')
 
         CommandsModule.Add("oocm", "Toggle OOC", {}, false, function(source, args)
             TriggerClientEvent('Ethnic-chat/client/toggle-OOC', source)
@@ -32,6 +34,9 @@ AddEventHandler('Modules/server/ready', function()
         CommandsModule.Add("clearchatall", "Clear everyone's chat", {}, false, function(source, args)
             TriggerClientEvent('Ethnic-chat/client/clear-chat', -1)
         end, "admin")
+        EventsModule.RegisterServer('mercy-chat/server/post-message', function(source, Title, Message, Class)
+            TriggerClientEvent('mercy-chat/client/post-message', -1, Title, Message, Class)
+        end)
     end)
 end)
 

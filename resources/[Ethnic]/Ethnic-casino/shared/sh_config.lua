@@ -15,7 +15,7 @@ Config = Config or {}
 Config.Casino = {
     ['Rent'] = 750,
 }
-Config.WheelURL = "http://localhost/Ethnic-CasinoWheelUI/" -- URL where you host the wheel here.
+Config.WheelURL = "http://localhost/Ethnic-CasinoWheelUI" -- URL where you host the wheel here.
 Config.TVImage = "" -- Image for TV
 Config.Debug = true
 

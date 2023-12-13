@@ -176,6 +176,7 @@ RegisterNetEvent("Ethnic-casino/client/casino-action", function(Data)
     end
 end)
 
+
 -- [ Functions ] --
 
 function SetupCasinoPeds()

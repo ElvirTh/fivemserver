@@ -15,10 +15,11 @@
     position: absolute;
     top: 52vh;
     left: 49.6vw;
+    color: aquamarine;
 }
 
 .eye-options > .option {
-    color: white;
+    color: #c0c0c0;
     cursor: pointer;
     font-size: 1.7vh;
     font-weight: 600;
@@ -27,9 +28,9 @@
 }
 
 .eye-options > .option:hover {
-    color: #00f8b9;
+    color: #e6ff07;
 }
 
 .eye-options > .option > i {
-    color: #00f8b9;
+    color: #e6ff07;
 }

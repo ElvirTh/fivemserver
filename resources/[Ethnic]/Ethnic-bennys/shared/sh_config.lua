@@ -9,6 +9,19 @@ Config.WheelFitment = {
 }
 
 Config.Zones = {
+    -- Real Bennys
+    {
+        center = vector3(-34.6, -1066.69, 28.4),
+        length = 6.0,
+        width = 4.5,
+        heading = 160.00,
+        minZ = 26.46,
+        maxZ = 30.46,
+        ShowBlip = true,
+        data = {
+            Heading = -20.00,
+        },
+    },
     -- MRPD
     {
         center = vector3(451.93, -975.79, 25.46),
@@ -230,7 +243,7 @@ Config.Zones = {
         width = 5.0,
         heading = 32,
         minZ = 34.91,
-        maxZ = 38.91,
+        maxZ = 38.91,   
         ShowBlip = false,
         data = {
             Authorized = { Business = { "Hayes Repairs" } },

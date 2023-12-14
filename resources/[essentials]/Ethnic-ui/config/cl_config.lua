@@ -543,13 +543,13 @@ Config.MyPreferences = {}
 Config.DefaultPreferences = {
     Hud = {
         ['ShowHealth'] = true, -- NEW
-        ['HealthValue'] = 95, -- NEW
+        ['HealthValue'] = 100, -- NEW
         ['ShowArmor'] = true, -- NEW
-        ['ArmorValue'] = 95, -- NEW
+        ['ArmorValue'] = 100, -- NEW
         ['ShowFood'] = true, -- NEW
-        ['FoodValue'] = 95, -- NEW
+        ['FoodValue'] = 100, -- NEW
         ['ShowWater'] = true, -- NEW
-        ['WaterValue'] = 95, -- NEW
+        ['WaterValue'] = 100, -- NEW
         ['ShowStress'] = true,
         ['ShowOxygen'] = true,
 
@@ -559,7 +559,7 @@ Config.DefaultPreferences = {
         ['Crosshair'] = true, -- NEW
         ['Blackbars'] = {
             Enabled = false,
-            Percentage = 10,
+            Percentage = 13,
         },
     },
     Phone = {
@@ -580,7 +580,7 @@ Config.DefaultPreferences = {
         ['RadioClickVolume'] = 100.0,
     },
     EmoteBinds = {
-        ['F2'] = '',
+        ['F2'] = 'handsup',
         ['F3'] = '',
         ['F5'] = '',
         ['F6'] = '',

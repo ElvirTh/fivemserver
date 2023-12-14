@@ -736,6 +736,18 @@ Config.AttachBackProps = {
 	},
 	{
 		Type = 1,
+		Id = 'weapon_n6ic',
+		Name = 'LWRC M6IC',
+		Model = 'm6ic',
+		PropCoords = {
+			Z = 0.0,
+			RX = 0.0,
+			RY = 0.0,
+			RZ = 0.0,
+		}
+	},
+	{
+		Type = 1,
 		Id = 'weapon_sniperrifle2',
 		Name = 'Hunting Rifle',
 		Model = 'w_sr_sniperrifle2',

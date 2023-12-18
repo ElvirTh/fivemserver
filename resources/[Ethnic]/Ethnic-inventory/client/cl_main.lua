@@ -101,9 +101,10 @@ Citizen.CreateThread(function()
             DisableControlAction(0, Keys["2"], true)
             DisableControlAction(0, Keys["3"], true)
             DisableControlAction(0, Keys["4"], true)
+            DisableControlAction(0, Keys["5"], true)
 
             -- Functionality for using items
-            for i = 1, 4, 1 do
+            for i = 1, 5, 1 do
                 local Key = tostring(i)
                 if IsDisabledControlJustPressed(0, Keys[Key]) then
                     local PlayerData = PlayerModule.GetPlayerData()
@@ -398,7 +399,7 @@ function InitInventory()
         if Plate ~= nil and not IsTrunk then
             InvName = Plate
             InvType = 'Glovebox'
-            MaxSlots, MaxWeight = 4, 50.0
+            MaxSlots, MaxWeight = 5, 50.0
             DoPickupAnimation()
         elseif Plate ~= nil and IsTrunk then
             InvName = Plate

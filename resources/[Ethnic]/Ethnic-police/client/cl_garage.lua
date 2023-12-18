@@ -112,13 +112,15 @@ RegisterNetEvent('Ethnic-police/client/take-out-pdvehicle',function(Data)
         local VehicleCoords = {['X'] = PoliceData.Coords.x, ['Y'] = PoliceData.Coords.y, ['Z'] = PoliceData.Coords.z, ['Heading'] = PoliceData.Coords.w}
         local Vehicle = VehicleModule.SpawnVehicle(PoliceData.Model, VehicleCoords, nil, false)
         local vehicle = SetVehicleColours(Vehicle['Vehicle'],61,61)
-        
+        local vehicle = SetVehicleNumberPlateText(Vehicle['Vehicle'],"POLICE")
         if Vehicle ~= nil then
             Citizen.SetTimeout(250, function()
                 local Plate = GetVehicleNumberPlateText(Vehicle['Vehicle'])
                 exports['Ethnic-vehicles']:SetFuelLevel(Vehicle['Vehicle'], 100)
                 exports['Ethnic-vehicles']:SetVehicleKeys(Plate, true, false)
                 SetVehicleModKit(Vehicle['Vehicle'], 0)
+
+                
 
                 SetVehicleMod(Vehicle['Vehicle'],11,3,false) --engine
                 SetVehicleMod(Vehicle['Vehicle'],12,2,false) --brakes

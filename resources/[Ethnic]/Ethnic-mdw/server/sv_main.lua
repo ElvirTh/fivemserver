@@ -315,17 +315,17 @@ Citizen.CreateThread(function()
                 local Tags = json.decode(TagsData[1].tags)
                 for _, Tag in pairs(Data.Tags) do
                     local Found = false
-                    for _, Tag2 in pairs(Data.Tags) do
+                    for _, Tag2 in pairs(Tags) do
                         if Tag == Tag2 then
                             Found = true
                         end
                     end
                     if not Found then
-                        table.insert(Data.Tags, Tag)
+                        table.insert(Tags, Tag)
                     end
                 end
                 DatabaseModule.Update('UPDATE mdw_profiles SET tags = ? WHERE id = ?', {
-                    json.encode(Data.Tags),
+                    json.encode(Tags),
                     Data.Id,
                 })
             else
@@ -495,17 +495,17 @@ Citizen.CreateThread(function()
                 local Tags = json.decode(ReportData[1].tags)
                 for _, Tag in pairs(Data.Tags) do
                     local Found = false
-                    for _, Tag2 in pairs(Data.Tags) do
+                    for _, Tag2 in pairs(Tags) do
                         if Tag == Tag2 then
                             Found = true
                         end
                     end
                     if not Found then
-                        table.insert(Data.Tags, Tag)
+                        table.insert(Tags, Tag)
                     end
                 end
                 DatabaseModule.Update('UPDATE mdw_reports SET tags = ? WHERE id = ?', {
-                    json.encode(Data.Tags),
+                    json.encode(Tags),
                     Data.Id,
                 })
             else
@@ -556,7 +556,7 @@ Citizen.CreateThread(function()
                         ['ForceDenied'] = false,
                     }
                     DatabaseModule.Update('UPDATE mdw_reports SET scums = ? WHERE id = ?', {
-                        json.encode(Data.Scums),
+                        json.encode(Scums),
                         Data.Id,
                     })
                 end, true)
@@ -572,11 +572,11 @@ Citizen.CreateThread(function()
         DatabaseModule.Execute('SELECT * FROM mdw_reports WHERE id = ?', {Data.Id}, function(ReportData)
             if ReportData[1] ~= nil then
                 local Scums = json.decode(ReportData[1].scums)
-                for k, v in pairs(Data.Scums) do
+                for k, v in pairs(Scums) do
                     if tonumber(v['Id']) == tonumber(Data.ScumId) then
                         Scums[k] = nil
                         DatabaseModule.Update('UPDATE mdw_reports SET scums = ? WHERE id = ?', {
-                            json.encode(Data.Scums),
+                            json.encode(Scums),
                             Data.Id,
                         })
                     end
@@ -593,11 +593,11 @@ Citizen.CreateThread(function()
         DatabaseModule.Execute('SELECT * FROM mdw_reports WHERE id = ? ', {Data.Id}, function(ReportData)
             if ReportData[1] ~= nil then
                 local Scums = json.decode(ReportData[1].scums)
-                for k, v in pairs(Data.Scums) do
+                for k, v in pairs(Scums) do
                     if tonumber(v['Id']) == tonumber(Data.ScumId) then
                         Scums[k]['Charges'] = Data.Charges
                         DatabaseModule.Update('UPDATE mdw_reports SET scums = ? WHERE id = ?', {
-                            json.encode(Data.Scums),
+                            json.encode(Scums),
                             Data.Id,
                         })
                     end
@@ -610,7 +610,7 @@ Citizen.CreateThread(function()
         DatabaseModule.Execute('SELECT * FROM mdw_reports WHERE id = ? ', {Data.Id}, function(ReportData)
             if ReportData[1] ~= nil then
                 local Scums = json.decode(ReportData[1].scums)
-                for k, v in pairs(Data.Scums) do
+                for k, v in pairs(Scums) do
                     if tonumber(v['Id']) == tonumber(Data.ScumId) then
                         Cb(v)
                     end
@@ -625,7 +625,7 @@ Citizen.CreateThread(function()
         DatabaseModule.Execute('SELECT * FROM mdw_reports WHERE id = ? ', {Data.Id}, function(ReportData)
             if ReportData[1] ~= nil then
                 local Scums = json.decode(ReportData[1].scums)
-                for k, v in pairs(Data.Scums) do
+                for k, v in pairs(Scums) do
                     if tonumber(v['Id']) == tonumber(Data.ScumId) then
                         Scums[k]['Warrent'] = Data.Warrent
                         Scums[k]['PleadedGuilty'] = Data.PleadedGuilty
@@ -646,7 +646,7 @@ Citizen.CreateThread(function()
                             })
                         end
                         DatabaseModule.Update('UPDATE mdw_reports SET scums = ? WHERE id = ?', {
-                            json.encode(Data.Scums),
+                            json.encode(Scums),
                             Data.Id,
                         })
                     end
@@ -660,11 +660,11 @@ Citizen.CreateThread(function()
         DatabaseModule.Execute('SELECT * FROM mdw_reports WHERE id = ? ', {Data.Id}, function(ReportData)
             if ReportData[1] ~= nil then
                 local Scums = json.decode(ReportData[1].scums)
-                for k, v in pairs(Data.Scums) do
+                for k, v in pairs(Scums) do
                     if tonumber(v['Id']) == tonumber(Data.ScumId) then
                         Scums[k]['Reduction'] = Data.Reduction
                         DatabaseModule.Update('UPDATE mdw_reports SET scums = ? WHERE id = ?', {
-                            json.encode(Data.Scums),
+                            json.encode(Scums),
                             Data.Id,
                         })
                     end
@@ -682,7 +682,7 @@ Citizen.CreateThread(function()
                 if Data.Officers == nil then Data.Officers = {} end
                 for _, Officer in pairs(Data.Officers) do
                     local Found = false
-                    for _, Officer2 in pairs(Officers) dow
+                    for _, Officer2 in pairs(Officers) do
                         if Officer == Officer2 then
                             Found = true
                         end
@@ -823,17 +823,17 @@ Citizen.CreateThread(function()
                 local Tags = json.decode(StaffData[1].tags)
                 for _, Tag in pairs(Data.Tags) do
                     local Found = false
-                    for _, Tag2 in pairs(Data.Tags) do
+                    for _, Tag2 in pairs(Tags) do
                         if Tag == Tag2 then
                             Found = true
                         end
                     end
                     if not Found then
-                        table.insert(Data.Tags, Tag)
+                        table.insert(Tags, Tag)
                     end
                 end
                 DatabaseModule.Update('UPDATE mdw_staff SET tags = ? WHERE id = ?', {
-                    json.encode(Data.Tags),
+                    json.encode(Tags),
                     Data.Id,
                 })
             else

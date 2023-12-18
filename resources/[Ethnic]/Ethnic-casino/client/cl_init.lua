@@ -120,6 +120,7 @@ Citizen.CreateThread(function()
             name = Location['Name'],
             minZ = Location['MinHeight'],
             maxZ = Location['MaxHeight'],
+            heading = Location['Coords'].w,
             hasMultipleZones = false,
             debugPoly = false,
         }, function() end, function() end)

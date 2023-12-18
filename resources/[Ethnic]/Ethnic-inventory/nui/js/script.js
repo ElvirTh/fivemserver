@@ -100,7 +100,7 @@ SetupInventory = function (BlockAmount, OtherData, data) {
         $(".my-inventory-blocks").find(`[data-slot=${ItemData["Slot"]}]`).addClass("draghandle");
         $(".my-inventory-blocks").find(`[data-slot=${ItemData["Slot"]}]`).data("ItemData", data.Items[ItemId]);
         $(".my-inventory-blocks").find(`[data-slot=${ItemData["Slot"]}]`).html(
-            `${(ItemData["Slot"] == 1 || ItemData["Slot"] == 2 || ItemData["Slot"] == 3 || ItemData["Slot"] == 4) ? `<div class="inventory-block-number">${ ItemData["Slot"] }</div>` : ""}` +
+            `${(ItemData["Slot"] == 1 || ItemData["Slot"] == 2 || ItemData["Slot"] == 3 || ItemData["Slot"] == 4 || ItemData["Slot"] == 5) ? `<div class="inventory-block-number">${ ItemData["Slot"] }</div>` : ""}` +
             `<img src="${ await GetItemImage(ItemData['Image']) }" class="inventory-block-img">
             <div class="inventory-block-amount">${ ItemData["Amount"] }x</div>
             <div class="inventory-block-name">${ ItemData["Label"] }</div>
@@ -266,12 +266,12 @@ HandleItemSwap = async function (FromSlot, ToSlot, FromInv, ToInv, Amount) {
                 $(ToInv).find(`[data-slot=${ToSlot}]`).attr("class", "inventory-block draghandle");
                 $(FromInv).find(`[data-slot=${FromSlot}]`).attr("class", "inventory-block");
                 $(ToInv).find(`[data-slot=${ToSlot}]`).html(
-                    `${(ToSlot == 1 || ToSlot == 2 || ToSlot == 3 || ToSlot == 4) ? `<div class="inventory-block-number">${ToSlot}</div>` : ''}` +
+                    `${(ToSlot == 1 || ToSlot == 2 || ToSlot == 3 || ToSlot == 4 || ToSlot == 5) ? `<div class="inventory-block-number">${ToSlot}</div>` : ''}` +
                     `<img src="${await GetItemImage(NewItemData['Image'])}" class="inventory-block-img">
                     <div class="inventory-block-amount">${NewItemData["Amount"]}x</div>
                     <div class="inventory-block-name">${NewItemData["Label"]}</div>`
                 );
-                $(FromInv).find(`[data-slot=${FromSlot}]`).html((FromSlot == 1 || FromSlot == 2 || FromSlot == 3 || FromSlot == 4) ? `<div class="inventory-block-number">${FromSlot}</div>` : "");
+                $(FromInv).find(`[data-slot=${FromSlot}]`).html((FromSlot == 1 || FromSlot == 2 || FromSlot == 3 || FromSlot == 4 || FromSlot == 5) ? `<div class="inventory-block-number">${FromSlot}</div>` : "");
                 $(FromInv) .find(`[data-slot=${FromSlot}]`) .removeData("ItemData");
                 HandleInventorySave();
             // My -> Other
@@ -397,14 +397,14 @@ HandleItemSwap = async function (FromSlot, ToSlot, FromInv, ToInv, Amount) {
                 $(ToInv).find(`[data-slot=${ToSlot}]`).data("ItemData", NewItemData);
                 $(ToInv).find(`[data-slot=${ToSlot}]`).attr("class", "inventory-block draghandle");
                 $(ToInv).find(`[data-slot=${ToSlot}]`).html(
-                `${(ToSlot == 1 || ToSlot == 2 || ToSlot == 3 || ToSlot == 4) ? `<div class="inventory-block-number">${ToSlot}</div>` : ''}` +
+                `${(ToSlot == 1 || ToSlot == 2 || ToSlot == 3 || ToSlot == 4 || ToSlot == 5) ? `<div class="inventory-block-number">${ToSlot}</div>` : ''}` +
                     `<img src="${await GetItemImage(NewItemData['Image'])}" class="inventory-block-img">
                     <div class="inventory-block-amount">${NewItemData["Amount"]}x </div>
                     <div class="inventory-block-name">${NewItemData["Label"]}</div>`);
                 // Update From Slot
                 $(FromInv).find(`[data-slot=${FromSlot}]`).data("ItemData", NewItemDataFrom);
                 $(FromInv).find(`[data-slot=${FromSlot}]`).html(
-                    `${(FromSlot == 1 || FromSlot == 2 || FromSlot == 3 || FromSlot == 4) ? `<div class="inventory-block-number">${FromSlot}</div>` : ''}` +
+                    `${(FromSlot == 1 || FromSlot == 2 || FromSlot == 3 || FromSlot == 4 || FromSlot == 5) ? `<div class="inventory-block-number">${FromSlot}</div>` : ''}` +
                     `<img src="${await GetItemImage(NewItemDataFrom['Image'])}" class="inventory-block-img">
                     <div class="inventory-block-amount">${NewItemDataFrom["Amount"]}x </div>
                     <div class="inventory-block-name">${NewItemDataFrom["Label"]}</div>`);
@@ -523,7 +523,7 @@ HandleItemSwap = async function (FromSlot, ToSlot, FromInv, ToInv, Amount) {
                 $(ToInv).find(`[data-slot=${ToSlot}]`).attr("class", "inventory-block draghandle");
                 $(FromInv).find(`[data-slot=${FromSlot}]`).attr("class", "inventory-block");
                 $(ToInv).find(`[data-slot=${ToSlot}]`) .html(
-                `${(ToSlot == 1 || ToSlot == 2 || ToSlot == 3 || ToSlot == 4) ? `<div class="inventory-block-number">${ToSlot}</div>` : ""}` +
+                `${(ToSlot == 1 || ToSlot == 2 || ToSlot == 3 || ToSlot == 4 || ToSlot == 5) ? `<div class="inventory-block-number">${ToSlot}</div>` : ""}` +
                     `<img src="${ await GetItemImage(NewItemData['Image']) }" class="inventory-block-img">
                     <div class="inventory-block-amount">${ NewItemData["Amount"] }x </div>
                     <div class="inventory-block-name">${ NewItemData["Label"] }</div>
@@ -531,7 +531,7 @@ HandleItemSwap = async function (FromSlot, ToSlot, FromInv, ToInv, Amount) {
                     <div class="inventory-quality-fill ${GetQualityColor(GetQuality(NewItemData["ItemName"], NewItemData["Info"]["CreateDate"], NewItemData) )}" style="height: ${GetQuality(NewItemData["ItemName"], NewItemData["Info"]["CreateDate"], NewItemData)}%"></div>
                     </div>`
                 );
-                $(FromInv).find(`[data-slot=${FromSlot}]`).html((FromSlot == 1 || FromSlot == 2 || FromSlot == 3 || FromSlot == 4)  ? `<div class="inventory-block-number">${FromSlot}</div>` : "");
+                $(FromInv).find(`[data-slot=${FromSlot}]`).html((FromSlot == 1 || FromSlot == 2 || FromSlot == 3 || FromSlot == 4 || FromSlot == 5)  ? `<div class="inventory-block-number">${FromSlot}</div>` : "");
                 $(FromInv).find(`[data-slot=${FromSlot}]`).removeData("ItemData");
                 HandleInventorySave();
                 DebugPrint("Moving", `Moving (${NewItemData["ItemName"]}) FROM My inventory (slot ${FromSlot}) TO My inventory (slot ${ToSlot})`);
@@ -685,7 +685,7 @@ HandleItemSwap = async function (FromSlot, ToSlot, FromInv, ToInv, Amount) {
             // My -> My
             if (FromInv == ".my-inventory-blocks" && ToInv == ".my-inventory-blocks") {
                 $(ToInv) .find(`[data-slot=${ToSlot}]`).html(
-                    `${(ToSlot == 1 || ToSlot == 2 || ToSlot == 3 || ToSlot == 4) ? `<div class="inventory-block-number">${ToSlot}</div>` : ""}` +
+                    `${(ToSlot == 1 || ToSlot == 2 || ToSlot == 3 || ToSlot == 4 || ToSlot == 5) ? `<div class="inventory-block-number">${ToSlot}</div>` : ""}` +
                     `<img src="${ await GetItemImage(NewItemData['Image']) }" class="inventory-block-img">
                     <div class="inventory-block-amount">${ NewItemData["Amount"] }x </div>
                     <div class="inventory-block-name">${ NewItemData["Label"] }</div>
@@ -695,7 +695,7 @@ HandleItemSwap = async function (FromSlot, ToSlot, FromInv, ToInv, Amount) {
                 $(ToInv).find(`[data-slot=${ToSlot}]`).data("ItemData", NewItemData);
                 $(ToInv).find(`[data-slot=${ToSlot}]`).attr("class", "inventory-block draghandle");
                 $(FromInv) .find(`[data-slot=${FromSlot}]`).html(
-                    `${(FromSlot == 1 || FromSlot == 2 || FromSlot == 3 || FromSlot == 4 ) ? `<div class="inventory-block-number">${FromSlot}</div>` : ""}` +
+                    `${(FromSlot == 1 || FromSlot == 2 || FromSlot == 3 || FromSlot == 4 || FromSlot == 5 ) ? `<div class="inventory-block-number">${FromSlot}</div>` : ""}` +
                     `<img src="${ await GetItemImage(NewItemDataFrom['Image']) }" class="inventory-block-img">
                     <div class="inventory-block-amount">${ NewItemDataFrom["Amount"] }x </div>
                     <div class="inventory-block-name">${ NewItemDataFrom["Label"] }</div>
@@ -828,7 +828,7 @@ HandleItemSwap = async function (FromSlot, ToSlot, FromInv, ToInv, Amount) {
                 // My -> My
                 if (FromInv == ".my-inventory-blocks" && ToInv == ".my-inventory-blocks") {
                     $(ToInv).find(`[data-slot=${ToSlot}]`) .html(
-                        `${(ToSlot == 1 || ToSlot == 2 || ToSlot == 3 || ToSlot == 4) ? `<div class="inventory-block-number">${ToSlot}</div>`: ""}` +
+                        `${(ToSlot == 1 || ToSlot == 2 || ToSlot == 3 || ToSlot == 4 || ToSlot == 5) ? `<div class="inventory-block-number">${ToSlot}</div>`: ""}` +
                         `<img src="${ await GetItemImage(NewItemData['Image']) }" class="inventory-block-img">
                         <div class="inventory-block-amount">${ NewItemData["Amount"] }x </div>
                         <div class="inventory-block-name">${ NewItemData["Label"] }</div>
@@ -837,7 +837,7 @@ HandleItemSwap = async function (FromSlot, ToSlot, FromInv, ToInv, Amount) {
                         </div>`);
                     $(ToInv).find(`[data-slot=${ToSlot}]`).data("ItemData", NewItemData);
                     $(FromInv).find(`[data-slot=${FromSlot}]`) .html(
-                        `${(FromSlot == 1 || FromSlot == 2 || FromSlot == 3 || FromSlot == 4) ? `<div class="inventory-block-number">${FromSlot}</div>` : ""}` +
+                        `${(FromSlot == 1 || FromSlot == 2 || FromSlot == 3 || FromSlot == 4 || FromSlot == 5) ? `<div class="inventory-block-number">${FromSlot}</div>` : ""}` +
                         `<img src="${ await GetItemImage(NewItemDataFrom['Image']) }" class="inventory-block-img">
                         <div class="inventory-block-amount">${ NewItemDataFrom["Amount"] }x </div>
                         <div class="inventory-block-name">${ NewItemDataFrom["Label"] }</div>

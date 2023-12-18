@@ -28,9 +28,6 @@
 ]]
 
 Config.SirenData = {
-    [GetHashKey("m3g80ummon")] = {
-        SirenSounds = { "VEHICLES_HORNS_SIREN_1", "VEHICLES_HORNS_SIREN_2", "VEHICLES_HORNS_POLICE_WARNING" },
-    },
     [GetHashKey("polvic")] = {
         SirenSounds = { "VEHICLES_HORNS_SIREN_1", "VEHICLES_HORNS_SIREN_2", "VEHICLES_HORNS_POLICE_WARNING" },
     },

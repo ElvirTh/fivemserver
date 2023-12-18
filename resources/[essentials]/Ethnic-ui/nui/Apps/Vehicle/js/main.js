@@ -51,7 +51,7 @@ RenderVehicleMenu = function(Data) {
                 Element = $('.vehicle-buttons').find('[data-type="DLeftB"]');
             } else if (Key == 'Four') {
                 Element = $('.vehicle-buttons').find('[data-type="DRightB"]');
-            }
+            } 
             if (Value && Settings.CanControl) {
                 $(Element).find('.vehicle-button-active').addClass("vehicle-active");
             } else if (!Settings.CanControl) {

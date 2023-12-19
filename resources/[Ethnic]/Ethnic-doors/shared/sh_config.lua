@@ -409,7 +409,7 @@ Config.Doors = {
         Disabled = false,
         Connected = {},
         Access = {
-            Job = {'judge' },
+            Job = {'police','judge' },
             CitizenId = {},
             Business = {}
         },
@@ -424,7 +424,7 @@ Config.Doors = {
         Disabled = false,
         Connected = {},
         Access = {
-            Job = {'judge' },
+            Job = {'police','judge' },
             CitizenId = {},
             Business = {}
         },

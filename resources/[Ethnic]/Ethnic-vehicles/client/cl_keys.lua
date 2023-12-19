@@ -31,7 +31,7 @@ CreateThread(function()
 			if Vehicle == -1 or Vehicle == 0 then goto Skip end
 
 			if GetVehicleDoorLockStatus(Vehicle) == 7 then
-				SetVehicleDoorsLocked(Vehicle, 2)
+				SetVehicleDoorsLocked(Vehicle, 1)
 			end
 	
 			local TargetPed = GetPedInVehicleSeat(Vehicle, -1)
@@ -347,7 +347,7 @@ RegisterNetEvent('Ethnic-vehicles/client/toggle-locks', function(OnPress)
     if Distance > 1.1 then return end
 
     if GetVehicleDoorLockStatus(Entity) == 1 then
-        VehicleModule.SetVehicleDoorsLocked(Entity, 2)
+        VehicleModule.SetVehicleDoorsLocked(Entity, 1)
         ClearPedTasks(PlayerPedId())
         exports['Ethnic-ui']:Notify('keys', "Vehicle Locked.", 'error')
         EventsModule.TriggerServer('Ethnic-ui/server/play-sound-in-distance', {['Position'] = {[1] = EntityCoords.x, [2] = EntityCoords.y, [3] = EntityCoords.z}, ['Distance'] = 12.0, ['MaxDistance'] = 0.20, ['Name'] = 'car-lock', ['Volume'] = 1.0, ['Type'] = 'Spatial'})

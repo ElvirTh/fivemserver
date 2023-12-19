@@ -1,87 +1,21 @@
 
 ================================================================
-======== txAdmin Starting - 12/18/2023, 12:50:34 AM             
+======== Log Rotated - 12/19/2023, 12:00:00 AM                  
 ================================================================
 
 ================================================================
-======== Log Rotated - 12/18/2023, 12:50:34 AM                  
+======== txAdmin Starting - 12/19/2023, 12:43:55 AM             
 ================================================================
-[12:51:32 AM] txAdmin: Logger started
-[1:01:52 AM] [Y8XBG#1] ケイ・ケイ: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[1:01:55 AM] [Y8XBG#1] ケイ・ケイ: disconnected (Exiting)
-[1:25:32 AM] [Y8XBG#2] ケイ・ケイ: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[1:27:21 AM] [Y8XBG#2] ケイ・ケイ: enabled noclip
-[1:27:27 AM] [Y8XBG#2] ケイ・ケイ: became mortal (standard mode)
-[2:15:43 AM] [Y8XBG#2] ケイ・ケイ: disconnected (Exiting)
-
-================================================================
-======== txAdmin Starting - 12/18/2023, 4:38:38 AM              
-================================================================
-[4:39:13 AM] txAdmin: Logger started
-[4:40:38 AM] [tV6HL#1] ケイ・ケイ: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[4:43:56 AM] [tV6HL#1] ケイ・ケイ: enabled noclip
-[4:43:59 AM] [tV6HL#1] ケイ・ケイ: became mortal (standard mode)
-[4:44:59 AM] [tV6HL#1] ケイ・ケイ: enabled noclip
-[4:45:12 AM] [tV6HL#1] ケイ・ケイ: became mortal (standard mode)
-[4:55:12 AM] [tV6HL#1] ケイ・ケイ: disconnected (Exiting)
-
-================================================================
-======== txAdmin Starting - 12/18/2023, 5:19:12 AM              
-================================================================
-[5:19:40 AM] txAdmin: Logger started
-[5:30:21 AM] [kP7tb#1] ケイ・ケイ: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[5:31:27 AM] [kP7tb#1] ケイ・ケイ: disconnected (Game crashed: 0x15f6e6be730)
-[5:32:10 AM] [kP7tb#2] ケイ・ケイ: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[5:34:34 AM] [kP7tb#2] ケイ・ケイ: disconnected (Server->client connection timed out. Last seen 36187 msec ago.)
-[5:34:43 AM] [kP7tb#3] ケイ・ケイ: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[5:36:48 AM] [kP7tb#3] ケイ・ケイ: disconnected (Server->client connection timed out. Last seen 36402 msec ago.)
-[5:37:54 AM] txAdmin: Logger started
-[5:38:20 AM] [V6JHf#1] ケイ・ケイ: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[5:40:43 AM] [V6JHf#1] ケイ・ケイ: disconnected (Exiting)
-[5:43:35 AM] txAdmin: Logger started
-[5:44:23 AM] [UEr44#1] ケイ・ケイ: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[5:47:44 AM] [UEr44#1] ケイ・ケイ: disconnected ([txAdmin] Server restarting (requested by Elvir_Thaqi1).)
-[5:48:28 AM] txAdmin: Logger started
-[5:49:11 AM] [HJL6G#1] ケイ・ケイ: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[5:50:17 AM] [HJL6G#1] ケイ・ケイ: died from suicide (Falling)
-[5:51:24 AM] [HJL6G#1] ケイ・ケイ: disconnected (Exiting)
-[5:52:18 AM] [HJL6G#2] ケイ・ケイ: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[5:54:24 AM] [HJL6G#2] ケイ・ケイ: died from suicide (Falling)
-
-================================================================
-======== txAdmin Starting - 12/18/2023, 6:00:01 AM              
-================================================================
-[6:00:28 AM] txAdmin: Logger started
-
-================================================================
-======== txAdmin Starting - 12/18/2023, 6:02:02 AM              
-================================================================
-[6:03:54 AM] txAdmin: Logger started
-[6:04:17 AM] [WEQBt#1] ケイ・ケイ: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[6:07:05 AM] [WEQBt#1] ケイ・ケイ: disconnected (Exiting)
-[6:07:39 AM] [WEQBt#2] ケイ・ケイ: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[6:08:32 AM] [WEQBt#2] ケイ・ケイ: enabled noclip
-[6:08:33 AM] [WEQBt#2] ケイ・ケイ: became mortal (standard mode)
-[6:12:13 AM] [WEQBt#2] ケイ・ケイ: disconnected (Server->client connection timed out. Last seen 59459 msec ago.)
-[6:14:04 AM] [WEQBt#3] ケイ・ケイ: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[6:15:56 AM] [WEQBt#3] ケイ・ケイ: disconnected (Exiting)
-[6:16:33 AM] [WEQBt#4] ケイ・ケイ: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[6:17:19 AM] [WEQBt#4] ケイ・ケイ: disconnected (Game crashed: gta-streaming-five.dll!GetStreamingModuleWithValidate<1> (0x33))
-[6:17:54 AM] [WEQBt#5] ケイ・ケイ: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[6:19:13 AM] [WEQBt#6] ケイ・ケイ: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[6:19:26 AM] [WEQBt#5] ケイ・ケイ: disconnected (Server->client connection timed out. Last seen 52338 msec ago.)
-[6:19:58 AM] [WEQBt#6] ケイ・ケイ: disconnected (Game crashed: gta-streaming-five.dll!GetStreamingModuleWithValidate<1> (0x33))
-[6:20:31 AM] txAdmin: Logger started
-[6:21:35 AM] [KFJyy#1] ケイ・ケイ: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[6:22:41 AM] [KFJyy#1] ケイ・ケイ: enabled noclip
-[6:22:41 AM] [KFJyy#1] ケイ・ケイ: became mortal (standard mode)
-[6:24:38 AM] [KFJyy#1] ケイ・ケイ: disconnected (Server->client connection timed out. Last seen 59463 msec ago.)
-[6:24:58 AM] [KFJyy#2] ケイ・ケイ: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[6:35:21 AM] [KFJyy#2] ケイ・ケイ: disconnected (Exiting)
-
-================================================================
-======== txAdmin Starting - 12/18/2023, 6:36:20 AM              
-================================================================
-[6:38:25 AM] txAdmin: Logger started
-[6:39:45 AM] [AF4DR#1] ケイ・ケイ: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
-[6:42:16 AM] [AF4DR#1] ケイ・ケイ: disconnected (Game crashed: gta-streaming-five.dll!GetStreamingModuleWithValidate<1> (0x12))
+[12:46:53 AM] txAdmin: Logger started
+[12:49:23 AM] [VgLxz#1] ケイ・ケイ: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
+[12:50:43 AM] [VgLxz#1] ケイ・ケイ: enabled noclip
+[12:52:38 AM] [VgLxz#1] ケイ・ケイ: teleported to coordinates (x=463.360, y=-984.220, z=30.730)
+[12:53:06 AM] [VgLxz#1] ケイ・ケイ: disconnected (Game crashed: gta-streaming-five.dll!GetStreamingModuleWithValidate<1> (0x33))
+[12:55:27 AM] [VgLxz#2] ケイ・ケイ: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]
+[12:56:45 AM] [VgLxz#2] ケイ・ケイ: enabled noclip
+[12:56:48 AM] [VgLxz#2] ケイ・ケイ: became mortal (standard mode)
+[1:00:34 AM] [VgLxz#2] ケイ・ケイ: enabled noclip
+[1:00:40 AM] [VgLxz#2] ケイ・ケイ: became mortal (standard mode)
+[1:24:33 AM] [VgLxz#2] ケイ・ケイ: disconnected ([txAdmin] Server restarting (requested by Elvir_Thaqi1).)
+[1:27:58 AM] txAdmin: Logger started
+[1:28:20 AM] [dGGUX#1] ケイ・ケイ: joined with identifiers [steam:1100001584761a5; license:6534666eeab13bcaef982219612f5a68ddd455de; xbl:2535464651082284; live:1899947382947272; discord:473273865423028226; fivem:10893259; license2:6534666eeab13bcaef982219612f5a68ddd455de]

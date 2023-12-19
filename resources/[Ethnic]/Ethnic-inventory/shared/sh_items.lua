@@ -358,22 +358,6 @@ Shared.ItemList['weapon_sniperrifle2'] = {
 	['Price'] = 500,
 }
 
-Shared.ItemList['weapon_arisaka'] = {
-    ['ItemName'] = "weapon_arisaka",
-	['Label'] = "Hunting Rifle",
-	['Weight'] = 17.0,
-	['Type'] = "Weapon",
-	['Metal'] = true,
-	['Melee'] = false,
-	['Image'] = "w_huntingrifle.png",
-	['Unique'] = true,
-	['Combinable'] = nil,
-	['Description'] = "Only shoot on animals please!",
-	['DecayRate'] = 2.0,
-	['RemoveWhenDecayed'] = true,
-	['Prop'] = true,
-	['Price'] = 500,
-}
 
 Shared.ItemList['weapon_marksmanrifle'] = {
     ['ItemName'] = "weapon_marksmanrifle",
@@ -389,7 +373,7 @@ Shared.ItemList['weapon_marksmanrifle'] = {
 	['DecayRate'] = 2.0,
 	['RemoveWhenDecayed'] = true,
 	['Prop'] = true,
-	['Price'] = 500,
+	['Price'] = 1500,
 }
 
 Shared.ItemList['weapon_empgun'] = {

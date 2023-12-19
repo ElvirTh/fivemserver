@@ -524,7 +524,7 @@ Config.StoreItems = {
     },
     ['Hunting'] = {
         {
-            ['ItemName'] = 'weapon_sniperrifle2',
+            ['ItemName'] = 'weapon_marksmanrifle',
             ['Amount'] = 1,
             ['Slot'] = 1,
             ['Info'] = {}

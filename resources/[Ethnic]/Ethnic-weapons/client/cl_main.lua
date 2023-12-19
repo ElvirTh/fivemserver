@@ -57,7 +57,7 @@ Citizen.CreateThread(function()
         Citizen.Wait(4)
         if LocalPlayer.state.LoggedIn and IsPedArmed(PlayerPedId(), 6) then
             local Weapon, Type = GetSelectedPedWeapon(PlayerPedId()), 'Normal'
-            if Shared.Weapons[Weapon] ~= nil and Shared.Weapons[Weapon]['WeaponID'] == 'weapon_sniperrifle2' then
+            if Shared.Weapons[Weapon] ~= nil and Shared.Weapons[Weapon]['WeaponID'] == 'weapon_marksmanrifle'  then
                 Type = 'Hunting'
             end
 

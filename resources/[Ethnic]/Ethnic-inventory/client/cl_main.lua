@@ -263,7 +263,7 @@ RegisterNetEvent('Ethnic-inventory/client/use-weapon', function(ItemData)
         return
     end
 
-    if WeaponName == 'weapon_sniperrifle2' and not exports['Ethnic-jobs']:InsideHuntingZone() then return end
+    if WeaponName == 'weapon_marksmanrifle' and not exports['Ethnic-jobs']:InsideHuntingZone() then return end
 
     Citizen.SetTimeout(15, function()
         exports['Ethnic-assets']:DoHolsterAnim()

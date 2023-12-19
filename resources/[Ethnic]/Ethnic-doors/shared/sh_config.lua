@@ -1499,7 +1499,7 @@ Config.Doors = {
         Connected = {},
         Access = {
             Job = {},
-            CitizenId = {'5122'},
+            CitizenId = {'4367'},
             Business = {},
         },
     },
@@ -1513,7 +1513,7 @@ Config.Doors = {
         Connected = {},
         Access = {
             Job = {},
-            CitizenId = {'5122'},
+            CitizenId = {'4367'},
             Business = {},
         },
     },    

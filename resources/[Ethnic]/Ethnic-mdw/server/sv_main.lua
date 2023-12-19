@@ -315,7 +315,7 @@ Citizen.CreateThread(function()
                 local Tags = json.decode(TagsData[1].tags)
                 for _, Tag in pairs(Data.Tags) do
                     local Found = false
-                    for _, Tag2 in pairs(Tags) do
+                    for _, Tag2 in pairs(Data.Tags) do
                         if Tag == Tag2 then
                             Found = true
                         end
@@ -325,7 +325,7 @@ Citizen.CreateThread(function()
                     end
                 end
                 DatabaseModule.Update('UPDATE mdw_profiles SET tags = ? WHERE id = ?', {
-                    json.encode(Tags),
+                    json.encode(Data.Tags),
                     Data.Id,
                 })
             else
@@ -682,7 +682,7 @@ Citizen.CreateThread(function()
                 if Data.Officers == nil then Data.Officers = {} end
                 for _, Officer in pairs(Data.Officers) do
                     local Found = false
-                    for _, Officer2 in pairs(Officers) do
+                    for _, Officer2 in pairs(Data.Officers) do
                         if Officer == Officer2 then
                             Found = true
                         end
@@ -692,7 +692,7 @@ Citizen.CreateThread(function()
                     end
                 end
                 DatabaseModule.Update('UPDATE mdw_reports SET officers = ? WHERE id = ?', {
-                    json.encode(Officers),
+                    json.encode(Data.Officers),
                     Data.Id,
                 })
             end
@@ -823,7 +823,7 @@ Citizen.CreateThread(function()
                 local Tags = json.decode(StaffData[1].tags)
                 for _, Tag in pairs(Data.Tags) do
                     local Found = false
-                    for _, Tag2 in pairs(Tags) do
+                    for _, Tag2 in pairs(Data.Tags) do
                         if Tag == Tag2 then
                             Found = true
                         end
@@ -833,7 +833,7 @@ Citizen.CreateThread(function()
                     end
                 end
                 DatabaseModule.Update('UPDATE mdw_staff SET tags = ? WHERE id = ?', {
-                    json.encode(Tags),
+                    json.encode(Data.Tags),
                     Data.Id,
                 })
             else
